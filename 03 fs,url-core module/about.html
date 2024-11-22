@@ -3,12 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About Us</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .navbar a:active {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+        .btn-primary {
+            background-color: white;
+            color: #fd1d1d;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #fd1d1d;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* About Section */
+        .about {
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+        .about h2 {
+            color: #833ab4;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        /* Values Section */
+        .values {
+            padding: 60px 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        .values h2 {
+            text-align: center;
+            color: #fd1d1d;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .value-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .value-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 280px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .value-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .value-card h3 {
+            color: #833ab4;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Team Section */
+        .team {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+        .team h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .team p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 10px;
+            margin-bottom: 30px;
+        }
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            max-width: 250px;
+            text-align: center;
+        }
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .team-member h3 {
+            color: #833ab4;
+            font-size: 1.2rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            text-align: center;
+            background-color: #fff;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .testimonial-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .testimonial-card {
+            background: #f4f4f4;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+            margin-top: 50px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #fcb045;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 20px 10px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .about h2 {
+                font-size: 2rem;
+            }
+            .values .value-cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .value-card {
+                max-width: 100%;
+            }
+            .team-members {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>About page</h1>
-    <a href="/">index</a>
-    <a href="/about">about</a>
-    <a href="/contact">contact</a>
+    <div class="navbar">
+        <div class="logo">About Page</div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/services">Services</a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our World</h1>
+            <p>We are more than just a website; we are a passion for creating the best digital experiences.</p>
+            <a href="#our-mission" class="btn-primary">Our Mission</a>
+        </div>
+    </section>
+
+    <section id="our-mission" class="about">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>At Index Page, we strive to provide our users with a seamless, engaging experience on every page. Our mission is simple: to create modern, accessible, and interactive digital experiences that meet the diverse needs of our users.</p>
+            <p>We believe that the web should be a place of endless possibilities, where businesses and individuals can connect, create, and thrive. That's why we are committed to making sure that each visitor to our website has access to all the tools, resources, and inspiration they need to succeed online.</p>
+        </div>
+    </section>
+
+    <section id="our-values" class="values">
+        <div class="container">
+            <h2>Our Core Values</h2>
+            <div class="value-cards">
+                <div class="value-card">
+                    <h3>Innovation</h3>
+                    <p>We embrace new ideas, technology, and trends that push the boundaries of what's possible. Innovation is at the heart of everything we do.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Customer-Centricity</h3>
+                    <p>Our customers are the driving force behind our work. We listen to their needs and feedback to ensure our solutions align with their goals.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Integrity</h3>
+                    <p>We operate with transparency, honesty, and respect, ensuring that we build lasting relationships based on trust with our users and partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Meet the Team</h2>
+            <p>Behind every great project is an amazing team. We are a group of passionate designers, developers, marketers, and dreamers who work tirelessly to deliver the best online experiences.</p>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="/images/team1.jpg" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="/images/team2.jpg" alt="Team Member 2">
+                    <h3>Jane Smith</h3>
+                    <p>Lead Designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="/images/team3.jpg" alt="Team Member 3">
+                    <h3>Michael Johnson</h3>
+                    <p>Lead Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p>"Working with Index Page was an absolute pleasure. Their attention to detail and commitment to innovation is unmatched!"</p>
+                    <h3>Sarah Lee</h3>
+                    <p>Marketing Specialist</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The team behind this website is fantastic. They've helped us grow our online presence exponentially!"</p>
+                    <h3>Mark Thompson</h3>
+                    <p>Entrepreneur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Index Page. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>

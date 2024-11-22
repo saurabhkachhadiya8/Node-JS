@@ -1,18 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 error</title>
+    <title>404 - Page Not Found</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            text-align: center;
+            padding: 50px;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        /* 404 Section */
+        .error-section {
+            background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4);
+            color: white;
+            padding: 100px 20px;
+            border-radius: 15px;
+            margin-top: 50px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .error-section h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .error-section p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .btn-primary {
+            background-color: white;
+            color: #fd1d1d;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #fd1d1d;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
 </head>
-
 <body>
-    <center>
+    <section class="error-section">
         <h1>404</h1>
-        <p>error</p>
-        <h2>page not found</h2>
-    </center>
+        <p>Oops! The page you are looking for does not exist.</p>
+        <a href="/" class="btn-primary">Back to Home</a>
+    </section>
 </body>
-
 </html>

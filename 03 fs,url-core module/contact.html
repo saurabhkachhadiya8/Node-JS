@@ -3,12 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact page</title>
+    <title>Contact Us</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        .contact h2 {
+            font-size: 2.5rem;
+            color: #833ab4;
+            margin-bottom: 20px;
+        }
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #fd1d1d;
+        }
+        .contact-form button {
+            padding: 15px;
+            background-color: #fd1d1d;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #833ab4;
+            transform: translateY(-3px);
+        }
+        .contact-form button:active {
+            transform: translateY(2px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+            margin-top: 50px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #fcb045;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 20px 10px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .contact h2 {
+                font-size: 2rem;
+            }
+            .contact-form input, .contact-form textarea {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Contact page</h1>
-    <a href="/">index</a>
-    <a href="/about">about</a>
-    <a href="/contact">contact</a>
+    <div class="navbar">
+        <div class="logo">Contact Page</div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/services">Services</a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Get in Touch with Us</h1>
+            <p>We are here to answer any questions you may have. Reach out to us today!</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you! Please fill out the form below, and we’ll get back to you as soon as possible.</p>
+            <form class="contact-form" action="/submit-contact" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Index Page. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>
