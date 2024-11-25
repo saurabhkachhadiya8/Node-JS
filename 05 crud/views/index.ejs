@@ -79,7 +79,7 @@
 <body>
     <div class="container">
         <h1 class="text-center my-4">Todo List</h1>
-        <% if(viewForm){ %>
+        <% if(dynamicBtn){ %>
             <div class="main col-10 mx-auto d-flex">
                 <div class="form col-3 p-3 my-3">
                     <h2 class="text-center mb-3">
@@ -170,7 +170,7 @@
                     </form>
                 </div>
                 <div class="dataTbl col-12 p-3 position-relative">
-                    <a href="/dynamicbtn" style="position: absolute;width: 20%;"><button class="btn btn-primary"
+                    <a href="/dynamicbtn" style="position: absolute;width: 15%;"><button class="btn btn-primary"
                             style="width: 100%;">Add User</button></a>
                     <h2 class="text-center mb-3">View Users</h2>
                     <table class="table">
@@ -186,13 +186,13 @@
                             <% data.map((val, i)=> { %>
                                 <% const { id, name, phone }=val %>
                                     <tr>
-                                        <td>
+                                        <td class="align-middle">
                                             <%= ++i %>
                                         </td>
-                                        <td class="text-start">
+                                        <td class="text-start align-middle">
                                             <%= name %>
                                         </td>
-                                        <td class="text-start">
+                                        <td class="text-start align-middle">
                                             <%= phone %>
                                         </td>
                                         <td>

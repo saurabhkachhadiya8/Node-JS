@@ -3,7 +3,7 @@ const port = 8080;
 const app = express();
 let record = [];
 let editUser;
-let dynamicBtn = true;
+let dynamicBtn = false;
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded());
@@ -12,16 +12,15 @@ app.get('/', (req, res) => {
     return res.render('index', {
         data: record,
         editUser: null,
-        viewForm: null
+        dynamicBtn: null
     });
 });
 app.get('/dynamicbtn', (req, res) => {
-    dynamicBtn = !dynamicBtn;
-    let viewForm = !dynamicBtn ? 1 : null;
+    dynamicBtn = true;
     return res.render('index', {
         data: record,
         editUser: null,
-        viewForm
+        dynamicBtn
     });
 });
 
@@ -50,7 +49,7 @@ app.get('/edituser', (req, res) => {
     return res.render('index', {
         data: record,
         editUser,
-        viewForm: null
+        dynamicBtn
     });
 });
 app.post('/updateuser', (req, res) => {
