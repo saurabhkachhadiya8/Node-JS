@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .navbar a:active {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+        .btn-primary {
+            background-color: white;
+            color: #fd1d1d;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #fd1d1d;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* About Section */
+        .about {
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+        .about h2 {
+            color: #833ab4;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #fff;
+            padding: 60px 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        .services h2 {
+            color: #fd1d1d;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .services .service {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 280px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .service-card h3 {
+            color: #833ab4;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .service-card p {
+            font-size: 1rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            text-align: center;
+            background: #f4f4f4;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .testimonial {
+            font-style: italic;
+            color: #666;
+            margin: 20px 0;
+            font-size: 1.1rem;
+            max-width: 700px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+            line-height: 1.6;
+        }
+        .testimonial:hover {
+            transform: translateY(-5px);
+            color: #333;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+            margin-top: 50px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #fcb045;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 20px 10px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .about h2 {
+                font-size: 2rem;
+            }
+            .services .service {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .service-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Index Page</div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1>Welcome to the Index Page</h1>
+        <p>Explore a variety of modern, interactive features designed to elevate your online experience.</p>
+        <a href="#about" class="btn-primary">Learn More</a>
+    </div>
+
+    <section id="about" class="about">
+        <h2>About This Website</h2>
+        <p>This is the Index page of a modern website designed to provide a sleek, responsive experience for all users. Our mission is to showcase top-quality web design and innovative solutions to meet your needs.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Featured Services</h2>
+        <div class="service">
+            <div class="service-card">
+                <h3>Web Design</h3>
+                <p>Beautiful, responsive designs that make your website stand out and perform seamlessly across all devices.</p>
+            </div>
+            <div class="service-card">
+                <h3>SEO Optimization</h3>
+                <p>Optimize your website to rank higher in search engines, boosting traffic and online visibility.</p>
+            </div>
+            <div class="service-card">
+                <h3>E-commerce Solutions</h3>
+                <p>Build your online store with powerful features to maximize sales and improve customer experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Are Saying</h2>
+        <p class="testimonial">"The design of this website is simply amazing. It has completely transformed how we engage with users online!"</p>
+        <p class="testimonial">"I can't thank the team enough for the incredible SEO results. Our site now ranks higher than ever before!"</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Index Page. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
