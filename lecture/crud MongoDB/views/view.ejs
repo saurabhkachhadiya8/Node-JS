@@ -11,12 +11,28 @@
         <table border="1" cellpadding="10">
             <thead>
                 <tr>
-                    <td>#</td>
-                    <td>Name</td>
-                    <td>Email</td>
-                    <td>Password</td>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Action</th>
                 </tr>
             </thead>
+            <tbody>
+                <% allData.map((val,i)=>{ %>
+                    <% const {id,name,email,password} = val %>
+                    <tr>
+                        <td><%= ++i %></td>
+                        <td><%= name %></td>
+                        <td><%= email %></td>
+                        <td><%= password %></td>
+                        <td>
+                            <a href="/edituser?editId=<%= id %>">Edit</a>
+                            <a href="/deleteuser?deleteId=<%= id %>">Delete</a>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
         </table>
         <a href="/add">Add</a>
     </div>
