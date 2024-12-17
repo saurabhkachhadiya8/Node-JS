@@ -2,14 +2,15 @@ const express = require('express');
 const port = 8080;
 const app = express();
 
+const path = require('path');
+
+const db = require('./assets/js/db');
+
 app.set('view engine','ejs');
 
-app.get('/',(req,res)=>{
-    return res.render('view');
-});
-app.get('/add',(req,res)=>{
-    return res.render('add');
-});
+app.use(express.static(path.join(__dirname,'assets')));
+
+app.use('/',require('./routes/indexRoute'));
 
 app.listen(port,(err)=>{
     if(err){

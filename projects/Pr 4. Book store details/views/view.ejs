@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Book</title>
+    <!-- icons  -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
+
 <body>
-    <a href="/">View</a>
-    <a href="/add">Add</a>
+    <%- include('navbar') %>
+
+    <section class="p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 border p-4">
+                    <div class="image text-center">
+                        <img src="/img/download.jfif" alt="" height="250">
+                    </div>
+                    <div class="content pt-3">
+                        <h4>Harry Potter and the Philosopher's Stone</h4>
+                        <p class="m-0">J.K. Rowling (Author)</p>
+                        <div class="rate text-warning py-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-success fw-semibold fs-5">₹ 383 <s class="text-danger fs-6">₹ 500</s></p>
+                        <a href="#" class="btn btn-warning d-block">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('footer') %>
+
+    <!-- bootstrap  -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
