@@ -9,6 +9,52 @@
     <link rel="stylesheet" href="/css/all.min.css">
     <!-- bootstrap  -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <style>
+        .card{
+            transition: all 0.3s;
+        }
+        .card .image h4{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 1rem;
+            color: #fff;
+            background-color: #00000090;
+            transition: all 0.3s;
+        }
+        .card .image img{
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+        .card .content{
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            top: 50%;
+            left: 0;
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            transition: all 0.5s;
+        }
+        .card:hover{
+            padding: 1.5rem;
+        }
+        .card:hover .image h4{
+            opacity: 0;
+            visibility: hidden;
+        }
+        .card:hover .image img{
+            object-fit: contain;
+            transition: all 0.3s;
+        }
+        .card:hover .content{
+            opacity: 1;
+            visibility: visible;
+            top: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,23 +64,22 @@
         <div class="container">
             <div class="row">
                 <% allData.map((data,i)=>{ %>
+                    <% const {name,price,pages,author,image,description,id} = data; %>
                     <div class="col-3 p-2">
-                        <div class="border p-4">
+                        <div class="card border border-bottom-0 position-relative">
                             <div class="image text-center">
-                                <img src="<%= data.image %>" alt="" height="250">
+                                <img src="<%= image %>" alt="" height="250" width="100%">
+                                <h4 class="m-0"><%= name %></h4>
                             </div>
-                            <div class="content pt-4">
-                                <h4><%= data.name %></h4>
-                                <p class="m-0"><%= data.author %> (Author)</p>
-                                <div class="rate text-warning py-1">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                            <div class="content border border-top-0">
+                                <h4><%= name %></h4>
+                                <p class="m-0"><%= author %> (Author)</p>
+                                <p class="text-success fw-semibold fs-5">₹ <%= price %> <s class="text-danger fs-6">₹ <%= price+300 %></s></p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#"><i class="fa-regular fa-pen-to-square btn btn-outline-warning px-3" style="font-family: 'Font Awesome 6 Free';"></i></a>
+                                    <a href="#" class="btn btn-warning px-4">Read More</a>
+                                    <a href="/deleteuser?deleteId=<%= id %>"><i class="fa-regular fa-trash-can btn btn-outline-warning px-3" style="font-family: 'Font Awesome 6 Free';"></i></a>
                                 </div>
-                                <p class="text-success fw-semibold fs-5">₹ <%= data.price %> <s class="text-danger fs-6">₹ 500</s></p>
-                                <a href="#" class="btn btn-warning d-block">Read More</a>
                             </div>
                         </div>
                     </div>

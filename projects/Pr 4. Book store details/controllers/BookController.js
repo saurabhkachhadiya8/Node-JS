@@ -1,12 +1,13 @@
 const bookModel = require('../models/BookModel');
+const fs = require('fs');
 
 const viewPage = async (req, res) => {
-    try{
+    try {
         let allData = await bookModel.find({});
-        return res.render('view',{
+        return res.render('view', {
             allData
         });
-    }catch(err){
+    } catch (err) {
         console.error(err);
         return false;
     }
@@ -33,6 +34,21 @@ const insertData = async (req, res) => {
         }
     }
 }
+const deleteuser = async (req, res) => {
+    try {
+        let id = req.query.deleteId;
+        let old = await bookModel.findById(id);
+        fs.unlinkSync(old.image);
+        let data = await bookModel.findByIdAndDelete(id);
+        console.log("Book deleted successfully");
+        return res.redirect('/');
+    } catch (err) {
+        if (err) {
+            console.log(err);
+            return false;
+        }
+    }
+}
 module.exports = {
-    viewPage, addPage, insertData
+    viewPage, addPage, insertData, deleteuser
 }

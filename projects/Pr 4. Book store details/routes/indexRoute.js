@@ -1,7 +1,7 @@
 const express = require('express');
 
 const routes = express.Router();
-const { viewPage, addPage, insertData } = require('../controllers/BookController');
+const { viewPage, addPage, insertData, deleteuser } = require('../controllers/BookController');
 
 const multer = require('multer');
 const st = multer.diskStorage({
@@ -18,5 +18,6 @@ const fileUpload = multer({ storage: st }).single('image');
 routes.get('/',viewPage);
 routes.get('/add',addPage);
 routes.post('/insertData',fileUpload,insertData);
+routes.get('/deleteuser',deleteuser);
 
 module.exports = routes;
