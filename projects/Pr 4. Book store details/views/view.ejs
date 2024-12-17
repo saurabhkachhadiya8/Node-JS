@@ -17,29 +17,31 @@
     <section class="p-5">
         <div class="container">
             <div class="row">
-                <div class="col-3 border p-4">
-                    <div class="image text-center">
-                        <img src="/img/download.jfif" alt="" height="250">
-                    </div>
-                    <div class="content pt-3">
-                        <h4>Harry Potter and the Philosopher's Stone</h4>
-                        <p class="m-0">J.K. Rowling (Author)</p>
-                        <div class="rate text-warning py-1">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                <% allData.map((data,i)=>{ %>
+                    <div class="col-3 p-2">
+                        <div class="border p-4">
+                            <div class="image text-center">
+                                <img src="<%= data.image %>" alt="" height="250">
+                            </div>
+                            <div class="content pt-4">
+                                <h4><%= data.name %></h4>
+                                <p class="m-0"><%= data.author %> (Author)</p>
+                                <div class="rate text-warning py-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-success fw-semibold fs-5">₹ <%= data.price %> <s class="text-danger fs-6">₹ 500</s></p>
+                                <a href="#" class="btn btn-warning d-block">Read More</a>
+                            </div>
                         </div>
-                        <p class="text-success fw-semibold fs-5">₹ 383 <s class="text-danger fs-6">₹ 500</s></p>
-                        <a href="#" class="btn btn-warning d-block">Read More</a>
                     </div>
-                </div>
+                <% }) %>
             </div>
         </div>
     </section>
-
-    <%- include('footer') %>
 
     <!-- bootstrap  -->
     <script src="/js/bootstrap.bundle.min.js"></script>

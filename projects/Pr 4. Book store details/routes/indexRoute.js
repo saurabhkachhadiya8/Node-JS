@@ -1,8 +1,22 @@
 const express = require('express');
 
 const routes = express.Router();
-const { insertData } = require('../controllers/BookController');
+const { viewPage, addPage, insertData } = require('../controllers/BookController');
 
-routes.get('/',insertData);
+const multer = require('multer');
+const st = multer.diskStorage({
+    destination: (req, res, cb) => {
+        return cb(null, 'uploads');
+    },
+    filename: (req, file, cb) => {
+        const uniq = Math.floor(Math.random() * 1000000);
+        return cb(null, `${file.fieldname}-${uniq}`)
+    }
+});
+const fileUpload = multer({ storage: st }).single('image');
+
+routes.get('/',viewPage);
+routes.get('/add',addPage);
+routes.post('/insertData',fileUpload,insertData);
 
 module.exports = routes;

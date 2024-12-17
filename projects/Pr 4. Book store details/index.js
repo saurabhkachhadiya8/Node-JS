@@ -9,6 +9,7 @@ const db = require('./assets/js/db');
 app.set('view engine','ejs');
 
 app.use(express.static(path.join(__dirname,'assets')));
+app.use(express.static(path.join(__dirname,'uploads')));
 
 app.use('/',require('./routes/indexRoute'));
 

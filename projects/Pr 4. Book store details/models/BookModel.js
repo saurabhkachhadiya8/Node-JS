@@ -6,11 +6,11 @@ const bookSchema = mongoose.Schema({
         required: true
     },
     price: {
-        type: String,
+        type: Number,
         required: true
     },
     pages: {
-        type: String,
+        type: Number,
         required: true
     },
     author: {
