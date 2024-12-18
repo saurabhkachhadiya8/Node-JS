@@ -60,7 +60,7 @@ const editdata = async (req, res) => {
 }
 const updateData = async (req, res) => {
     try {
-        let id = req.body.editid;
+        let id = req.body.updateId;
         if (req.file) {
             let old = await bookModel.findById(id);
             fs.unlinkSync(path.join(__dirname, '../uploads', old.image));

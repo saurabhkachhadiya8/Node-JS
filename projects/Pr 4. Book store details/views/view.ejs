@@ -34,25 +34,26 @@
             opacity: 0;
             visibility: hidden;
             top: 50%;
-            left: 0;
+            left: -.5%;
+            width: 101%;
+            background-color: #fff;
             padding: 0 1.5rem 1.5rem 1.5rem;
+            z-index: 9999;
             transition: all 0.5s;
-        }
-        .card:hover{
-            padding: 1.5rem;
         }
         .card:hover .image h4{
             opacity: 0;
             visibility: hidden;
         }
         .card:hover .image img{
+            margin: 1.5rem 0;
             object-fit: contain;
             transition: all 0.3s;
         }
         .card:hover .content{
             opacity: 1;
             visibility: visible;
-            top: 100%;
+            top: 99%;
         }
     </style>
 </head>
