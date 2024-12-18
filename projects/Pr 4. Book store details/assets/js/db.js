@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-mongoose.connect(`mongodb://localhost/book-store`);
-const db = mongoose.connection;
-db.on('connected', (err) => {
-    if (err) {
+const connectDB = async () => {
+    try{
+        const connect = await mongoose.connect(`mongodb+srv://SaurabhKachhadiya:SaurabhKachhadiya@cluster0.7att4.mongodb.net/Book-Store`);
+        console.log(`MongoDB Connect in host ${connect.connection.host}`);
+    }catch(err){
         console.log(err);
         return false;
     }
-    console.log(`database is connected`);
-});
-module.exports = db;
+}
+module.exports = connectDB;

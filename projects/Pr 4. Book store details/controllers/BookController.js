@@ -1,5 +1,6 @@
 const bookModel = require('../models/BookModel');
 const fs = require('fs');
+const path = require('path');
 
 const viewPage = async (req, res) => {
     try {
@@ -8,7 +9,7 @@ const viewPage = async (req, res) => {
             allData
         });
     } catch (err) {
-        console.error(err);
+        console.log(err);
         return false;
     }
 }
@@ -26,29 +27,71 @@ const insertData = async (req, res) => {
             description: req.body.description
         });
         console.log("Book added successfully");
-        return res.redirect('/add');
+        return res.redirect('/');
     } catch (err) {
-        if (err) {
-            console.log(err);
-            return false;
-        }
+        console.log(err);
+        return false;
     }
 }
-const deleteuser = async (req, res) => {
+const deletedata = async (req, res) => {
     try {
         let id = req.query.deleteId;
         let old = await bookModel.findById(id);
-        fs.unlinkSync(old.image);
-        let data = await bookModel.findByIdAndDelete(id);
+        fs.unlinkSync(path.join(__dirname, '../uploads', old.image));
+        await bookModel.findByIdAndDelete(id);
         console.log("Book deleted successfully");
         return res.redirect('/');
     } catch (err) {
-        if (err) {
-            console.log(err);
-            return false;
+        console.log(err);
+        return false;
+    }
+}
+const editdata = async (req, res) => {
+    try {
+        let id = req.query.editId;
+        let single = await bookModel.findById(id);
+        return res.render('edit', {
+            single
+        })
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const updateData = async (req, res) => {
+    try {
+        let id = req.body.editid;
+        if (req.file) {
+            let old = await bookModel.findById(id);
+            fs.unlinkSync(path.join(__dirname, '../uploads', old.image));
+            await bookModel.findByIdAndUpdate(id, {
+                name: req.body.name,
+                price: req.body.price,
+                pages: req.body.pages,
+                author: req.body.author,
+                image: req.file.filename,
+                description: req.body.description
+            });
+            console.log("Book Updated Successfully");
+            return res.redirect('/');
+        } else {
+            let old = await bookModel.findById(id);
+            await bookModel.findByIdAndUpdate(id, {
+                name: req.body.name,
+                price: req.body.price,
+                pages: req.body.pages,
+                author: req.body.author,
+                image: old.image,
+                description: req.body.description
+            });
+            console.log("Book Updated Successfully");
+            return res.redirect('/');
         }
+    } catch (err) {
+        console.log(err);
+        return false;
     }
 }
 module.exports = {
-    viewPage, addPage, insertData, deleteuser
+    viewPage, addPage, insertData, deletedata, editdata, updateData
 }

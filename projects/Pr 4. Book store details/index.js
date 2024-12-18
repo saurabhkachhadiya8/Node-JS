@@ -4,7 +4,8 @@ const app = express();
 
 const path = require('path');
 
-const db = require('./assets/js/db');
+const connectDB = require('./assets/js/db');
+connectDB();
 
 app.set('view engine','ejs');
 
