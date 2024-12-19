@@ -32,8 +32,10 @@
         .btns form{
             width: 32%;
         }
-        .btns form a{
+        .btns form input[type='submit']{
             width: 100%;
+            font-size: 22px;
+            padding: 10px;
         }
         .btns a.buy{
             background-color: rgb(255, 153, 0);
@@ -78,7 +80,7 @@
                         <p class="text-success fw-semibold m-0 ps-5 ms-5 fs-1">₹ <span id="total"><%= single.price %></span></p>
                     </div>
                     <div class="btns d-flex justify-content-between">
-                        <form action="/cart" method="post">
+                        <form action="/addtocart" method="post">
                             <input type="hidden" name="cartId" value="<%= single._id %>">
                             <input type="hidden" name="cartCount" id="cartCount" value="1">
                             <input type="submit" class="cart btn btn-warning" value="Add to Cart">
