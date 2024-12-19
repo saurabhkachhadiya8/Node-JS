@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Cart</title>
+    <!-- icons  -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <style>
+        table{
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('navbar') %>
+
+    <section class="py-5">
+        <div class="col-10 mx-auto">
+            <h1 class="text-center mb-5">View Cart</h1>
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col">#</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Pages</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td><img src="<%= single.image %>" alt="<%= single.image %>" height="250"></td>
+                        <td><%= single.name %></td>
+                        <td class="quantity-btns">
+                            <a href="#" onclick="decrement(event)" class="text-decoration-none text-dark pe-4">-</  a>
+                            <span id="count"><%= count %></span>
+                            <a href="#" onclick="increment(event)" class="text-decoration-none text-dark ps-4">+</  a>
+                        </td>
+                        <td>₹ <span id="total"><%= single.price %></span></td>
+                        <td>1 Book :- <%= single.pages %> pages</td>
+                        <td>
+                            <a href="#" class="text-decoration-none text-dark border px-4 py-1">Edit</a>
+                            <a href="#" class="text-decoration-none text-dark border px-4 py-1">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+      <!-- bootstrap  -->
+      <script src="/js/bootstrap.bundle.min.js"></script>
+
+      <script>
+        let count = document.getElementById('count').textContent;
+        let total = document.getElementById('total').textContent;
+        
+        const increment = (event) => {
+            event.preventDefault();
+            count++;
+            document.getElementById('count').textContent = count;
+            document.getElementById('total').textContent = total*count;
+        }
+        const decrement = (event) => {
+            event.preventDefault();
+            if(count > 1){
+                count--;
+                document.getElementById('count').textContent = count;
+                document.getElementById('total').textContent = total*count;
+            }
+        }
+    </script>
+</body>
+
+</html>
