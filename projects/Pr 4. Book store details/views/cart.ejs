@@ -56,11 +56,11 @@
                             <td><img src="<%= image %>" alt="<%= image %>" height="250"></td>
                             <td class="fs-2"><%= name %></td>
                             <td class="quantity-btns">
-                                <a href="#" onclick="decrement(event)" class="text-decoration-none text-dark pe-4"><i class="fa-solid fa-minus fs-6"></i></a>
-                                <span id="count"><%= count %></span>
-                                <a href="#" onclick="increment(event)" class="text-decoration-none text-dark ps-4"><i class="fa-solid fa-plus fs-6"></i></a>
+                                <a href="#" onclick="decrement(event,'<%= _id %>','<%= price %>')" class="text-decoration-none text-dark pe-4"><i class="fa-solid fa-minus fs-6"></i></a>
+                                <span id="count-<%= _id %>"><%= count %></span>
+                                <a href="#" onclick="increment(event,'<%= _id %>','<%= price %>')" class="text-decoration-none text-dark ps-4"><i class="fa-solid fa-plus fs-6"></i></a>
                             </td>
-                            <td>₹ <span id="total"><%= price %></span></td>
+                            <td>₹ <span id="total-<%= _id %>"><%= price*count %></span></td>
                             <td class="actions">
                                 <a href="#" class="btn btn-outline-warning fs-5 my-3 py-2">Buy Now</a>
                                 <a href="/delfromcart?deleteId=<%= _id %>" class="btn btn-outline-danger fs-5 my-3 py-2">Delete</a>
@@ -77,21 +77,25 @@
       <script src="/js/bootstrap.bundle.min.js"></script>
 
       <script>
-        let count = document.getElementById('count').textContent;
-        let total = document.getElementById('total').textContent;
-        
-        const increment = (event) => {
+        const increment = (event, id, price) => {
             event.preventDefault();
+            const countElem = document.getElementById(`count-${id}`);
+            const totalElem = document.getElementById(`total-${id}`);
+            let count = parseInt(countElem.textContent);
             count++;
-            document.getElementById('count').textContent = count;
-            document.getElementById('total').textContent = total*count;
+            countElem.textContent = count;
+            totalElem.textContent = price * count;
         }
-        const decrement = (event) => {
+
+        const decrement = (event, id, price) => {
             event.preventDefault();
-            if(count > 1){
+            const countElem = document.getElementById(`count-${id}`);
+            const totalElem = document.getElementById(`total-${id}`);
+            let count = parseInt(countElem.textContent);
+            if (count > 1) {
                 count--;
-                document.getElementById('count').textContent = count;
-                document.getElementById('total').textContent = total*count;
+                countElem.textContent = count;
+                totalElem.textContent = price * count;
             }
         }
     </script>
