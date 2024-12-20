@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const cartSchema = mongoose.Schema({
+    _id: {
+        type: String,
+        required: true
+    },
     name: {
         type: String,
         required: true
@@ -23,6 +27,10 @@ const cartSchema = mongoose.Schema({
     },
     description: {
         type: String,
+        required: true
+    },
+    count: {
+        type: Number,
         required: true
     }
 });

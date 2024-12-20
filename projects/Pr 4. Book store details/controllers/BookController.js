@@ -1,4 +1,5 @@
 const bookModel = require('../models/BookModel');
+const cartModel = require('../models/CartModel');
 const fs = require('fs');
 const path = require('path');
 
@@ -108,17 +109,55 @@ const readMorePage = async (req, res) => {
 }
 const cart = async (req, res) => {
     try {
-        const id = req.body.cartId;
-        const single = await bookModel.findById(id);
-        return res.render('cart',{
-            single,
-            count : req.body.cartCount
+        let allData = await cartModel.find({});
+        return res.render('cart', {
+            allData
         });
     } catch (err) {
         console.log(err);
         return false;
     }
 }
+const addtocart = async (req, res) => {
+    try {
+        const id = req.body.cartId;
+        const single = await bookModel.findById(id);
+        let allData = await cartModel.findById(id);
+        console.log("Product Id :- " + single._id);
+        
+        if(allData){
+            console.log("Book Already in Cart");
+            return res.redirect('/cart');
+        }else{
+            await cartModel.create({
+                _id: single._id,
+                name: single.name,
+                price: single.price,
+                pages: single.pages,
+                author: single.author,
+                image: single.image,
+                description: single.description,
+                count: req.body.cartCount
+            });
+            console.log("Book AddtoCart Successfully");
+            return res.redirect('/cart');
+        }
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const delfromcart = async (req, res) => {
+    try {
+        const id = req.query.deleteId;
+        await cartModel.findByIdAndDelete(id);
+        console.log("Book Delete from Cart Successfully");
+        return res.redirect('/cart');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
 module.exports = {
-    viewPage, addPage, insertData, deletedata, editdata, updateData, readMorePage, cart
+    viewPage, addPage, insertData, deletedata, editdata, updateData, readMorePage, addtocart, cart, delfromcart
 }

@@ -1,7 +1,7 @@
 const express = require('express');
 
 const routes = express.Router();
-const { viewPage, addPage, insertData, deletedata, editdata, updateData, readMorePage, cart } = require('../controllers/BookController');
+const { viewPage, addPage, insertData, deletedata, editdata, updateData, readMorePage, addtocart, cart, delfromcart } = require('../controllers/BookController');
 
 const multer = require('multer');
 const st = multer.diskStorage({
@@ -23,6 +23,8 @@ routes.get('/editdata', editdata);
 routes.post('/updateData', fileUpload, updateData);
 
 routes.get('/readmore', readMorePage);
-routes.post('/cart', cart);
+routes.post('/addtocart', addtocart);
+routes.get('/cart', cart);
+routes.get('/delfromcart', delfromcart);
 
 module.exports = routes;
