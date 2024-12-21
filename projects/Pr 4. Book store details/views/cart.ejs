@@ -53,8 +53,8 @@
                         <% const {name,price,pages,author,image,description,count,_id} = data; %>
                         <tr>
                             <td><%= ++i %></td>
-                            <td><img src="<%= image %>" alt="<%= image %>" height="250"></td>
-                            <td class="fs-2"><%= name %></td>
+                            <td><a href="/readmore?readmoreId=<%= _id %>"><img src="<%= image %>" alt="<%= image %>" height="250"></a></td>
+                            <td><a href="/readmore?readmoreId=<%= _id %>" class="fs-2 text-decoration-none text-dark"><%= name %></a></td>
                             <td class="quantity-btns">
                                 <a href="#" onclick="decrement(event,'<%= _id %>','<%= price %>')" class="text-decoration-none text-dark pe-4"><i class="fa-solid fa-minus fs-6"></i></a>
                                 <span id="count-<%= _id %>"><%= count %></span>
