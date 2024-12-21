@@ -17,7 +17,7 @@
         td{
             padding: 15px 0 !important;
         }
-        .actions a{
+        .actions a,.actions form input[type='submit']{
             width: 80%;
         }
         .actions a:first-child{
@@ -50,7 +50,7 @@
                 </thead>
                 <tbody>
                     <% allData.map((data,i) => { %>
-                        <% const {name,price,pages,author,image,description,count,_id} = data; %>
+                        <% const {_id,name,price,image,count} = data; %>
                         <tr>
                             <td><%= ++i %></td>
                             <td><a href="/readmore?readmoreId=<%= _id %>"><img src="<%= image %>" alt="<%= image %>" height="250"></a></td>
@@ -64,7 +64,10 @@
                             <td class="actions">
                                 <a href="#" class="btn btn-outline-warning fs-5 my-3 py-2">Buy Now</a>
                                 <a href="/delfromcart?deleteId=<%= _id %>" class="btn btn-outline-danger fs-5 my-3 py-2">Delete</a>
-                                <a href="#" class="btn btn-outline-dark fs-5 my-3 py-2">Add to Wish List</a>
+                                <form action="/addtowishlist" method="post">
+                                    <input type="hidden" name="wishlistId" value="<%= _id %>">
+                                    <input type="submit" class="btn btn-outline-dark fs-5 my-3 py-2" value="Add to Wish List">
+                                </form>
                             </td>
                         </tr>
                     <% }) %>

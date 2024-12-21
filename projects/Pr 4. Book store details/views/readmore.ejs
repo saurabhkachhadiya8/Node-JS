@@ -86,7 +86,10 @@
                             <input type="submit" class="cart btn btn-warning" value="Add to Cart">
                         </form>
                         <a href="#" class="buy btn btn-warning">Buy Now</a>
-                        <a href="#" class="wish btn btn-outline-dark">Add to Wish List</a>
+                        <form action="/addtowishlist" method="post">
+                            <input type="hidden" name="wishlistId" value="<%= single._id %>">
+                            <input type="submit" class="wish btn btn-outline-dark" value="Add to Wish List">
+                        </form>
                     </div>
                 </div>
             </div>

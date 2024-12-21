@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish List</title>
+    <!-- icons  -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <style>
+        table{
+            font-size: 22px;
+        }
+        td{
+            padding: 15px 0 !important;
+        }
+        .actions a,.actions form input[type='submit']{
+            width: 80%;
+        }
+        .actions a:first-child{
+            border-color: rgb(255, 153, 0);
+            color: rgb(255, 153, 0);
+        }
+        .actions a:first-child:hover{
+            background-color: rgb(255, 153, 0);
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('navbar') %>
+
+    <section class="py-5">
+        <div class="col-10 mx-auto text-center">
+            <h1 class="mb-5">Wish List</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" width="5%">#</th>
+                        <th scope="col" width="20%">Image</th>
+                        <th scope="col" width="55%" class="text-start">Details</th>
+                        <th scope="col" width="20%">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% allData.map((data,i) => { %>
+                        <% const {name,price,pages,author,image,description,_id} = data; %>
+                        <tr>
+                            <td><%= ++i %></td>
+                            <td><a href="/readmore?readmoreId=<%= _id %>"><img src="<%= image %>" alt="<%= image %>" height="250"></a></td>
+                            <td class="text-start ps-2 pe-4">
+                                <a href="/readmore?readmoreId=<%= _id %>" class="fs-1 text-decoration-none text-dark lh-sm"><%= name %></a>
+                                <p class="mb-0 mt-2"><strong>Author : </strong><%= author %></p>
+                                <p class="mb-0"><strong>Pages : </strong><%= pages %></p>
+                                <p class="price text-success fw-semibold m-0 fs-2"><span class="fs-4 text-danger">-30%</span> ₹ <%= price %></p>
+                                <p class="m-0">M.R.P. : <s class="text-danger fs-4">₹ <%= (price+(price*0.3)) %></s></p>
+                            </td>
+                            <td class="actions">
+                                <a href="#" class="btn btn-outline-warning fs-5 my-3 py-2">Buy Now</a>
+                                <a href="/delfromwishlist?deleteId=<%= _id %>" class="btn btn-outline-danger fs-5 my-3 py-2">Delete</a>
+                                <form action="/addtocart" method="post">
+                                    <input type="hidden" name="cartId" value="<%= _id %>">
+                                    <input type="hidden" name="cartCount" id="cartCount" value="1">
+                                    <input type="submit" class="btn btn-outline-warning fs-5 my-3 py-2" value="Add to Cart">
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+      <!-- bootstrap  -->
+      <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

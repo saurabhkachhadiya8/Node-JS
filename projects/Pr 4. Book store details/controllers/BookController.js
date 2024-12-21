@@ -1,8 +1,10 @@
 const bookModel = require('../models/BookModel');
 const cartModel = require('../models/CartModel');
+const wishlistModel = require('../models/WishlistModel');
 const fs = require('fs');
 const path = require('path');
 
+// Book add,View,Delete,Update
 const viewPage = async (req, res) => {
     try {
         let allData = await bookModel.find({});
@@ -94,6 +96,7 @@ const updateData = async (req, res) => {
     }
 }
 
+// ReadMore 
 const readMorePage = async (req, res) => {
     try {
         let id = req.query.readmoreId;
@@ -107,7 +110,9 @@ const readMorePage = async (req, res) => {
         return false;
     }
 }
-const cart = async (req, res) => {
+
+// Cart 
+const cartPage = async (req, res) => {
     try {
         let allData = await cartModel.find({});
         return res.render('cart', {
@@ -122,10 +127,10 @@ const addtocart = async (req, res) => {
     try {
         const id = req.body.cartId;
         const single = await bookModel.findById(id);
-        let allData = await cartModel.findById(id);
+        let duplicate = await cartModel.findById(id);
         console.log("Product Id :- " + single._id);
         
-        if(allData){
+        if(duplicate){
             console.log("Book Already in Cart");
             return res.redirect('/cart');
         }else{
@@ -133,10 +138,7 @@ const addtocart = async (req, res) => {
                 _id: single._id,
                 name: single.name,
                 price: single.price,
-                pages: single.pages,
-                author: single.author,
                 image: single.image,
-                description: single.description,
                 count: req.body.cartCount
             });
             console.log("Book AddtoCart Successfully");
@@ -158,6 +160,57 @@ const delfromcart = async (req, res) => {
         return false;
     }
 }
+
+// WishList 
+const wishlistPage = async(req,res)=>{
+    try{
+        const allData = await wishlistModel.find({});
+        return res.render('wishlist',{
+            allData
+        });
+    }catch(err){
+        console.log(err);
+        return false;
+    }
+}
+const addtowishlist = async (req,res)=>{
+    try{
+        const id = req.body.wishlistId;
+        const single = await bookModel.findById(id);
+        const duplicate = await wishlistModel.findById(id);
+        console.log("Product Id :- " + single._id);
+        if(duplicate){
+            console.log("Book Already in WishList");
+            return res.redirect('/wishlist');
+        }else{
+            await wishlistModel.create({
+                _id: single._id,
+                name: single.name,
+                price: single.price,
+                pages: single.pages,
+                author: single.author,
+                image: single.image
+            });
+            console.log("Book Add to Wishlist Successfully");
+            return res.redirect('/wishlist');
+        }
+    }catch(err){
+        console.log(err);
+        return false;
+    }
+}
+const delfromwishlist = async(req,res) => {
+    try{
+        const id = req.query.deleteId;
+        await wishlistModel.findByIdAndDelete(id);
+        console.log("Book Delete from Wishlist Successfully");
+        return res.redirect('/wishlist');
+    }catch(err){
+        console.log(err);
+        return false;
+    }
+}
+
 module.exports = {
-    viewPage, addPage, insertData, deletedata, editdata, updateData, readMorePage, addtocart, cart, delfromcart
+    viewPage, addPage, insertData, deletedata, editdata, updateData, readMorePage, cartPage, addtocart, delfromcart,wishlistPage,addtowishlist,delfromwishlist
 }
