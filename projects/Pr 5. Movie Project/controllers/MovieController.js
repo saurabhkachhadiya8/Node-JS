@@ -1,7 +1,12 @@
 const movieModel = require('../models/MovieModel');
 
-const index = (req,res)=>{
-    return res.render('index');
+const index = async(req,res)=>{
+    try{
+        return res.render('index');
+    }catch(err){
+        console.log(err);
+        return false;
+    }
 }
 
 module.exports = {
