@@ -1,5 +1,6 @@
 .layout {
   z-index: 1;
+  height: 100vh !important;
 }
 .layout .header {
   display: flex;
@@ -281,18 +282,6 @@
 }
 .layout.rtl .sidebar.collapsed .menu > ul > .menu-item.sub-menu > .sub-menu-list {
   margin-left: -3px !important;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  height: 100vh;
-  font-family: "Poppins", sans-serif;
-  color: #3f4750;
-  font-size: 0.9rem;
 }
 
 a {

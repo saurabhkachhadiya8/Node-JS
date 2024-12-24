@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/bootstrap.min.css">
 </head>
 <body>
-    <h1>Index Page</h1>
-    <%- include('sidebar') %>
+    <div class="d-flex">
+        <div>
+            <%- include('sidebar') %>
+        </div>
+        <div>
+            <% movies.map((data,i)=>{ %>
+                <h3><%= ++i %> :- <%= data.name %></h3>
+            <% }) %>
+        </div>
+    </div>
 </body>
 </html>
