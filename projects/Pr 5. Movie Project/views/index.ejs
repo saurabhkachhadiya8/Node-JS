@@ -34,106 +34,30 @@
                             <li class="menu-item sub-menu">
                                 <a href="#">
                                     <span class="menu-icon">
-                                        <i class="ri-vip-diamond-fill"></i>
-                                    </span>
-                                    <span class="menu-title">Components</span>
-                                    <span class="menu-suffix">
-                                        <span class="badge primary">Hot</span>
-                                    </span>
-                                </a>
-                                <div class="sub-menu-list">
-                                    <ul>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">Grid</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">Layout</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item sub-menu">
-                                            <a href="#">
-                                                <span class="menu-title">Forms</span>
-                                            </a>
-                                            <div class="sub-menu-list">
-                                                <ul>
-                                                    <li class="menu-item">
-                                                        <a href="#">
-                                                            <span class="menu-title">Input</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="#">
-                                                            <span class="menu-title">Select</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu-item sub-menu">
-                                                        <a href="#">
-                                                            <span class="menu-title">More</span>
-                                                        </a>
-                                                        <div class="sub-menu-list">
-                                                            <ul>
-                                                                <li class="menu-item">
-                                                                    <a href="#">
-                                                                        <span class="menu-title">CheckBox</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="menu-item">
-                                                                    <a href="#">
-                                                                        <span class="menu-title">Radio</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="menu-item sub-menu">
-                                                                    <a href="#">
-                                                                        <span class="menu-title">Want more ?</span>
-                                                                        <span class="menu-suffix">&#x1F914;</span>
-                                                                    </a>
-                                                                    <div class="sub-menu-list">
-                                                                        <ul>
-                                                                            <li class="menu-item">
-                                                                                <a href="#">
-                                                                                    <span
-                                                                                        class="menu-prefix">&#127881;</span>
-                                                                                    <span class="menu-title">You made it
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu-item sub-menu">
-                                <a href="#">
-                                    <span class="menu-icon">
                                         <i class="ri-bar-chart-2-fill"></i>
                                     </span>
-                                    <span class="menu-title">Charts</span>
+                                    <span class="menu-title">Movie</span>
                                 </a>
                                 <div class="sub-menu-list">
                                     <ul>
                                         <li class="menu-item">
                                             <a href="#">
-                                                <span class="menu-title">Pie chart</span>
+                                                <span class="menu-title">All</span>
                                             </a>
                                         </li>
                                         <li class="menu-item">
                                             <a href="#">
-                                                <span class="menu-title">Line chart</span>
+                                                <span class="menu-title">Hindi</span>
                                             </a>
                                         </li>
                                         <li class="menu-item">
                                             <a href="#">
-                                                <span class="menu-title">Bar chart</span>
+                                                <span class="menu-title">Gujarati</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">
+                                                <span class="menu-title">English</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -251,7 +175,12 @@
                         <i class="ri-menu-line ri-xl"></i>
                     </a>
                 </div>
-                <div class="col-2">
+                <div>
+                    <!-- <img src="https://images.hdqwalls.com/download/mufasa-the-lion-king-d-box-poster-gf-1366x768.jpg" alt="mufasa: the lion king" width="100%"> -->
+                    <!-- <img src="https://4kwallpapers.com/images/walls/thumbs_3t/19900.jpg" alt="pushpa 2: the rule" width="100%"> -->
+                    <!-- <img src="https://images.hdqwalls.com/download/red-one-2024-5y-1366x768.jpg" alt="red one" width="100%"> -->
+                    <!-- <img src="https://4kwallpapers.com/images/walls/thumbs_3t/17174.jpeg" alt="Kalki 2898 AD" width="100%"> -->
+                    <!-- <img src="https://images.hdqwalls.com/download/venom-the-last-dance-2024-movie-vk-1366x768.jpg" alt="Venom The Last Dance" width="100%"> -->
                     <% movies.map((data,i)=>{ %>
                         <% const {writers,thumbnail}=data;%>
                             <img src="<%= thumbnail %>" alt="<%= thumbnail %>" height="300">
