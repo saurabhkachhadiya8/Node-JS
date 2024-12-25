@@ -3,12 +3,11 @@
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "mongoose": "^8.9.2",
+    "multer": "^1.4.5-lts.1",
     "nodemon": "^3.1.9",
-    "sass": "^1.83.0",
-    "swiper": "^11.1.15"
+    "sass": "^1.83.0"
   },
   "scripts": {
-    "start": "nodemon index.js",
-    "build-css": "sass config/slider.scss config/slider.css"
+    "start": "nodemon index.js"
   }
 }

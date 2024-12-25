@@ -7,8 +7,11 @@ const database = require('./config/db');
 database();
 
 app.set('view engine','ejs');
-// app.use(express.urlencoded());
+
+app.use(express.urlencoded());
 app.use(express.static(path.join(__dirname,'config')));
+app.use(express.static(path.join(__dirname,'uploads')));
+
 app.use('/',require('./routes/indexRoute'));
 
 app.listen(port,(err)=>{

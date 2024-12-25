@@ -7,187 +7,136 @@
     <title>Document</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="/bootstrap.min.css">
-    <!-- css  -->
-    <link rel="stylesheet" href="/sidebar.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
-    <link rel="stylesheet" href="https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css">
+    <!-- icon  -->
+    <link rel="stylesheet" href="/all.min.css">
+    <!-- slider  -->
+    <link rel="stylesheet" href="/slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+    <!-- font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
-    <div class="layout has-sidebar fixed-sidebar fixed-header">
-        <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
-            <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
-            <div class="image-wrapper">
-                <img src="assets/images/sidebar-bg.jpg" alt="sidebar background" />
+<body style="background: url('http://ott.aipdfquery.com/assets/img/dark-gradient-bg.jpg') no-repeat center;background-size: cover;background-blend-mode: darken;background-color: #5f0000;color: #fff;">
+    <%- include('navbar') %>
+    <div class="container-fluid px-0 py-5">
+        <section class="hero-slider hero-style">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <% slider.map((data) => { %>
+                        <div class="swiper-slide position-relative">
+                            <div class="slide-inner slide-bg-image"
+                                data-background="<%= data.thumbnail %>">
+                                <div class="slider-content">
+                                    <div data-swiper-parallax="300" class="slide-title">
+                                        <h2><%= data.name %></h2>
+                                    </div>
+                                    <div data-swiper-parallax="400" class="slide-text">
+                                        <p><%= data.genre %></p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div data-swiper-parallax="500" class="slide-btns">
+                                        <a href="#" class="theme-btn-s2 fs-5">Book now</a>
+                                        <a href="#" class="theme-btn-s3 fs-5"><i class="fas fa-chevron-circle-right"></i> Get Info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+                <!-- end swiper-wrapper -->
+        
+                <!-- swipper controls -->
+                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
             </div>
-            <div class="sidebar-layout">
-                <div class="sidebar-header">
-                    <div class="pro-sidebar-logo">
-                        <div>M</div>
-                        <h5>MovieHub</h5>
-                    </div>
-                </div>
-                <div class="sidebar-content">
-                    <nav class="menu open-current-submenu">
-                        <ul>
-                            <li class="menu-header"><span> GENERAL </span></li>
-                            <li class="menu-item sub-menu">
-                                <a href="#">
-                                    <span class="menu-icon">
-                                        <i class="ri-bar-chart-2-fill"></i>
-                                    </span>
-                                    <span class="menu-title">Movie</span>
-                                </a>
-                                <div class="sub-menu-list">
-                                    <ul>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">All</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">Hindi</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">Gujarati</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">English</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu-item sub-menu">
-                                <a href="#">
-                                    <span class="menu-icon">
-                                        <i class="ri-shopping-cart-fill"></i>
-                                    </span>
-                                    <span class="menu-title">E-commerce</span>
-                                </a>
-                                <div class="sub-menu-list">
-                                    <ul>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">Products</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">Orders</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">credit card</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu-item sub-menu">
-                                <a href="#">
-                                    <span class="menu-icon">
-                                        <i class="ri-global-fill"></i>
-                                    </span>
-                                    <span class="menu-title">Maps</span>
-                                </a>
-                                <div class="sub-menu-list">
-                                    <ul>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">Google maps</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">Open street map</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu-item sub-menu">
-                                <a href="#">
-                                    <span class="menu-icon">
-                                        <i class="ri-paint-brush-fill"></i>
-                                    </span>
-                                    <span class="menu-title">Theme</span>
-                                </a>
-                                <div class="sub-menu-list">
-                                    <ul>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">Dark</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">
-                                                <span class="menu-title">Light</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu-header" style="padding-top: 20px"><span> EXTRA </span></li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <span class="menu-icon">
-                                        <i class="ri-book-2-fill"></i>
-                                    </span>
-                                    <span class="menu-title">Documentation</span>
-                                    <span class="menu-suffix">
-                                        <span class="badge secondary">Beta</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <span class="menu-icon">
-                                        <i class="ri-calendar-fill"></i>
-                                    </span>
-                                    <span class="menu-title">Calendar</span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <span class="menu-icon">
-                                        <i class="ri-service-fill"></i>
-                                    </span>
-                                    <span class="menu-title">Examples</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </aside>
-        <div id="overlay" class="overlay"></div>
-        <!-- <div style="width: 280px;"></div> -->
-        <div>
-            <main class="content">
-                <div>
-                    <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
-                        <i class="ri-menu-line ri-xl"></i>
-                    </a>
-                    <%- include('slider') %>
-                    <% movies.map((data,i)=>{ %>
-                        <% const {writers,thumbnail}=data;%>
-                            <img src="<%= thumbnail %>" alt="<%= thumbnail %>" height="300">
-                            <% }) %>
-                </div>
-            </main>
-            <div class="overlay"></div>
-        </div>
+        </section>
     </div>
+    <section>
+        <div class="container-fluid p-5">
+            <% movies.map((data,i)=>{ %>
+                <% const {writers,thumbnail}=data;%>
+                    <img src="<%= thumbnail %>" alt="<%= thumbnail %>" height="300">
+                <% }) %>
+        </div>
+    </section>
 
-    <script src="/sidebar.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="/bootstrap.bundle.min.js"></script>
+
+    <!-- slider  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        // HERO SLIDER
+        var menu = [];
+        jQuery('.swiper-slide').each(function (index) {
+            menu.push(jQuery(this).find('.slide-inner').attr("data-text"));
+        });
+        var interleaveOffset = 0.5;
+        var swiperOptions = {
+            loop: true,
+            speed: 800,
+            parallax: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            watchSlidesProgress: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            on: {
+                progress: function () {
+                    var swiper = this;
+                    for (var i = 0; i < swiper.slides.length; i++) {
+                        var slideProgress = swiper.slides[i].progress;
+                        var innerOffset = swiper.width * interleaveOffset;
+                        var innerTranslate = slideProgress * innerOffset;
+                        swiper.slides[i].querySelector(".slide-inner").style.transform =
+                            "translate3d(" + innerTranslate + "px, 0, 0)";
+                    }
+                },
+
+                touchStart: function () {
+                    var swiper = this;
+                    for (var i = 0; i < swiper.slides.length; i++) {
+                        swiper.slides[i].style.transition = "";
+                    }
+                },
+
+                setTransition: function (speed) {
+                    var swiper = this;
+                    for (var i = 0; i < swiper.slides.length; i++) {
+                        swiper.slides[i].style.transition = speed + "ms";
+                        swiper.slides[i].querySelector(".slide-inner").style.transition =
+                            speed + "ms";
+                    }
+                }
+            }
+        };
+
+        var swiper = new Swiper(".swiper-container", swiperOptions);
+
+        // DATA BACKGROUND IMAGE
+        var sliderBgSetting = $(".slide-bg-image");
+        sliderBgSetting.each(function (indx) {
+            if ($(this).attr("data-background")) {
+                $(this).css("background-image", "url(" + $(this).data("background") + ")");
+            }
+        });
+
+
+    </script>
 </body>
 
 </html>

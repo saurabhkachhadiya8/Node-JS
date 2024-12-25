@@ -1400,5 +1400,237 @@
             "other_characters": null,
             "released": "Upcoming (2024)"
         }
+    ],
+    "slider":[
+        {
+            "id": 1,
+            "name": "Pushpa 2: The Rule",
+            "country_name": "India",
+            "genre": ["Romance", "Drama", "Comedy"],
+            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "release": {
+                "date": 28,
+                "month": "July",
+                "year": 2023
+            },
+            "thumbnail": "https://4kwallpapers.com/images/walls/thumbs_3t/19900.jpg",
+            "description": "Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
+            "movie_language": "Hindi",
+            "director": [
+                {
+                    "name": "Karan Johar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Ranveer Singh",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Alia Bhatt",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Dharmendra",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
+                }, {
+                    "name": "Jaya Bachchan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
+                }, {
+                    "name": "Shabana Azmi",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
+                }
+            ],
+            "released": false
+        },
+        {
+            "id": 1,
+            "name": "Mufasa: The Lion King",
+            "country_name": "India",
+            "genre": ["Romance", "Drama", "Comedy"],
+            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "release": {
+                "date": 28,
+                "month": "July",
+                "year": 2023
+            },
+            "thumbnail": "https://images.hdqwalls.com/download/mufasa-the-lion-king-d-box-poster-gf-3840x2160.jpg",
+            "description": "Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
+            "movie_language": "Hindi",
+            "director": [
+                {
+                    "name": "Karan Johar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Ranveer Singh",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Alia Bhatt",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Dharmendra",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
+                }, {
+                    "name": "Jaya Bachchan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
+                }, {
+                    "name": "Shabana Azmi",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
+                }
+            ],
+            "released": false
+        },
+        {
+            "id": 1,
+            "name": "Kalki 2898 A.D.",
+            "country_name": "India",
+            "genre": ["Romance", "Drama", "Comedy"],
+            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "release": {
+                "date": 28,
+                "month": "July",
+                "year": 2023
+            },
+            "thumbnail": "https://4kwallpapers.com/images/walls/thumbs_3t/17174.jpeg",
+            "description": "Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
+            "movie_language": "Hindi",
+            "director": [
+                {
+                    "name": "Karan Johar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Ranveer Singh",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Alia Bhatt",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Dharmendra",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
+                }, {
+                    "name": "Jaya Bachchan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
+                }, {
+                    "name": "Shabana Azmi",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
+                }
+            ],
+            "released": false
+        },
+        {
+            "id": 1,
+            "name": "Red One",
+            "country_name": "India",
+            "genre": ["Romance", "Drama", "Comedy"],
+            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "release": {
+                "date": 28,
+                "month": "July",
+                "year": 2023
+            },
+            "thumbnail": "https://images.hdqwalls.com/download/red-one-2024-5y-3840x2160.jpg",
+            "description": "Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
+            "movie_language": "Hindi",
+            "director": [
+                {
+                    "name": "Karan Johar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Ranveer Singh",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Alia Bhatt",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Dharmendra",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
+                }, {
+                    "name": "Jaya Bachchan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
+                }, {
+                    "name": "Shabana Azmi",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
+                }
+            ],
+            "released": false
+        },
+        {
+            "id": 1,
+            "name": "Venom: The Last Dance",
+            "country_name": "India",
+            "genre": ["Romance", "Drama", "Comedy"],
+            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "release": {
+                "date": 28,
+                "month": "July",
+                "year": 2023
+            },
+            "thumbnail": "https://images.hdqwalls.com/download/venom-the-last-dance-2024-movie-vk-3840x2160.jpg",
+            "description": "Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
+            "movie_language": "Hindi",
+            "director": [
+                {
+                    "name": "Karan Johar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Ranveer Singh",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Alia Bhatt",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Dharmendra",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
+                }, {
+                    "name": "Jaya Bachchan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
+                }, {
+                    "name": "Shabana Azmi",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
+                }
+            ],
+            "released": false
+        }
     ]
 }
