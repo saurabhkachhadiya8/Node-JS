@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/slider.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+<section class="section slider-section">
+    <div class="slider-column">
+        <div class="swiper swiper-slider">
+            <div class="swiper-wrapper">
+                <img class="swiper-slide" src="https://images.hdqwalls.com/download/mufasa-the-lion-king-d-box-poster-gf-1366x768.jpg" alt="mufasa: the lion king" width="100%">
+                <img class="swiper-slide" src="https://4kwallpapers.com/images/walls/thumbs_3t/19900.jpg" alt="pushpa 2: the rule" width="100%">
+                <img class="swiper-slide" src="https://images.hdqwalls.com/download/red-one-2024-5y-1366x768.jpg" alt="red one" width="100%">
+                <img class="swiper-slide" src="https://4kwallpapers.com/images/walls/thumbs_3t/17174.jpeg" alt="Kalki 2898 AD" width="100%">
+                <img class="swiper-slide" src="https://images.hdqwalls.com/download/venom-the-last-dance-2024-movie-vk-1366x768.jpg" alt="Venom The Last Dance" width="100%">
+            </div>
+            <span class="swiper-pagination"></span>
+            <span class="swiper-button-prev"></span>
+            <span class="swiper-button-next"></span>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper(".swiper-slider", {
+        // Optional parameters
+        centeredSlides: true,
+        slidesPerView: 1,
+        grabCursor: true,
+        freeMode: false,
+        loop: true,
+        mousewheel: false,
+        keyboard: {
+            enabled: true
+        },
+
+        // Enabled autoplay mode
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        },
+
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: false,
+            clickable: true
+        },
+
+        // If we need navigation
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+    });
+
+</script>

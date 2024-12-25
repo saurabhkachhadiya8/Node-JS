@@ -4,10 +4,11 @@
     "express": "^4.21.2",
     "mongoose": "^8.9.2",
     "nodemon": "^3.1.9",
-    "sass": "^1.83.0"
+    "sass": "^1.83.0",
+    "swiper": "^11.1.15"
   },
   "scripts": {
     "start": "nodemon index.js",
-    "build-css": "sass config/sidebar.scss config/sidebar.css"
+    "build-css": "sass config/slider.scss config/slider.css"
   }
 }

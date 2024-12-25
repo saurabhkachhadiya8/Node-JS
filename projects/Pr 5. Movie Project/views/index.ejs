@@ -168,19 +168,14 @@
             </div>
         </aside>
         <div id="overlay" class="overlay"></div>
-        <div class="layout">
+        <!-- <div style="width: 280px;"></div> -->
+        <div>
             <main class="content">
                 <div>
                     <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
                         <i class="ri-menu-line ri-xl"></i>
                     </a>
-                </div>
-                <div>
-                    <!-- <img src="https://images.hdqwalls.com/download/mufasa-the-lion-king-d-box-poster-gf-1366x768.jpg" alt="mufasa: the lion king" width="100%"> -->
-                    <!-- <img src="https://4kwallpapers.com/images/walls/thumbs_3t/19900.jpg" alt="pushpa 2: the rule" width="100%"> -->
-                    <!-- <img src="https://images.hdqwalls.com/download/red-one-2024-5y-1366x768.jpg" alt="red one" width="100%"> -->
-                    <!-- <img src="https://4kwallpapers.com/images/walls/thumbs_3t/17174.jpeg" alt="Kalki 2898 AD" width="100%"> -->
-                    <!-- <img src="https://images.hdqwalls.com/download/venom-the-last-dance-2024-movie-vk-1366x768.jpg" alt="Venom The Last Dance" width="100%"> -->
+                    <%- include('slider') %>
                     <% movies.map((data,i)=>{ %>
                         <% const {writers,thumbnail}=data;%>
                             <img src="<%= thumbnail %>" alt="<%= thumbnail %>" height="300">

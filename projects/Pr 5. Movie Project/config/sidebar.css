@@ -21,7 +21,9 @@
 .sidebar {
   color: #7d84ab;
   overflow-x: hidden !important;
-  position: relative;
+  /* position: fixed;
+  top: 0;
+  left: 0; */
 }
 .sidebar::-webkit-scrollbar-thumb {
   border-radius: 4px;
@@ -409,5 +411,3 @@ a {
   margin: 0 10px;
   color: #3f4750;
 }
-
-/*# sourceMappingURL=sidebar.css.map */
