@@ -3,6 +3,21 @@ const movieApi = require('../config/movieApi.json');
 const fs = require('fs');
 const path = require('path');
 
+const fetchAndStoreMovies = async (req, res) => {
+    try {
+        const movies = movieApi.movies;
+
+        await Movie.deleteMany({});
+
+        await Movie.insertMany(movies);
+
+        console.log('Movies have been successfully saved to MongoDB!');
+        return res.status(200).send('Data stored in MongoDB');
+    } catch (err) {
+        console.error(err);
+        return res.status(500).send('Error storing data in MongoDB');
+    }
+};
 const index = async (req, res) => {
     try {
         const movies = await movieApi;

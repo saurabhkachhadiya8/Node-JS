@@ -33,7 +33,14 @@
                                         <h2><%= data.name %></h2>
                                     </div>
                                     <div data-swiper-parallax="400" class="slide-text">
-                                        <p><%= data.genre %></p>
+                                        <p>
+                                            <% data.genre.map((genre) => { %>
+                                                <%= genre %> / 
+                                            <% }) %>
+                                        </p>
+                                    </div>
+                                    <div data-swiper-parallax="400" class="slide-text">
+                                        <p><%= data.description %></p>
                                     </div>
                                     <div class="clearfix"></div>
                                     <div data-swiper-parallax="500" class="slide-btns">

@@ -4,15 +4,24 @@
             "id": 1,
             "name": "Rocky Aur Rani Kii Prem Kahaani",
             "country_name": "India",
-            "genre": ["Romance", "Drama", "Comedy"],
-            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "genre": [
+                "Romance",
+                "Drama",
+                "Comedy",
+                "Family"
+            ],
+            "writers": [
+                "Ishita Moitra",
+                "Shashank Khaitan",
+                "Sumit Roy"
+            ],
             "release": {
                 "date": 28,
                 "month": "July",
                 "year": 2023
             },
-            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/6/65/Rocky_Aur_Rani_Ki_Prem_Kahani.jpg/220px-Rocky_Aur_Rani_Ki_Prem_Kahani.jpg",
-            "description": "Rocky Aur Rani Kii Prem Kahaani (transl. Rocky and Rani's Love Story), is a 2023 Indian Hindi-language romantic comedy family drama directed by Karan Johar and written by Ishita Moitra, Shashank Khaitan and Sumit Roy. The film stars Ranveer Singh and Alia Bhatt as a couple with contrasting personalities who decide to live with each other's families for three months before getting married. Dharmendra, Jaya Bachchan, Shabana Azmi, Tota Roy Chowdhury, Churni Ganguly, Aamir Bashir, and Kshitee Jog play their family members.Produced under Dharma Productions and Viacom18 Studios, the film was announced in July 2021, marking Johar's feature film comeback after the romantic drama Ae Dil Hai Mushkil (2016). Principal photography took place from August 2021 to March 2023 in Mumbai, New Delhi, and Jammu & Kashmir. Filming and release were delayed by a few months due to Bhatt's pregnancy. Pritam composed the film's music, with the audio rights purchased by Saregama. Nitin Baid edited the film, and the cinematography was handled by Manush Nandan.Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjViNWNiNDUtMTk2NC00NGExLTkyMjctNDhhMjY3MTA5N2U5XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "Flamboyant Punjabi Rocky and intellectual Bengali journalist Rani fall in love despite their differences. After facing family opposition, they decide to live with each other's families for three months before getting married.",
             "movie_language": "Hindi",
             "director": [
                 {
@@ -36,1601 +45,1338 @@
                 {
                     "name": "Dharmendra",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
-                }, {
+                },
+                {
                     "name": "Jaya Bachchan",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
-                }, {
+                },
+                {
                     "name": "Shabana Azmi",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
                 }
             ],
-            "released": false
+            "released": true
         },
         {
             "id": 2,
             "name": "Jawan",
             "country_name": "India",
-            "genre": ["Action", "Thriller"],
-            "writers": ["Atlee Kumar", "S. Ramana Girivasan"],
+            "genre": [
+                "Action",
+                "Thriller"
+            ],
+            "writers": [
+                "Atlee Kumar",
+                "S. Ramana Girivasan",
+                "Sumit Arora"
+            ],
             "release": {
                 "date": 7,
                 "month": "September",
                 "year": 2023
             },
-            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Jawan_film_poster.jpg/220px-Jawan_film_poster.jpg",
-            "description": "Jawan is a high-octane action thriller that combines intense action sequences with a gripping emotional storyline. The movie features Shah Rukh Khan in dual roles, where he plays both a wronged man seeking revenge and a vigilante fighting corruption. The plot is filled with twists, conspiracy, and high-stakes drama, offering a unique narrative about the quest for justice. Nayanthara plays the female lead, bringing a touch of grace and determination to the film. Vijay Sethupathi, as the antagonist, adds a layer of complexity to the conflict, pushing the boundaries of good and evil. Atlee’s direction and the explosive action sequences make the film a roller-coaster ride. The film emphasizes the power of resilience, revenge, and redemption.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMGExNGI1NDktOWI2Mi00NDM3LWIxMmQtNTQxYTgzMzI0MTA1XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "A prison warden recruits inmates to commit outrageous crimes that shed light on corruption and injustice - and that lead him to an unexpected reunion.",
             "movie_language": "Hindi",
-            "director_name": ["Atlee Kumar"],
-            "director_image": ["https://i.pinimg.com/236x/da/e2/63/dae26390e8bde94e02c58f16d2cd3afd.jpg"],
-            "hero_name": ["Shah Rukh Khan"],
-            "hero_image": ["https://i.pinimg.com/236x/89/04/f8/8904f8a84466ee5a79767243808e51dd.jpg"],
-            "heroine_name": ["Nayanthara"],
-            "heroine_image": ["https://i.pinimg.com/474x/b0/bc/89/b0bc89714b9f802534dbdbbe581273af.jpg"],
-            "released": false
+            "director": [
+                {
+                    "name": "Atlee Kumar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Atleeawrd.jpg/480px-Atleeawrd.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Shah Rukh Khan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/334px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Nayanthara",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Nayanthara_at_Filmfare_Awards.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Vijay Sethupathi",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Vijay_Sethupathi_at_the_premiere_of_Merry_Christmas_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Deepika Padukone",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Deepika_Padukone_Cannes_2018_%28cropped%29.jpg/359px-Deepika_Padukone_Cannes_2018_%28cropped%29.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 3,
             "name": "Pathaan",
             "country_name": "India",
-            "genre": ["Action", "Thriller"],
-            "writers": ["Siddharth Anand", "Shridhar Raghavan"],
+            "genre": [
+                "Action",
+                "Thriller"
+            ],
+            "writers": [
+                "Siddharth Anand",
+                "Shridhar Raghavan",
+                "Abbas Tyrewala"
+            ],
             "release": {
                 "date": 25,
                 "month": "January",
                 "year": 2023
             },
-            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c3/Pathaan_film_poster.jpg",
-            "description": "Pathaan marks Shah Rukh Khan's grand return to the big screen, where he plays an ex-Indian spy tasked with thwarting an international terrorist's dangerous plot. The movie is filled with high-octane action, suspenseful moments, and pulse-pounding thrills. Set against the backdrop of global espionage, Pathaan is not only a personal battle but a fight against a larger, more dangerous threat. Deepika Padukone adds charm as an ally, while John Abraham takes on the role of the menacing villain. Siddharth Anand’s direction brings together an entertaining mix of action, emotion, and larger-than-life stunts. With its adrenaline-fueled pace and gripping storyline, Pathaan provides a cinematic experience of thrills, patriotism, and personal sacrifice.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDdkNTY1MDQtY2I5MC00OTFlLTg5OWQtZWE2YzE5NWFiMDgzXkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "An Indian agent races against a doomsday clock as a ruthless mercenary, with a bitter vendetta, mounts an apocalyptic attack against the country.",
             "movie_language": "Hindi",
-            "director_name": ["Siddharth Anand"],
-            "director_image": ["https://i.pinimg.com/736x/2f/19/52/2f19528a43a6a589dce0aa93c2d34de5.jpg"],
-            "hero_name": ["Shah Rukh Khan"],
-            "hero_image": ["https://i.pinimg.com/236x/89/04/f8/8904f8a84466ee5a79767243808e51dd.jpg"],
-            "heroine_name": ["Deepika Padukone"],
-            "heroine_image": ["https://i.pinimg.com/236x/b7/b0/f7/b7b0f778e82496321d1036d2b1a3a778.jpg"],
-            "released": false
+            "director": [
+                {
+                    "name": "Siddharth Anand",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Sid_Anand_on_set.jpg/320px-Sid_Anand_on_set.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Shah Rukh Khan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/334px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Deepika Padukone",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Deepika_Padukone_Cannes_2018_%28cropped%29.jpg/359px-Deepika_Padukone_Cannes_2018_%28cropped%29.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "John Abraham",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/JohnAbraham.jpg"
+                },
+                {
+                    "name": "Dimple Kapadia",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/DimpleKapadiaPichvai_%28cropped%29.png"
+                },
+                {
+                    "name": "Ashutosh Rana",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ashutosh_Rana_2.jpg/480px-Ashutosh_Rana_2.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 4,
             "name": "12th Fail",
             "country_name": "India",
-            "genre": ["Drama"],
-            "writers": ["Vidhu Vinod Chopra", "Jaskunwar Kohli"],
+            "genre": [
+                "Drama"
+            ],
+            "writers": [
+                "Vidhu Vinod Chopra",
+                "Jaskunwar Kohli"
+            ],
             "release": {
-                "date": 12,
-                "month": "November",
+                "date": 27,
+                "month": "October",
                 "year": 2023
             },
-            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/12th_Fail_poster.jpeg/220px-12th_Fail_poster.jpeg",
-            "description": "12th Fail is a poignant drama that delves deep into the pressures of the Indian education system, showcasing the journey of two students who fail their 12th exams but learn invaluable lessons about life and self-worth. The film beautifully captures the emotional struggle of young minds trying to meet societal expectations while pursuing their dreams. It challenges the notion of success, highlighting the resilience and inner strength of students who overcome failure. The performances by the lead actors, Vikrant Massey and Shweta Tripathi, are heartfelt, and the film resonates with anyone who has faced academic pressure. It emphasizes the importance of mental health, self-love, and the need to break free from the societal definition of success.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BNTE3OTIxZDYtNjA0NC00N2YxLTg1NGQtOTYxNmZkMDkwOWNjXkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "The real-life story of IPS Officer Manoj Kumar Sharma and IRS Officer Shraddha Joshi.",
             "movie_language": "Hindi",
-            "director_name": ["Vidhu Vinod Chopra"],
-            "director_image": ["https://i.pinimg.com/236x/de/0d/a8/de0da83772983cdc60c1f1123668c222.jpg"],
-            "hero_name": ["Vikrant Massey"],
-            "hero_image": ["https://i.pinimg.com/236x/02/4d/cf/024dcf3c4474abb904962b3fea34a12f.jpg"],
-            "heroine_name": ["Medha Shankr"],
-            "heroine_image": ["https://i.pinimg.com/236x/30/18/0d/30180dc2249461c2792e71454980178d.jpg"],
-            "released": false
+            "director": [
+                {
+                    "name": "Vidhu Vinod Chopra",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Vidhu_Vinod_Chopra_2023_%28cropped%29.jpg/457px-Vidhu_Vinod_Chopra_2023_%28cropped%29.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Vikrant Massey",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Vikrant_Massey_in_the_closing_ceremony_of_IFFI_2024.jpg/384px-Vikrant_Massey_in_the_closing_ceremony_of_IFFI_2024.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Medha Shankr",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Medha_Shankr_spotted_in_Khar_%28cropped%29.jpg/394px-Medha_Shankr_spotted_in_Khar_%28cropped%29.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Anant V Joshi",
+                    "image": ""
+                },
+                {
+                    "name": "Anshumaan Pushkar",
+                    "image": ""
+                }
+            ],
+            "released": true
         },
         {
             "id": 5,
             "name": "Hanu Man",
             "country_name": "India",
-            "genre": "Superhero, Fantasy",
-            "writers": "Prasanth Varma",
+            "genre": [
+                "Action",
+                "Adventure",
+                "Fantasy"
+            ],
+            "writers": [
+                "Prasanth Varma"
+            ],
             "release": {
-                "date": 14,
-                "month": "April",
+                "date": 12,
+                "month": "January",
                 "year": 2024
             },
-            "thumbnail": null,
-            "description": "Hanu Man is a Telugu superhero film that blends mythology with modern-day superhero elements. The film follows the journey of a young man who gains incredible powers inspired by Lord Hanuman, allowing him to fight evil forces threatening the peace of his city. The film taps into the rich Indian mythology surrounding Hanuman while introducing a modern twist that appeals to the younger generation. With stunning visual effects, action-packed sequences, and an emotional storyline, Hanu Man promises to be a groundbreaking superhero film in Telugu cinema. It explores themes of heroism, self-discovery, and sacrifice, drawing parallels between ancient legends and contemporary challenges.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BYmI0MDdhYzYtZDg3Mi00ODI2LTk0OTgtZDg4ZDUzNWZjYjMzXkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "An imaginary place called Anjanadri where the protagonist gets the powers of Hanuman and fights for Anjanadri.",
             "movie_language": "Telugu",
-            "director_name": "Prasanth Varma",
-            "director_image": null,
-            "hero_name": "Teja Sajja",
-            "hero_image": null,
-            "heroine_name": "Amritha Aiyer",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming"
+            "director": [
+                {
+                    "name": "Prasanth Varma",
+                    "image": ""
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Teja Sajja",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Teja_Sajja_snapped_at_the_trailer_launch_of_Hanuman.jpg/405px-Teja_Sajja_snapped_at_the_trailer_launch_of_Hanuman.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Amritha Aiyer",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Amritha_Aiyer_at_HanuMan_gratitude_meet_%281%29.jpg/320px-Amritha_Aiyer_at_HanuMan_gratitude_meet_%281%29.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Varalaxmi Sarathkumar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Madhu_Shalini%2C_Sonia_Agarwal_and_Varalakshmi_Sarathkumar_at_CCL3_%28cropped%29_2.jpg"
+                },
+                {
+                    "name": "Samuthirakani",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Samuthirakani_at_Sandamarudham_Audio_Launch.jpg/320px-Samuthirakani_at_Sandamarudham_Audio_Launch.jpg"
+                },
+                {
+                    "name": "Vinay Rai",
+                    "image": ""
+                },
+                {
+                    "name": "Vennela Kishore",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Vennela_Kishore.jpg/335px-Vennela_Kishore.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 6,
             "name": "Satyaprem Ki Katha",
             "country_name": "India",
-            "genre": "Romance, Drama",
-            "writers": "Karan Shrikant Sharma",
+            "genre": [
+                "Romance",
+                "Drama"
+            ],
+            "writers": [
+                "Karan Shrikant Sharma"
+            ],
             "release": {
                 "date": 29,
                 "month": "June",
                 "year": 2023
             },
-            "thumbnail": null,
-            "description": "Satyaprem Ki Katha is a heartfelt romantic drama that delves into the life of Satyaprem, a young man with a deep sense of morality, and his complex relationship with Katha, a woman with a troubled past. The film explores love in its rawest and most vulnerable form, highlighting the significance of trust, honesty, and sacrifice in a relationship. Kartik Aaryan’s portrayal of Satyaprem is both charming and earnest, while Kiara Advani brings warmth and depth to the role of Katha. The movie beautifully balances humor and emotion, drawing the audience into a story about finding love amidst the challenges life throws your way. Directed by Sameer Vidwans, the film is a beautiful tribute to the power of love and the transformative nature of relationships.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTVmZDNjMGEtNzc5MC00ODY4LWI1ZTYtMjM2ODhhNGExNzgxXkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "A middle-class boy in Ahmedabad, Satyaprem falling in one-sided love with Katha, who is coping with her breakup with Tapan. Through the journey, they discover each other's life and complement in accomplishing what was left halfway.",
             "movie_language": "Hindi",
-            "director_name": "Sameer Vidwans",
-            "director_image": null,
-            "hero_name": "Kartik Aaryan as Satyaprem",
-            "hero_image": null,
-            "heroine_name": "Kiara Advani as Katha",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": false
+            "director": [
+                {
+                    "name": "Sameer Vidwans",
+                    "image": ""
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Kartik Aaryan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Kartik_Aaryan_promoting_Bhool_Bhualiyaa_3.jpg/358px-Kartik_Aaryan_promoting_Bhool_Bhualiyaa_3.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Kiara Advani",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kiara_Advani_snapped_at_the_screening_of_Shershaah_%28cropped%29.jpg/384px-Kiara_Advani_snapped_at_the_screening_of_Shershaah_%28cropped%29.jpg"
+                }
+            ],
+            "other_characters": [],
+            "released": true
         },
         {
             "id": 7,
             "name": "Tiger 3",
             "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "Maneesh Sharma, Shridhar Raghavan",
+            "genre": [
+                "Action",
+                "Thriller"
+            ],
+            "writers": [
+                "Shridhar Raghavan",
+                "Anckur Chaudhry",
+                "Aditya Chopra"
+            ],
             "release": {
-                "date": 10,
+                "date": 12,
                 "month": "November",
                 "year": 2023
             },
-            "thumbnail": null,
-            "description": "Tiger 3 is the latest action-packed chapter in the Tiger franchise, with Salman Khan reprising his role as the daring Indian spy, Tiger. This time, Tiger is up against a more dangerous enemy in the form of Emraan Hashmi, who poses a serious threat to national security. The movie is a visual spectacle, with high-intensity action sequences, stunts, and chase scenes that will keep viewers on the edge of their seats. Katrina Kaif returns as Zoya, Tiger’s partner in espionage, and their chemistry is as intense as ever. Directed by Maneesh Sharma, the film takes the action genre to new heights, blending espionage with thrilling confrontations. Tiger 3 is an explosive ride filled with twists, intrigue, and patriotism.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMGQ1MzkzZDYtMzg1YS00ODE0LTgyYTYtNDdkOWNjMDFhMmZjXkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "Tiger and Zoya are back - to save the country and their family. This time it's personal.",
             "movie_language": "Hindi",
-            "director_name": "Maneesh Sharma",
-            "director_image": null,
-            "hero_name": "Salman Khan as Tiger",
-            "hero_image": null,
-            "heroine_name": "Katrina Kaif as Zoya",
-            "heroine_image": null,
-            "other_characters": "Emraan Hashmi",
-            "released": false
+            "director": [
+                {
+                    "name": "Maneesh Sharma",
+                    "image": ""
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Salman Khan",
+                    "imag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Salman_Khan_in_2023_%281%29_%28cropped%29.jpg/480px-Salman_Khan_in_2023_%281%29_%28cropped%29.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Katrina Kaif",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Katrina_Kaif_promoting_Bharat_in_2019.jpg/340px-Katrina_Kaif_promoting_Bharat_in_2019.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Emraan Hashmi",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Emraan_Hashmi_at_RAAZ_3_DVD_launch.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 8,
             "name": "Dunki",
             "country_name": "India",
-            "genre": "Drama, Comedy",
-            "writers": "Rajkumar Hirani, Abhijat Joshi",
+            "genre": [
+                "Drama",
+                "Comedy"
+            ],
+            "writers": [
+                "Rajkumar Hirani",
+                "Abhijat Joshi",
+                "Kanika Dhillon"
+            ],
             "release": {
-                "date": 22,
+                "date": 21,
                 "month": "December",
                 "year": 2023
             },
-            "thumbnail": null,
-            "description": "Directed by Rajkumar Hirani, Dunki tells the story of a man’s journey from India to a foreign land as he seeks a better life. The film touches on themes of migration, dreams, and the human spirit, combining humor and emotional depth. Shah Rukh Khan stars as the lead, bringing his signature charisma and intensity to a role that’s both comedic and dramatic. The film is expected to deliver a powerful message about the struggles faced by those in search of a better future, infused with Hirani’s signature storytelling style. Dunki promises to be an entertaining yet thought-provoking journey for audiences.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMThhZjM4M2UtYmE1NC00YTMzLTk3ZTAtNmQ1ZmI4YmRmZGE1XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "When his friends in Punjab struggle to clear the immigration process, an ex-soldier guides them on a risky journey to enter the UK without permission.",
             "movie_language": "Hindi",
-            "director_name": "Rajkumar Hirani",
-            "director_image": null,
-            "hero_name": "Shah Rukh Khan",
-            "hero_image": "https://i.pinimg.com/236x/89/04/f8/8904f8a84466ee5a79767243808e51dd.jpg",
-            "heroine_name": null,
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming"
+            "director": [
+                {
+                    "name": "Rajkumar Hirani",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Rajkumar_Hirani_2014.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Shah Rukh Khan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/334px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Taapsee Pannu",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Taapsee_Pannu_in_March_2022.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Boman Irani",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/IIFA_2017_Green_Carpet_%2836349841166%29_%28cropped%29.jpg/359px-IIFA_2017_Green_Carpet_%2836349841166%29_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Anil Grover",
+                    "image": ""
+                },
+                {
+                    "name": "Vikram Kochhar",
+                    "image": ""
+                },
+                {
+                    "name": "Vicky Kaushal",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Vicky_Kaushal_snapped_promoting_Zara_Hatke_Zara_Bach_Ke_on_the_sets_of_The_Kapil_Sharma_Show_%28cropped%29.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 9,
-            "name": "Sreeja",
+            "name": "Devara Part 1",
             "country_name": "India",
-            "genre": "Thriller, Drama",
-            "writers": null,
+            "genre": [
+                "Action",
+                "Drama",
+                "Thriller"
+            ],
+            "writers": [
+                "Koratala Siva"
+            ],
             "release": {
-                "date": 28,
-                "month": "December",
-                "year": 2023
+                "date": 26,
+                "month": "September",
+                "year": 2024
             },
-            "thumbnail": null,
-            "description": "Sreeja is a gripping thriller about a woman’s fight for survival after she finds herself in a dangerous situation. The film explores themes of strength, resilience, and the darkness that lurks in the most unsuspecting places. With an intense plot and strong performances, Sreeja is expected to captivate audiences with its suspenseful narrative. The movie has already generated buzz due to its intriguing storyline and the promise of a powerful female lead. Directed by an upcoming filmmaker, it explores the psychological intricacies of a woman’s struggle to break free from a dark past.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzUwZTM1ZDEtZGViOC00YmUxLWEwNWQtNGIyMzE2NWZkYzUyXkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "A mighty sea warrior takes a violent stand against the criminal deeds of his village. Years later, his mild-mannered son walks a path of his own.",
             "movie_language": "Hindi",
-            "director_name": null,
-            "director_image": null,
-            "hero_name": null,
-            "hero_image": null,
-            "heroine_name": null,
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming"
+            "director": [
+                {
+                    "name": "Koratala Siva",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Koratala_Siva_%28cropped%29.jpg/359px-Koratala_Siva_%28cropped%29.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "N.T. Rama Rao Jr.",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Jr-NTRspotted-promoting-RRR-on-sets-of-The-Kapil-Sharma-Show_%28cropped%29.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Janhvi Kapoor",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Janhvi_Kapoor_snapped_at_the_press_show_of_Bawaal.jpg/354px-Janhvi_Kapoor_snapped_at_the_press_show_of_Bawaal.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Saif Ali Khan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Saif_Ali_Khan_At_The_5th_Anniversary_Celebration_Of_Chevrolet.jpg/480px-Saif_Ali_Khan_At_The_5th_Anniversary_Celebration_Of_Chevrolet.jpg"
+                },
+                {
+                    "name": "Prakash Raj",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Prakash_Raj_at_KLF_18_kozhikode.jpg/480px-Prakash_Raj_at_KLF_18_kozhikode.jpg"
+                },
+                {
+                    "name": "Srikanth",
+                    "image": ""
+                },
+                {
+                    "name": "Shine Tom Chacko",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Shine_Tom_Chacko_2019.jpg/373px-Shine_Tom_Chacko_2019.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 10,
-            "name": "Jee Le Zaraa",
+            "name": "Bade Miyan Chote Miyan",
             "country_name": "India",
-            "genre": "Adventure, Drama",
-            "writers": "Zoya Akhtar, Reema Kagti",
+            "genre": [
+                "Action",
+                "Adventure",
+                "Sci-Fi"
+            ],
+            "writers": [
+                "Aditya Basu",
+                "Vashu Bhagnani",
+                "Suraj Gianani"
+            ],
             "release": {
-                "date": null,
-                "month": null,
+                "date": 11,
+                "month": "April",
                 "year": 2024
             },
-            "thumbnail": null,
-            "description": "Directed by Zoya Akhtar, Jee Le Zaraa is a road-trip film that follows three women on a journey of self-discovery, adventure, and friendship. The movie stars Priyanka Chopra, Katrina Kaif, and Alia Bhatt, bringing together a stellar ensemble cast of strong, independent women. The film promises to be a blend of heartwarming moments, humor, and inspiring experiences as the trio navigates through challenges in their lives. With Zoya’s keen eye for character-driven storytelling, Jee Le Zaraa is set to explore themes of liberation, independence, and the bonds that form between women.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDE4Yzc3YTctODE5My00Mjg3LWI0ZDktZjM4MmVkMTQ3ZmNmXkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "Two elite soldiers with troubled pasts are enlisted for a daring mission when a deadly masked villain threatens India's defenses.",
             "movie_language": "Hindi",
-            "director_name": "Zoya Akhtar",
-            "director_image": null,
-            "hero_name": null,
-            "hero_image": null,
-            "heroine_name": "Priyanka Chopra, Katrina Kaif, Alia Bhatt",
-            "heroine_image": ["","","https://i.pinimg.com/236x/af/07/8f/af078fbb15675781341b9c2bfbd91aa6.jpg"],
-            "other_characters": null,
-            "released": "Upcoming"
+            "director": [
+                {
+                    "name": "Ali Abbas Zafar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Ali_Abbas_Zafar.jpg/359px-Ali_Abbas_Zafar.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Akshay Kumar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Akshay_Kumar.jpg"
+                },
+                {
+                    "name": "Tiger Shroff",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Tiger_Shroff_in_2019.jpg/340px-Tiger_Shroff_in_2019.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Sonakshi Sinha",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Sonakshi_Sinha_snapped_at_Krome_Studio_in_Bandra_%285%29.jpg/349px-Sonakshi_Sinha_snapped_at_Krome_Studio_in_Bandra_%285%29.jpg"
+                },
+                {
+                    "name": "Alaya F",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/Alaya_F_and_others_at_Parcos_Beauty_Influencer_Awards_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Manushi Chhillar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Manushi_Chhillar_attends_a_press_meet_for_the_Gem_and_Jewellery_Export_Promotion_Council_of_India_%28GJEPC%29_in_2023_%28cropped%29.jpg/427px-Manushi_Chhillar_attends_a_press_meet_for_the_Gem_and_Jewellery_Export_Promotion_Council_of_India_%28GJEPC%29_in_2023_%28cropped%29.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Ronit Roy",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Ronit_Roy_at_Sahara_IPL_Awards_%28cropped%29.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 11,
             "name": "Kisi Ka Bhai Kisi Ki Jaan",
             "country_name": "India",
-            "genre": "Action, Comedy",
-            "writers": "Farhad Samji",
+            "genre": [
+                "Action",
+                "Comedy",
+                "Drama"
+            ],
+            "writers": [
+                "Tasha Bhambra",
+                "Sparsh Khetarpal",
+                "Sajid Nadiadwala"
+            ],
             "release": {
                 "date": 21,
                 "month": "April",
                 "year": 2023
             },
-            "thumbnail": null,
-            "description": "Kisi Ka Bhai Kisi Ki Jaan is a light-hearted family drama with action-packed elements. The story revolves around a man, played by Salman Khan, who must protect his loved ones from external threats while keeping his family’s values intact. The movie is filled with humor, action, and emotional moments, making it a wholesome entertainer. Pooja Hegde stars as the female lead, bringing charm and warmth to the narrative. The movie also features an ensemble cast, adding more depth and comedy to the story. Directed by Farhad Samji, it’s a fun-filled film that mixes family drama and action for a perfect movie night.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDZlZDIxM2EtMDk1Ni00MTM3LTg2YjYtNzYxMTM3ZTU0NzU0XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "The eldest brother refuses to marry since he believes it may create disharmony in his big family. His brothers, who've already found partners, come together to find a match for him.",
             "movie_language": "Hindi",
-            "director_name": "Farhad Samji",
-            "director_image": null,
-            "hero_name": "Salman Khan",
-            "hero_image": null,
-            "heroine_name": "Pooja Hegde",
-            "heroine_image": null,
-            "other_characters": "Venkatesh Daggubati, Raghav Juyal",
-            "released": false
+            "director": [
+                {
+                    "name": "Farhad Samji",
+                    "image": ""
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Salman Khan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Salman_Khan_in_2023_%281%29_%28cropped%29.jpg/480px-Salman_Khan_in_2023_%281%29_%28cropped%29.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Pooja Hegde",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Pooja_Hegde_at_Beast_Telugu_press_meet.jpg/359px-Pooja_Hegde_at_Beast_Telugu_press_meet.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Venkatesh Daggubati",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Daggubati_Venkatesh_%28cropped%29.jpg/480px-Daggubati_Venkatesh_%28cropped%29.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 12,
             "name": "Bholaa",
             "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "Ajay Devgn, Sandeep Kewlani",
+            "genre": [
+                "Action",
+                "Thriller",
+                "Adventure",
+                "Crime"
+            ],
+            "writers": [
+                "Lokesh Kanagaraj",
+                "Ankush Singh",
+                "Aamil Keeyan Khan",
+                "Sandeep Kewlani",
+                "Shridhar Dubey"
+            ],
             "release": {
                 "date": 30,
                 "month": "March",
                 "year": 2023
             },
-            "thumbnail": null,
-            "description": "Bholaa is an intense action thriller directed by Ajay Devgn, who also stars in the lead role. The movie follows Bholaa, a man with a tragic past, who is on a mission to reunite with his daughter while being pursued by ruthless enemies. The movie combines raw action with a strong emotional core, making it an engaging watch. Tabu plays a pivotal role, adding complexity and intensity to the narrative. With mind-blowing stunts, compelling storytelling, and a powerful lead performance, Bholaa is an edge-of-the-seat thriller that will keep the audience hooked.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzMzYzZiNWYtZDNlMy00YzIwLTk3YWYtYmMyZjc3NGQ5ZTk5XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "After getting out of prison with the desire to meet his daughter, Bholaa's plans are interrupted by a well-orchestrated drug bust.",
             "movie_language": "Hindi",
-            "director_name": "Ajay Devgn",
-            "director_image": null,
-            "hero_name": "Ajay Devgn",
-            "hero_image": null,
-            "heroine_name": "Tabu",
-            "heroine_image": null,
-            "other_characters": "Deepak Dobriyal, Sanjay Mishra",
-            "released": false
+            "director": [
+                {
+                    "name": "Ajay Devgn",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg/343px-Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Ajay Devgn",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg/343px-Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Tabu",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Tabu_in_2024.jpg/359px-Tabu_in_2024.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Sanjay Mishra",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Sanjay_Mishra_Guthlee-Ladoo_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Deepak Dobriyal",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Deepak_Dobriyal_in_2013.jpg"
+                },
+                {
+                    "name": "Gajraj Rao",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Gajraj_Rao_in_February_2020.jpg"
+                },
+                {
+                    "name": "Vineet Kumar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Vineet_Kumar_2022.jpg/270px-Vineet_Kumar_2022.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 13,
-            "name": "Ponniyin Selvan II",
+            "name": "Stree 2: Sarkate Ka Aatank",
             "country_name": "India",
-            "genre": "Epic, Historical",
-            "writers": "Kalki Krishnamurthy, Mani Ratnam",
+            "genre": [
+                "Comedy",
+                "Horror"
+            ],
+            "writers": [
+                "Niren Bhatt",
+                "Krishna D.K.",
+                "Raj Nidimoru"
+            ],
             "release": {
                 "date": 28,
                 "month": "April",
                 "year": 2023
             },
-            "thumbnail": null,
-            "description": "Ponniyin Selvan II continues the saga of the Chola dynasty, diving deeper into the complexities of political intrigue, war, and the personal struggles of its characters. Directed by Mani Ratnam, this epic historical drama takes the audience on a visual journey through medieval Tamil Nadu, exploring themes of power, betrayal, and love. The ensemble cast, including Vikram, Aishwarya Rai Bachchan, and Karthi, deliver outstanding performances, bringing their characters to life in a film that balances grandeur with intimate moments. The film promises to be a cinematic spectacle, with stunning visuals and a gripping storyline.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTA1NmUxYzItZmVmNy00YmQxLTk4Y2UtZjVkMWUwMWQ5N2IxXkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "After the events of Stree, the town of Chanderi is being haunted again. This time, women are mysteriously abducted by a terrifying headless entity. Once again, it's up to Vicky and his friends to save their town and loved ones.",
             "movie_language": "Tamil",
-            "director_name": "Mani Ratnam",
-            "director_image": null,
-            "hero_name": "Vikram as Aditya Karikalan",
-            "hero_image": null,
-            "heroine_name": "Aishwarya Rai Bachchan as Nandhini",
-            "heroine_image": null,
-            "other_characters": "Karthi, Jayam Ravi",
-            "released": false
+            "director": [
+                {
+                    "name": "Amar Kaushik",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/The_Director_Amar_Khaushik_of_the_film_AABA%2C_at_the_Presentation%2C_during_the_48th_International_Film_Festival_of_India_%28IFFI-2017%29%2C_in_Panaji%2C_Goa_on_November_27%2C_2017.jpg/480px-thumbnail.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Rajkummar Rao",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Actor_Rajkummar_Rao.jpg/320px-Actor_Rajkummar_Rao.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Shraddha Kapoor",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Shraddha_Kapoor_promoting_Street_Dancer_3D.jpg/326px-Shraddha_Kapoor_promoting_Street_Dancer_3D.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Pankaj Tripathi",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pankaj_Tripathi_World_Premiere_Newton_Zoopalast_Berlinale_2017_06.jpg/320px-Pankaj_Tripathi_World_Premiere_Newton_Zoopalast_Berlinale_2017_06.jpg"
+                },
+                {
+                    "name": "Abhishek Banerjee",
+                    "image": ""
+                },
+                {
+                    "name": "Aparshakti Khurana",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Aparshakti-Khurana.jpg/390px-Aparshakti-Khurana.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 14,
             "name": "Murder Mubarak",
             "country_name": "India",
-            "genre": "Thriller, Mystery",
-            "writers": null,
+            "genre": [
+                "Comedy",
+                "Mystery",
+                "Romance"
+            ],
+            "writers": [
+                "Anuja Chauhan",
+                "Gazal Dhaliwal",
+                "Suprotim Sengupta"
+            ],
             "release": {
-                "date": null,
-                "month": null,
+                "date": 15,
+                "month": "March",
                 "year": 2024
             },
-            "thumbnail": null,
-            "description": "Murder Mubarak is a thrilling mystery about a series of murders that seem to be connected to a high-profile case. The film will keep viewers on edge as the protagonist, a sharp investigator, works to uncover the dark secrets behind the murders. With an intriguing plot filled with twists and turns, this film is sure to captivate mystery and thriller lovers. The ensemble cast and the smartly crafted screenplay promise to make this film a must-watch for fans of suspenseful storytelling.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmVmZGVmYmYtNTIwOC00NjY0LWE3MWItYTRmNTQxZjU2OTA1XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "During a murder investigation, a non-traditional police officer turns a spotlight on an array of suspects. He steps into their world as an outsider, only to find there is so much more than what meets the eye.",
             "movie_language": "Hindi",
-            "director_name": null,
-            "director_image": null,
-            "hero_name": null,
-            "hero_image": null,
-            "heroine_name": null,
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming"
+            "director": [
+                {
+                    "name": "Homi Adajania",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Homi_Adajania_-_Director.jpg/319px-Homi_Adajania_-_Director.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Pankaj Tripathi",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pankaj_Tripathi_World_Premiere_Newton_Zoopalast_Berlinale_2017_06.jpg/320px-Pankaj_Tripathi_World_Premiere_Newton_Zoopalast_Berlinale_2017_06.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Karisma Kapoor",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Karisma_Kapoor_snapped_at_Rotary_Club_of_Bombay_West_%286%29_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Sara Ali Khan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sara_Ali_Khan_snapped_promoting_Zara_Hatke_Zara_Bach_Ke_on_the_sets_of_The_Kapil_Sharma_Show_%288%29_%28cropped%29.jpg/347px-Sara_Ali_Khan_snapped_promoting_Zara_Hatke_Zara_Bach_Ke_on_the_sets_of_The_Kapil_Sharma_Show_%288%29_%28cropped%29.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Vijay Varma",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Vijay_Varma_snapped_at_the_trailer_launch_of_his_film_Jaane_Jaan_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Dimple Kapadia",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/DimpleKapadiaPichvai_%28cropped%29.png"
+                },
+                {
+                    "name": "Sanjay Kapoor",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Sanjay_Kapoor_at_the_special_screening_of_%27Neerja%27.jpg/320px-Sanjay_Kapoor_at_the_special_screening_of_%27Neerja%27.jpg"
+                },
+                {
+                    "name": "Tisca Chopra",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Tisca_Chopra_graces_the_screening_of_Sonata.jpg/341px-Tisca_Chopra_graces_the_screening_of_Sonata.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 15,
             "name": "Samrat Prithviraj",
             "country_name": "India",
-            "genre": "Historical, Action",
-            "writers": "Dr. Chandraprakash Dwivedi",
+            "genre": [
+                "Action",
+                "Drama",
+                "History"
+            ],
+            "writers": [
+                "Dr. Chandraprakash Dwivedi"
+            ],
             "release": {
                 "date": 3,
                 "month": "June",
                 "year": 2022
             },
-            "thumbnail": null,
-            "description": "Samrat Prithviraj is a historical drama based on the life and valor of the legendary Rajput king, Prithviraj Chauhan. The film depicts his rise to power, his struggles in battle, and his love story with Sanyogita. Akshay Kumar plays the titular role, delivering a performance full of valor and determination. The film also stars Manushi Chhillar as Sanyogita and brings to life the grandeur of Indian history, showcasing epic battles and royal intrigues. With elaborate sets and period costumes, Samrat Prithviraj is a visual spectacle, although the storytelling received mixed reviews.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BZGQ3OTA3YzQtZDhjMC00MjIxLTg5ZDQtOTFjYTU4MDA0ZmI5XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "A magnum opus recounting the glorious tale of one of India's bravest emperors- Samrat Prithviraj Chauhan. Inspired from the epic poem Prithviraj Raaso and other folklores.",
             "movie_language": "Hindi",
-            "director_name": "Dr. Chandraprakash Dwivedi",
-            "director_image": null,
-            "hero_name": "Akshay Kumar as Prithviraj Chauhan",
-            "hero_image": null,
-            "heroine_name": "Manushi Chhillar as Sanyogita",
-            "heroine_image": null,
-            "other_characters": "Sanjay Dutt",
-            "released": false
+            "director": [
+                {
+                    "name": "Dr. Chandraprakash Dwivedi",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Cine-Bahastalab-2012_Dr._Chandra_Prakash_Dwivedi_%28Film_%26_TV_Director%2BActor%29.jpg/480px-Cine-Bahastalab-2012_Dr._Chandra_Prakash_Dwivedi_%28Film_%26_TV_Director%2BActor%29.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Akshay Kumar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Akshay_Kumar.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Manushi Chhillar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Manushi_Chhillar_attends_a_press_meet_for_the_Gem_and_Jewellery_Export_Promotion_Council_of_India_%28GJEPC%29_in_2023_%28cropped%29.jpg/427px-Manushi_Chhillar_attends_a_press_meet_for_the_Gem_and_Jewellery_Export_Promotion_Council_of_India_%28GJEPC%29_in_2023_%28cropped%29.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Sanjay Dutt",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Sanjay_Dutt_at_Mumbai_Airport%2C_2018_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Sonu Sood",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Sonu_Sood.jpg/288px-Sonu_Sood.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 16,
-            "name": "Raja Raja Chora",
+            "name": "Bad Newz",
             "country_name": "India",
-            "genre": "Comedy, Drama",
-            "writers": "TBA",
+            "genre": [
+                "Comedy",
+                "Romance"
+            ],
+            "writers": [
+                "Tarun Dudeja",
+                "Ishita Moitra"
+            ],
             "release": {
-                "date": "TBA",
-                "month": "TBA",
-                "year": 2023
+                "date": 19,
+                "month": "July",
+                "year": 2024
             },
-            "thumbnail": "image",
-            "description": "Raja Raja Chora is a comedy-drama film that brings together humor and a heartfelt story about a common man’s extraordinary exploits. The film portrays the protagonist's journey from being an average person to an unlikely hero, blending laughter and emotion seamlessly. The comedy is sharp, with well-written dialogues and memorable characters that keep the audience entertained. Directed by an emerging filmmaker, the film also tackles important social issues in a light-hearted way, making it relatable for many.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2QxNGM0OTItMjE1MS00ZjRiLTg3ZTItMTg1NGMyNmRiMjc4XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "A crazy laugh riot which will show the outcomes of two sophisticated Punjabi men and a Punjabi girl. One of the men has a one night stand with the girl and somehow, craziness happens when she is pregnant unexpectedly.",
             "movie_language": "Hindi",
-            "director_name": "TBA",
-            "director_image": null,
-            "hero_name": "TBA",
-            "hero_image": null,
-            "heroine_name": "TBA",
-            "heroine_image": null,
-            "other_characters": "TBA",
-            "released": "Upcoming (2023)"
+            "director": [
+                {
+                    "name": "Anand Tiwari",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Anand_tiwari.jpg/318px-Anand_tiwari.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Vicky Kaushal",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Vicky_Kaushal_snapped_promoting_Zara_Hatke_Zara_Bach_Ke_on_the_sets_of_The_Kapil_Sharma_Show_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Ammy Virk",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Ammy_Virk_2019.jpg/384px-Ammy_Virk_2019.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Triptii Dimri",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Triptii_Dimri_snapped_outside_Leap_Club_in_Santacruz_%28cropped%29.jpg/332px-Triptii_Dimri_snapped_outside_Leap_Club_in_Santacruz_%28cropped%29.jpg"
+                }
+            ],
+            "other_characters": [],
+            "released": true
         },
         {
             "id": 17,
-            "name": "Dhoom 4",
+            "name": "Singham Again",
             "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "TBA",
+            "genre": [
+                "Action",
+                "Drama"
+            ],
+            "writers": [
+                "Vidhi Ghodgaonkar",
+                "Abhijeet Khuman",
+                "Anusha Nandakumar"
+            ],
             "release": {
-                "date": "TBA",
-                "month": "TBA",
+                "date": 1,
+                "month": "November",
                 "year": 2024
             },
-            "thumbnail": "image",
-            "description": "Dhoom 4 is the highly anticipated sequel in the popular action franchise. Known for its thrilling heists, high-speed chases, and dramatic twists, Dhoom 4 promises to continue the legacy with an exciting new storyline. The movie will feature new characters as well as the return of some beloved faces. Expect cutting-edge stunts, stylish action sequences, and a gripping plot that keeps you at the edge of your seat.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjQzZDExZDEtYjAxYy00ZGVhLWE4YWItNTVkZjA5ZjVjZWM3XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "A new chase is coming - with reference to the epic Ramayana, Singham and his team face an ambiguous villain in order to save his wife.",
             "movie_language": "Hindi",
-            "director_name": "TBA",
-            "director_image": null,
-            "hero_name": "TBA",
-            "hero_image": null,
-            "heroine_name": "TBA",
-            "heroine_image": null,
-            "other_characters": "TBA",
-            "released": "Upcoming (2024)"
+            "director": [
+                {
+                    "name": "Rohit Shetty",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Rohit_Shetty_snapped_during_Simmba_interviews_at_JW_Marriott_in_Juhu.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Ajay Devgn",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg/343px-Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg"
+                },
+                {
+                    "name": "Akshay Kumar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Akshay_Kumar.jpg"
+                },
+                {
+                    "name": "Ranveer Singh",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Tiger Shroff",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Tiger_Shroff_in_2019.jpg/340px-Tiger_Shroff_in_2019.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Kareena Kapoor Khan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Kareena_Kapoor_Khan_in_2023_%281%29_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Deepika Padukone",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Deepika_Padukone_Cannes_2018_%28cropped%29.jpg/359px-Deepika_Padukone_Cannes_2018_%28cropped%29.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Arjun Kapoor",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Arjun_Kapoor_at_film_promotions_of_Mubarakan.jpg/319px-Arjun_Kapoor_at_film_promotions_of_Mubarakan.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 18,
-            "name": "Chup",
+            "name": "Munjya",
             "country_name": "India",
-            "genre": "Thriller, Horror",
-            "writers": "R Balki, Raghavendra Rao",
+            "genre": [
+                "Comedy",
+                "Horror"
+            ],
+            "writers": [
+                "Niren Bhatt",
+                "Yogesh Chandekar",
+                "Tushar Ajgaonkar"
+            ],
             "release": {
                 "date": 23,
                 "month": "September",
                 "year": 2022
             },
-            "thumbnail": "image",
-            "description": "Chup is a psychological thriller that keeps the audience guessing till the end. The plot centers around a serial killer whose actions are linked to the world of cinema and its critics. The film explores the impact of criticism on the psyche of an artist, and how it can lead to dark consequences. Sunny Deol plays the main investigator, who is trying to uncover the killer’s identity, while Dulquer Salmaan gives a stellar performance as a mysterious figure entangled in the events. With a tight script and intense direction by R Balki, Chup provides a fresh take on the thriller genre.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMGY4OTA3OWEtZjYxYy00YTBlLWJmYzEtNzM0NDliYzA5OGYwXkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "A young man's visit to his native village unveils a family secret and a vengeful spirit, the Munjya, who wants to get married. Now the young man must fight to protect himself and his love from Munjya's clutches.",
             "movie_language": "Hindi",
-            "director_name": "R Balki",
-            "director_image": null,
-            "hero_name": "Dulquer Salmaan",
-            "hero_image": null,
-            "heroine_name": "Shreya Dhanwanthary",
-            "heroine_image": null,
-            "other_characters": "Sunny Deol",
-            "released": "Not Upcoming (Released in 2022)"
+            "director": [
+                {
+                    "name": "Aditya Sarpotdar",
+                    "image": ""
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Abhay Verma",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abhay_Verma_in_2024_%28cropped%29.jpg/415px-Abhay_Verma_in_2024_%28cropped%29.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Sharvari Wagh",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Sharvari_Wagh_snapped_promoting_Munjya_at_Maddock_Films_office_%28cropped%29.jpg/449px-Sharvari_Wagh_snapped_promoting_Munjya_at_Maddock_Films_office_%28cropped%29.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Sathyaraj",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Sathiyaraj.JPG/359px-Sathiyaraj.JPG"
+                },
+                {
+                    "name": "Mona Singh",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Mona_Singh_at_the_premiere_of_The_Archies_%28cropped%29.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 19,
-            "name": "Bachchan Pandey",
+            "name": "The Greatest of All Time",
             "country_name": "India",
-            "genre": "Action, Comedy",
-            "writers": "TBA",
+            "genre": [
+                "Action",
+                "Thriller"
+            ],
+            "writers": [
+                "M Prasad Babu",
+                "K. Chandru",
+                "Ezhilarasu Gunasekaran"
+            ],
             "release": {
-                "date": 18,
-                "month": "March",
-                "year": 2022
+                "date": 2,
+                "month": "October",
+                "year": 2024
             },
-            "thumbnail": "image",
-            "description": "Bachchan Pandey is a quirky action-comedy film that blends humor with action-packed moments. The film follows the journey of a gangster, played by Akshay Kumar, who is feared by many. His life takes a turn when a young director, played by Kriti Sanon, decides to make a film about his life, leading to unpredictable events. The movie combines dark humor and action, with a performance-driven narrative and thrilling confrontations.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BZTc5ZDEwZmUtOTJlOC00ZmFkLWJjMTEtYWI4YjE3N2EwYTE2XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "Gandhi is a hostage negotiator, field agent, and spy working for the Special Anti-Terrorist Squad (SATS). After years of service, he is called back for a critical mission that sets him on a dangerous collision course with his own ...",
             "movie_language": "Hindi",
-            "director_name": "Farhad Samji",
-            "director_image": null,
-            "hero_name": "Akshay Kumar",
-            "hero_image": null,
-            "heroine_name": "Kriti Sanon",
-            "heroine_image": null,
-            "other_characters": "Jacqueline Fernandez",
-            "released": "Not Upcoming (Released in 2022)"
+            "director": [
+                {
+                    "name": "Venkat Prabhu",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Venkat_Prabhu_at_Damaal_Dumeel_Audio_Launch.jpg/320px-Venkat_Prabhu_at_Damaal_Dumeel_Audio_Launch.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Joseph Vijay",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Vijay_at_Protest_of_the_Nadigar_Sangam.jpg/384px-Vijay_at_Protest_of_the_Nadigar_Sangam.jpg"
+                }
+            ],
+            "heroine": [],
+            "other_characters": [
+                {
+                    "name": "Prashanth",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Prashanth_at_Saahasam_Audio_Launch.jpg/320px-Prashanth_at_Saahasam_Audio_Launch.jpg"
+                },
+                {
+                    "name": "Prabhu Deva",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Promotional_rickshaw_race_for_%27Rowdy_Rathore%27_%2810%29.jpg/318px-Promotional_rickshaw_race_for_%27Rowdy_Rathore%27_%2810%29.jpg"
+                },
+                {
+                    "name": "Mohan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mohan_at_IIFA_Utsavam_Chennai_Press_Meet.jpg/320px-Mohan_at_IIFA_Utsavam_Chennai_Press_Meet.jpg"
+                },
+                {
+                    "name": "Jayaram",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Jayaram_in_2024.jpg/320px-Jayaram_in_2024.jpg"
+                },
+                {
+                    "name": "Ajmal Ameer",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ajmal_Ameer_at_Launch_of_Provoke_Lifestyle_Magazine.jpg/320px-Ajmal_Ameer_at_Launch_of_Provoke_Lifestyle_Magazine.jpg"
+                }
+            ],
+            "released": true
         },
         {
             "id": 20,
-            "name": "Brahmāstra: Part One – Shiva",
-            "country_name": "India",
-            "genre": "Fantasy, Adventure",
-            "writers": "Ayan Mukerji",
-            "release": {
-                "date": 9,
-                "month": "September",
-                "year": 2022
-            },
-            "thumbnail": "image",
-            "description": "Brahmāstra is a grand-scale fantasy adventure film that takes inspiration from ancient Indian mythology. The movie revolves around Shiva, a young man who discovers his connection to a powerful and mystical force. Directed by Ayan Mukerji, the film features stunning visual effects, action sequences, and a gripping story. Ranbir Kapoor leads the cast as Shiva, while Alia Bhatt plays the female lead. The film explores the conflict between good and evil, with a unique narrative based on ancient weapons and powers.",
-            "movie_language": "Hindi",
-            "director_name": "Ayan Mukerji",
-            "director_image": null,
-            "hero_name": "Ranbir Kapoor",
-            "hero_image": null,
-            "heroine_name": "Alia Bhatt",
-            "heroine_image": "https://i.pinimg.com/236x/af/07/8f/af078fbb15675781341b9c2bfbd91aa6.jpg",
-            "other_characters": "Amitabh Bachchan, Mouni Roy",
-            "released": "Not Upcoming (Released in 2022)"
-        },
-        {
-            "id": 21,
-            "name": "Tiger 3",
-            "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "Aditya Chopra",
-            "release": {
-                "date": 10,
-                "month": "November",
-                "year": 2023
-            },
-            "thumbnail": "image",
-            "description": "Tiger 3 is the highly anticipated third installment of the Tiger franchise, continuing the adventures of RAW agent Avinash Singh Rathore (Salman Khan). The film promises explosive action sequences, thrilling espionage, and high-stakes drama as Tiger embarks on a mission to stop a dangerous international threat. Katrina Kaif reprises her role as Zoya, adding more intensity to the action. Directed by Maneesh Sharma, the film will also feature Emraan Hashmi as the antagonist, bringing a fresh dynamic to the action-packed narrative.",
-            "movie_language": "Hindi",
-            "director_name": "Maneesh Sharma",
-            "director_image": null,
-            "hero_name": "Salman Khan",
-            "hero_image": null,
-            "heroine_name": "Katrina Kaif",
-            "heroine_image": null,
-            "other_characters": "Emraan Hashmi",
-            "released": "Upcoming (2023)"
-        },
-        {
-            "id": 22,
             "name": "Fighter",
             "country_name": "India",
-            "genre": "Action, Drama",
-            "writers": "Shridhar Raghavan",
+            "genre": [
+                "Action",
+                "Drama"
+            ],
+            "writers": [
+                "Siddharth Anand",
+                "Ramon Chibb",
+                "Abbas Dalal"
+            ],
             "release": {
                 "date": 25,
                 "month": "January",
                 "year": 2024
             },
-            "thumbnail": "image",
-            "description": "Fighter is a high-octane action film starring Hrithik Roshan and Deepika Padukone. The story follows a group of elite fighter pilots as they take on dangerous missions and navigate their personal lives. Directed by Siddharth Anand, the movie promises intense aerial combat scenes, emotionally charged drama, and gripping performances. With Hrithik’s action hero persona and Deepika’s grounded and intense role, Fighter is expected to be a visual spectacle with a strong emotional core.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BYmJiYzZhOTktNGIzNy00YjljLWI3ZDgtZGU2YWMzNGQ1YjQ5XkEyXkFqcGc@._V1_SX300.jpg",
+            "description": "A reckless yet brilliant squadron leader and his team of elite fighter pilots face mortal dangers and inner demons as they unite for a deadly mission.",
             "movie_language": "Hindi",
-            "director_name": "Siddharth Anand",
-            "director_image": null,
-            "hero_name": "Hrithik Roshan",
-            "hero_image": null,
-            "heroine_name": "Deepika Padukone",
-            "heroine_image": null,
-            "other_characters": "Anil Kapoor",
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 23,
-            "name": "Dhamaka",
-            "country_name": "India",
-            "genre": "Thriller, Drama",
-            "writers": "Ravi Udyawar, Rishabh Sharma",
-            "release": {
-                "date": 22,
-                "month": "November",
-                "year": 2024
-            },
-            "thumbnail": "image",
-            "description": "Dhamaka is a gripping thriller that revolves around a man caught in a deadly situation when he becomes the target of terrorists. The film focuses on the survival instincts of the protagonist, played by Kartik Aaryan, as he is forced to make morally complex decisions. Directed by Ram Madhvani, Dhamaka promises to be an edge-of-the-seat experience with high-paced action, strong performances, and a storyline that keeps the audience hooked.",
-            "movie_language": "Hindi",
-            "director_name": "Ram Madhvani",
-            "director_image": null,
-            "hero_name": "Kartik Aaryan",
-            "hero_image": null,
-            "heroine_name": "TBA",
-            "heroine_image": null,
-            "other_characters": "TBA",
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 24,
-            "name": "Jawan",
-            "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "Atlee",
-            "release": {
-                "date": 7,
-                "month": "September",
-                "year": 2023
-            },
-            "thumbnail": "image",
-            "description": "Jawan is a high-energy action thriller directed by Atlee, starring Shah Rukh Khan in a dual role. The film combines action, drama, and suspense as Khan’s character seeks revenge and justice, with the plot weaving through various twists and turns. Nayanthara and Vijay Sethupathi are also part of the stellar cast, adding gravitas to the narrative. Known for its high-octane action sequences and emotional depth, Jawan has already created massive buzz for its gripping storyline and powerful performances.",
-            "movie_language": "Hindi",
-            "director_name": "Atlee",
-            "director_image": null,
-            "hero_name": "Shah Rukh Khan",
-            "hero_image": "https://i.pinimg.com/236x/89/04/f8/8904f8a84466ee5a79767243808e51dd.jpg",
-            "heroine_name": "Nayanthara",
-            "heroine_image": null,
-            "other_characters": "Vijay Sethupathi",
-            "released": "Not Upcoming (Released in 2023)"
-        },
-        {
-            "id": 25,
-            "name": "Bawaal",
-            "country_name": "India",
-            "genre": "Drama, Romance",
-            "writers": "N/A",
-            "release": {
-                "date": 28,
-                "month": "April",
-                "year": 2023
-            },
-            "thumbnail": "image",
-            "description": "Bawaal is a romantic drama set against the backdrop of personal turmoil. The movie focuses on the love story of two individuals who must confront their pasts and deal with the complexities of their relationship. Varun Dhawan and Janhvi Kapoor star in this film, exploring deep emotional arcs and the challenges of finding love amidst life's chaos. The film’s plot touches on themes of forgiveness, healing, and understanding in relationships, all while being set against a captivating narrative.",
-            "movie_language": "Hindi",
-            "director_name": "N/A",
-            "director_image": null,
-            "hero_name": "Varun Dhawan",
-            "hero_image": null,
-            "heroine_name": "Janhvi Kapoor",
-            "heroine_image": null,
-            "other_characters": "TBA",
-            "released": "Not Upcoming (Released in 2023)"
-        },
-        {
-            "id": 26,
-            "name": "Kalki 2898 A.D.",
-            "country_name": "India",
-            "genre": "Sci-Fi, Action",
-            "writers": "TBA",
-            "release": {
-                "date": "TBA",
-                "month": "TBA",
-                "year": 2024
-            },
-            "thumbnail": "image",
-            "description": "Kalki 2898 A.D. is a futuristic science fiction film set in the year 2898, exploring themes of artificial intelligence, technology, and the battle for human survival. The movie promises to deliver cutting-edge special effects and intense action sequences as the protagonist embarks on a journey to save humanity from a dystopian future. The film will feature an ensemble cast with futuristic storytelling, blending thrilling action and thought-provoking themes of artificial intelligence and human conflict.",
-            "movie_language": "Hindi",
-            "director_name": "TBA",
-            "director_image": null,
-            "hero_name": "TBA",
-            "hero_image": null,
-            "heroine_name": "TBA",
-            "heroine_image": null,
-            "other_characters": "TBA",
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 27,
-            "name": "No Entry Mein Entry",
-            "country_name": "India",
-            "genre": "Comedy",
-            "writers": "Anees Bazmee",
-            "release": {
-                "date": "TBA",
-                "month": "TBA",
-                "year": 2024
-            },
-            "thumbnail": "image",
-            "description": "No Entry Mein Entry is a sequel to the hit comedy No Entry and brings back the beloved characters in a new hilarious setting. The film follows the chaotic and humorous lives of three married men as they navigate the messes they’ve gotten into. With an ensemble cast including Anil Kapoor, Salman Khan, and Fardeen Khan, the film promises to be a laugh riot with plenty of twists and turns. Directed by Anees Bazmee, No Entry Mein Entry will deliver what the audience expects – non-stop comedy and uproarious situations.",
-            "movie_language": "Hindi",
-            "director_name": "Anees Bazmee",
-            "director_image": null,
-            "hero_name": "Salman Khan",
-            "hero_image": null,
-            "heroine_name": "TBA",
-            "heroine_image": null,
-            "other_characters": "Anil Kapoor, Fardeen Khan",
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 28,
-            "name": "Tejas",
-            "country_name": "India",
-            "genre": "Action, Drama",
-            "writers": "TBA",
-            "release": {
-                "date": "TBA",
-                "month": "TBA",
-                "year": 2024
-            },
-            "thumbnail": "image",
-            "description": "Tejas is a thrilling drama centered around the life of an Indian Air Force pilot, portrayed by Kangana Ranaut. The film highlights the challenges and heroism of the armed forces as the protagonist embarks on dangerous missions to safeguard the country. Directed by Sarvesh Mewara, the film promises to blend action, patriotism, and intense drama, with Kangana’s performance at the forefront. Tejas is expected to inspire with its portrayal of courage, resilience, and duty.",
-            "movie_language": "Hindi",
-            "director_name": "Sarvesh Mewara",
-            "director_image": null,
-            "hero_name": "TBA",
-            "hero_image": null,
-            "heroine_name": "Kangana Ranaut",
-            "heroine_image": null,
-            "other_characters": "TBA",
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 29,
-            "name": "Bunty Aur Babli 2",
-            "country_name": "India",
-            "genre": "Comedy, Crime",
-            "writers": "Varun Sharma",
-            "release": {
-                "date": 19,
-                "month": "November",
-                "year": 2021
-            },
-            "thumbnail": "image",
-            "description": "Bunty Aur Babli 2 is a comedic sequel that brings back the con artist duo, played by Rani Mukerji and Saif Ali Khan, along with new cons and hijinks. The film follows the antics of the original characters as they encounter a new generation of fraudsters, leading to hilarious and action-packed situations. Directed by Varun V. Sharma, the film blends comedy, action, and drama in a fresh way while retaining the essence of the first film.",
-            "movie_language": "Hindi",
-            "director_name": "Varun V. Sharma",
-            "director_image": null,
-            "hero_name": "Saif Ali Khan",
-            "hero_image": null,
-            "heroine_name": "Rani Mukerji",
-            "heroine_image": null,
-            "other_characters": "Siddhant Chaturvedi, Sharvari",
-            "released": "Not Upcoming (Released in 2021)"
-        },
-        {
-            "id": 30,
-            "name": "Dosti Ke Side Effects",
-            "country_name": "India",
-            "genre": "Comedy, Romance",
-            "writers": "Rajesh Kumar",
-            "release": {
-                "date": 14,
-                "month": "March",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "Dosti Ke Side Effects is a romantic comedy that delves into the complexities of friendship and love. The story follows two best friends who begin to realize their feelings for each other, but struggle with how to navigate their changing dynamic. Directed by Rajesh Kumar, the film blends humor, romance, and emotional moments, making for a light-hearted yet heartwarming journey.",
-            "movie_language": "Hindi",
-            "director_name": "Rajesh Kumar",
-            "director_image": null,
-            "hero_name": "Vicky Kaushal",
-            "hero_image": null,
-            "heroine_name": "Kriti Sanon",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 31,
-            "name": "Baaghi 4",
-            "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "TBA",
-            "release": {
-                "date": 26,
-                "month": "April",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The fourth installment of the Baaghi franchise continues the action-packed journey of Tiger Shroff’s character. As expected, the movie promises high-energy stunts, intense action sequences, and gripping combat as Tiger’s character faces new challenges.",
-            "movie_language": "Hindi",
-            "director_name": "Ahmed Khan",
-            "director_image": null,
-            "hero_name": "Tiger Shroff",
-            "hero_image": null,
-            "heroine_name": "Shraddha Kapoor",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 32,
-            "name": "Don 3",
-            "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "Farhan Akhtar",
-            "release": {
-                "date": 25,
-                "month": "December",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "Don 3 continues the story of the infamous gangster, Don, as Shah Rukh Khan returns to play the iconic role. The movie promises high-stakes action, suspenseful twists, and edge-of-the-seat thrills. Directed by Farhan Akhtar, the film will deliver another blockbuster journey into the world of crime, mystery, and power.",
-            "movie_language": "Hindi",
-            "director_name": "Farhan Akhtar",
-            "director_image": null,
-            "hero_name": "Shah Rukh Khan",
-            "hero_image": "https://i.pinimg.com/236x/89/04/f8/8904f8a84466ee5a79767243808e51dd.jpg",
-            "heroine_name": "Priyanka Chopra",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 33,
-            "name": "The Crew",
-            "country_name": "India",
-            "genre": "Comedy, Drama",
-            "writers": "Rajesh Krishnan",
-            "release": {
-                "date": 14,
-                "month": "December",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The Crew is a comedy-drama revolving around three women navigating their quirky professional and personal lives. Directed by Rajesh Krishnan, the film stars Kareena Kapoor Khan, Tabu, and Kriti Sanon. Filled with hilarious moments and emotional twists, the movie promises to deliver a perfect blend of drama and comedy.",
-            "movie_language": "Hindi",
-            "director_name": "Rajesh Krishnan",
-            "director_image": null,
-            "hero_name": "Kareena Kapoor Khan",
-            "hero_image": null,
-            "heroine_name": "Kriti Sanon",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 34,
-            "name": "Dhoom 4",
-            "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "Aditya Chopra",
-            "release": {
-                "date": 15,
-                "month": "August",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "Dhoom 4 promises to elevate the stakes of the franchise with thrilling heists, high-speed chases, and intense action sequences. Directed by Vijay Krishna Acharya, the movie introduces a new villain, continuing the legacy of this high-octane action series. Expect daring stunts, a fresh ensemble cast, and spectacular visuals that push the boundaries of cinematic action.",
-            "movie_language": "Hindi",
-            "director_name": "Vijay Krishna Acharya",
-            "director_image": null,
-            "hero_name": "Hrithik Roshan",
-            "hero_image": null,
-            "heroine_name": "Deepika Padukone",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 35,
-            "name": "Yeh Kaali Kaali Aankhein 2",
-            "country_name": "India",
-            "genre": "Thriller, Drama",
-            "writers": "Sameer Saxena",
-            "release": {
-                "date": 22,
-                "month": "June",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The second season of the thrilling series continues the intense and suspenseful narrative, blending twists and turns with high-stakes drama.",
-            "movie_language": "Hindi",
-            "director_name": "Sameer Saxena",
-            "director_image": null,
-            "hero_name": "Tahir Raj Bhasin",
-            "hero_image": null,
-            "heroine_name": "Shweta Tripathi",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 36,
-            "name": "Tumbbad 2",
-            "country_name": "India",
-            "genre": "Horror, Thriller",
-            "writers": "Rahi Anil Barve",
-            "release": {
-                "date": 17,
-                "month": "November",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The sequel to Tumbbad continues the chilling tale of a man's quest for hidden treasure, facing even darker supernatural forces. With its atmospheric horror and suspenseful twists, Tumbbad 2 is set to captivate fans of the original film. Directed by Rahi Anil Barve, the movie promises a deeper dive into the mysterious and eerie world of Tumbbad.",
-            "movie_language": "Hindi",
-            "director_name": "Rahi Anil Barve",
-            "director_image": null,
-            "hero_name": "Sohum Shah",
-            "hero_image": null,
-            "heroine_name": "TBA",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 37,
-            "name": "Darlings 2",
-            "country_name": "India",
-            "genre": "Dark Comedy, Thriller",
-            "writers": "Jasmeet K. Reen",
-            "release": {
-                "date": 22,
-                "month": "September",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "Darlings 2 takes the thrilling and dark comedic journey of its protagonists to the next level. Alia Bhatt and Vijay Varma reprise their roles, with even more twists, darker humor, and thrilling moments. The movie delves deeper into the psychological intricacies of its characters, offering a rollercoaster of emotions and suspenseful storytelling.",
-            "movie_language": "Hindi",
-            "director_name": "Jasmeet K. Reen",
-            "director_image": null,
-            "hero_name": "Vijay Varma",
-            "hero_image": null,
-            "heroine_name": "Alia Bhatt",
-            "heroine_image": "https://i.pinimg.com/236x/af/07/8f/af078fbb15675781341b9c2bfbd91aa6.jpg",
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 38,
-            "name": "The Train",
-            "country_name": "India",
-            "genre": "Mystery, Thriller",
-            "writers": "Kunal Kohli",
-            "release": {
-                "date": 12,
-                "month": "January",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The Train, directed by Kunal Kohli, takes audiences on a mysterious and thrilling journey aboard a train. With suspenseful twists and a gripping storyline, the film promises to keep viewers on the edge of their seats. Starring Hrithik Roshan and Tara Sutaria, it is set to be an exciting mystery-thriller in 2024.",
-            "movie_language": "Hindi",
-            "director_name": "Kunal Kohli",
-            "director_image": null,
-            "hero_name": "Hrithik Roshan",
-            "hero_image": null,
-            "heroine_name": "Tara Sutaria",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 39,
-            "name": "Chandramukhi 2",
-            "country_name": "India",
-            "genre": "Horror, Thriller",
-            "writers": "P. Vasu",
-            "release": {
-                "date": 12,
-                "month": "May",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The sequel to the supernatural thriller Chandramukhi, this film continues the eerie story of a haunted mansion and the terrifying mysteries within. Directed by P. Vasu, it stars Raghava Lawrence and Kangana Ranaut. With spine-chilling moments and a suspenseful plot, Chandramukhi 2 promises to be a gripping experience.",
-            "movie_language": "Tamil",
-            "director_name": "P. Vasu",
-            "director_image": null,
-            "hero_name": "Raghava Lawrence",
-            "hero_image": null,
-            "heroine_name": "Kangana Ranaut",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 40,
-            "name": "Tarak",
-            "country_name": "India",
-            "genre": "Action, Drama",
-            "writers": "K. S. Ravindra",
-            "release": {
-                "date": 4,
-                "month": "October",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "Tarak is a gripping action drama directed by K. S. Ravindra. The film follows Nandamuri Kalyan Ram as he navigates personal and societal challenges while engaging in intense action sequences. It promises to be a thrilling and emotional journey for fans of action dramas.",
-            "movie_language": "Telugu",
-            "director_name": "K. S. Ravindra",
-            "director_image": null,
-            "hero_name": "Nandamuri Kalyan Ram",
-            "hero_image": null,
-            "heroine_name": "TBA",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 41,
-            "name": "Dilli Wali Thakur Gurls",
-            "country_name": "India",
-            "genre": "Drama, Comedy",
-            "writers": "TBA",
-            "release": {
-                "date": 3,
-                "month": "March",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "A vibrant drama-comedy set in the heart of Delhi, Dilli Wali Thakur Gurls follows the lives of three sisters who navigate their personal and professional challenges while keeping up with their traditional family values. Expect humor, drama, and an exploration of familial ties in the bustling city of Delhi.",
-            "movie_language": "Hindi",
-            "director_name": "TBA",
-            "director_image": null,
-            "hero_name": "TBA",
-            "hero_image": null,
-            "heroine_name": "Ananya Panday",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 42,
-            "name": "Bhool Bhulaiyaa 3",
-            "country_name": "India",
-            "genre": "Horror, Comedy",
-            "writers": "Aakash Kaushik",
-            "release": {
-                "date": 21,
-                "month": "December",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The third installment of the horror-comedy franchise Bhool Bhulaiyaa continues with new mysteries, a haunted mansion, and lots of laughs. Starring Kartik Aaryan, the film promises a mixture of supernatural suspense and comic relief. Directed by Aakash Kaushik, the film will feature thrilling moments with its signature blend of horror and humor.",
-            "movie_language": "Hindi",
-            "director_name": "Aakash Kaushik",
-            "director_image": null,
-            "hero_name": "Kartik Aaryan",
-            "hero_image": null,
-            "heroine_name": "Kiara Advani",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 43,
-            "name": "Bhediya 2",
-            "country_name": "India",
-            "genre": "Horror, Comedy",
-            "writers": "Amar Kaushik",
-            "release": {
-                "date": 19,
-                "month": "October",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The sequel to the hit horror-comedy Bhediya, this film continues the fun and spooky journey of the werewolf character played by Varun Dhawan. With Amar Kaushik back at the helm, Bhediya 2 promises to deliver more laughs, thrills, and some spine-chilling moments.",
-            "movie_language": "Hindi",
-            "director_name": "Amar Kaushik",
-            "director_image": null,
-            "hero_name": "Varun Dhawan",
-            "hero_image": null,
-            "heroine_name": "Kriti Sanon",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 44,
-            "name": "Rocky Aur Rani Ki Prem Kahani",
-            "country_name": "India",
-            "genre": "Romance, Drama",
-            "writers": "Karan Johar",
-            "release": {
-                "date": 23,
-                "month": "February",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "This romantic drama, directed by Karan Johar, explores the tumultuous love story between two people from different cultural backgrounds. Starring Ranveer Singh and Alia Bhatt, the film promises to be an emotional rollercoaster with high drama, romance, and soulful music.",
-            "movie_language": "Hindi",
-            "director_name": "Karan Johar",
-            "director_image": "https://i.pinimg.com/236x/ae/14/95/ae14950f9d027eeaccf28024b5d53480.jpg",
-            "hero_name": "Ranveer Singh",
-            "hero_image": "https://i.pinimg.com/236x/8d/82/c7/8d82c7d6e78fc37578392339bf4a551c.jpg",
-            "heroine_name": "Alia Bhatt",
-            "heroine_image": "https://i.pinimg.com/236x/af/07/8f/af078fbb15675781341b9c2bfbd91aa6.jpg",
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 45,
-            "name": "Gully Boy 2",
-            "country_name": "India",
-            "genre": "Drama, Music",
-            "writers": "Zoya Akhtar",
-            "release": {
-                "date": 1,
-                "month": "August",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The sequel to the acclaimed Gully Boy, Gully Boy 2 continues the journey of a young rapper from Mumbai as he battles with fame, family, and his artistic expression. Directed by Zoya Akhtar, the film stars Ranveer Singh and Siddhant Chaturvedi. Expect powerful performances, music, and the raw energy of the streets.",
-            "movie_language": "Hindi",
-            "director_name": "Zoya Akhtar",
-            "director_image": null,
-            "hero_name": "Ranveer Singh",
-            "hero_image": "https://i.pinimg.com/236x/8d/82/c7/8d82c7d6e78fc37578392339bf4a551c.jpg",
-            "heroine_name": "Alia Bhatt",
-            "heroine_image": "https://i.pinimg.com/236x/af/07/8f/af078fbb15675781341b9c2bfbd91aa6.jpg",
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 46,
-            "name": "Tiger 3",
-            "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "Aditya Chopra",
-            "release": {
-                "date": 10,
-                "month": "November",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The third film in the Tiger franchise promises more action, espionage, and intrigue. Salman Khan reprises his role as the deadly spy, facing off against powerful enemies while navigating high-stakes missions. Directed by Maneesh Sharma, the movie will feature breathtaking action sequences and high-voltage drama.",
-            "movie_language": "Hindi",
-            "director_name": "Maneesh Sharma",
-            "director_image": null,
-            "hero_name": "Salman Khan",
-            "hero_image": null,
-            "heroine_name": "Katrina Kaif",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 47,
-            "name": "Pushpa 3",
-            "country_name": "India",
-            "genre": "Action, Drama",
-            "writers": "Sukumar",
-            "release": {
-                "date": 14,
-                "month": "December",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The third part of the Pushpa series follows Pushpa (Allu Arjun) as he takes on greater enemies and power struggles. Directed by Sukumar, this film promises action, drama, and emotional depth, with the ever-popular Pushpa character continuing to rise in his battle for control and survival.",
-            "movie_language": "Telugu",
-            "director_name": "Sukumar",
-            "director_image": null,
-            "hero_name": "Allu Arjun",
-            "hero_image": null,
-            "heroine_name": "Rashmika Mandanna",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 48,
-            "name": "Satyaprem Ki Katha",
-            "country_name": "India",
-            "genre": "Comedy, Drama",
-            "writers": "Sameer Saxena",
-            "release": {
-                "date": 20,
-                "month": "April",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "This heartwarming romantic drama revolves around a man who faces trials in his search for true love. Starring Kartik Aaryan and Kiara Advani, the film blends comedy, drama, and romance with a significant emotional core. Directed by Sameer Saxena, it promises an engaging and heartfelt narrative.",
-            "movie_language": "Hindi",
-            "director_name": "Sameer Saxena",
-            "director_image": null,
-            "hero_name": "Kartik Aaryan",
-            "hero_image": null,
-            "heroine_name": "Kiara Advani",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 49,
-            "name": "Liger 2",
-            "country_name": "India",
-            "genre": "Action, Sports",
-            "writers": "Puri Jagannadh",
-            "release": {
-                "date": 28,
-                "month": "June",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The sequel to the high-octane sports drama Liger continues the story of a boxer navigating through personal challenges, rivalries, and intense training. Directed by Puri Jagannadh, the film features Vijay Deverakonda and Ananya Panday, and promises to be an action-packed follow-up with more intense fights and emotional moments.",
-            "movie_language": "Hindi",
-            "director_name": "Puri Jagannadh",
-            "director_image": null,
-            "hero_name": "Vijay Deverakonda",
-            "hero_image": null,
-            "heroine_name": "Ananya Panday",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 50,
-            "name": "Krrish 4",
-            "country_name": "India",
-            "genre": "Sci-Fi, Action",
-            "writers": "Rakesh Roshan",
-            "release": {
-                "date": 25,
-                "month": "December",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The long-awaited return of Hrithik Roshan as Krrish brings more sci-fi action, superhuman powers, and thrilling moments. Directed by Rakesh Roshan, this fourth installment promises new challenges for Krrish as he faces enemies that threaten not just his family but the world.",
-            "movie_language": "Hindi",
-            "director_name": "Rakesh Roshan",
-            "director_image": null,
-            "hero_name": "Hrithik Roshan",
-            "hero_image": null,
-            "heroine_name": "Priyanka Chopra",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 51,
-            "name": "Jawan 2",
-            "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "Atlee Kumar",
-            "release": {
-                "date": 5,
-                "month": "August",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The highly anticipated sequel to Jawan brings more thrilling action sequences and a gripping story. Directed by Atlee Kumar, Shah Rukh Khan reprises his role, but this time the stakes are higher, with more twists and drama. Expect intense action, emotional depth, and high-powered performances.",
-            "movie_language": "Hindi",
-            "director_name": "Atlee Kumar",
-            "director_image": null,
-            "hero_name": "Shah Rukh Khan",
-            "hero_image": "https://i.pinimg.com/236x/89/04/f8/8904f8a84466ee5a79767243808e51dd.jpg",
-            "heroine_name": "Nayanthara",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 52,
-            "name": "Shehzada",
-            "country_name": "India",
-            "genre": "Action, Comedy",
-            "writers": "David Dhawan",
-            "release": {
-                "date": 16,
-                "month": "February",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "A remake of the Telugu hit Ala Vaikunthapurramuloo, Shehzada stars Kartik Aaryan as the charming lead who must deal with family drama, love, and some comic misunderstandings. Directed by David Dhawan, this film promises a perfect blend of action and comedy.",
-            "movie_language": "Hindi",
-            "director_name": "David Dhawan",
-            "director_image": null,
-            "hero_name": "Kartik Aaryan",
-            "hero_image": null,
-            "heroine_name": "Kriti Sanon",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 53,
-            "name": "Street Dancer 4",
-            "country_name": "India",
-            "genre": "Dance, Music, Drama",
-            "writers": "Remo D'Souza",
-            "release": {
-                "date": 15,
-                "month": "May",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The fourth installment of the Street Dancer series continues the story of young dancers facing new challenges. With electrifying dance moves, music, and the return of the beloved characters, this film will keep you on your feet.",
-            "movie_language": "Hindi",
-            "director_name": "Remo D'Souza",
-            "director_image": null,
-            "hero_name": "Varun Dhawan",
-            "hero_image": null,
-            "heroine_name": "Shraddha Kapoor",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 54,
-            "name": "Adipurush 2",
-            "country_name": "India",
-            "genre": "Mythology, Action",
-            "writers": "Om Raut",
-            "release": {
-                "date": 18,
-                "month": "July",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "A continuation of the epic mythology saga, Adipurush 2 delves deeper into the battle between good and evil. Featuring Prabhas and Kriti Sanon, the film will bring more high-octane action and a rich narrative based on the Ramayana. Directed by Om Raut, expect a visually stunning experience.",
-            "movie_language": "Hindi",
-            "director_name": "Om Raut",
-            "director_image": null,
-            "hero_name": "Prabhas",
-            "hero_image": null,
-            "heroine_name": "Kriti Sanon",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 55,
-            "name": "Kaala 2",
-            "country_name": "India",
-            "genre": "Action, Drama",
-            "writers": "Pa. Ranjith",
-            "release": {
-                "date": 23,
-                "month": "November",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "A continuation of the iconic Kaala, Kaala 2 stars Rajinikanth once again as the revolutionary leader. Directed by Pa. Ranjith, the movie promises a blend of powerful social commentary, action, and intense drama. The struggles of Kaala continue as he takes on the powerful forces threatening the people.",
-            "movie_language": "Tamil",
-            "director_name": "Pa. Ranjith",
-            "director_image": null,
-            "hero_name": "Rajinikanth",
-            "hero_image": null,
-            "heroine_name": "Huma Qureshi",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 56,
-            "name": "Kushi",
-            "country_name": "India",
-            "genre": "Romance, Drama",
-            "writers": "Shiva Nirvana",
-            "release": {
-                "date": 2,
-                "month": "June",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "A romantic drama that explores the complexities of love and relationships. Starring Vijay Deverakonda and Samantha Ruth Prabhu, Kushi follows the journey of two individuals who fall in love despite their contrasting backgrounds. The movie promises intense emotions and heartfelt moments.",
-            "movie_language": "Telugu",
-            "director_name": "Shiva Nirvana",
-            "director_image": null,
-            "hero_name": "Vijay Deverakonda",
-            "hero_image": null,
-            "heroine_name": "Samantha Ruth Prabhu",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 57,
-            "name": "Laal Singh Chaddha 2",
-            "country_name": "India",
-            "genre": "Drama, Romance",
-            "writers": "Atul Kulkarni",
-            "release": {
-                "date": 14,
-                "month": "February",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "The much-awaited sequel to the 2022 film Laal Singh Chaddha follows the next chapter in Laal’s life. Starring Aamir Khan, the film will continue the heartfelt and emotional journey of this character, exploring themes of love, loss, and destiny.",
-            "movie_language": "Hindi",
-            "director_name": "Advait Chandan",
-            "director_image": null,
-            "hero_name": "Aamir Khan",
-            "hero_image": null,
-            "heroine_name": "Kareena Kapoor",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 58,
-            "name": "Kaatal (The Tree)",
-            "country_name": "India",
-            "genre": "Drama, Family",
-            "writers": "Vikramaditya Motwane",
-            "release": {
-                "date": 30,
-                "month": "September",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "Kaatal (The Tree) is a family drama that revolves around the importance of trees and their role in human lives. It follows a father and son who struggle to understand each other, while the tree in their backyard serves as a metaphor for their relationship.",
-            "movie_language": "Hindi",
-            "director_name": "Vikramaditya Motwane",
-            "director_image": null,
-            "hero_name": "Manoj Bajpayee",
-            "hero_image": null,
-            "heroine_name": "Alia Bhatt",
-            "heroine_image": "https://i.pinimg.com/236x/af/07/8f/af078fbb15675781341b9c2bfbd91aa6.jpg",
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 59,
-            "name": "Mujhse Dosti Karoge! 2",
-            "country_name": "India",
-            "genre": "Romance, Drama",
-            "writers": "Kunal Kohli",
-            "release": {
-                "date": 11,
-                "month": "October",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "A sequel to the classic romantic drama, Mujhse Dosti Karoge! 2 continues the tale of friendship, love, and heartbreak. The movie will feature Hrithik Roshan and Rani Mukerji as they explore how their relationships evolve over time.",
-            "movie_language": "Hindi",
-            "director_name": "Kunal Kohli",
-            "director_image": null,
-            "hero_name": "Hrithik Roshan",
-            "hero_image": null,
-            "heroine_name": "Rani Mukerji",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
-        },
-        {
-            "id": 60,
-            "name": "Gunpowder",
-            "country_name": "India",
-            "genre": "Action, Thriller",
-            "writers": "Anurag Kashyap",
-            "release": {
-                "date": 3,
-                "month": "July",
-                "year": 2024
-            },
-            "thumbnail": null,
-            "description": "Gunpowder is an action-packed thriller that delves into the world of espionage, crime, and revenge. Directed by Anurag Kashyap, the film stars Ranbir Kapoor as an undercover agent on a mission to expose a criminal syndicate.",
-            "movie_language": "Hindi",
-            "director_name": "Anurag Kashyap",
-            "director_image": null,
-            "hero_name": "Ranbir Kapoor",
-            "hero_image": null,
-            "heroine_name": "Taapsee Pannu",
-            "heroine_image": null,
-            "other_characters": null,
-            "released": "Upcoming (2024)"
+            "director": [
+                {
+                    "name": "Siddharth Anand",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Sid_Anand_on_set.jpg/320px-Sid_Anand_on_set.jpg"
+                }
+            ],
+            "hero": [
+                {
+                    "name": "Hrithik Roshan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hrithik_at_Rado_launch.jpg/342px-Hrithik_at_Rado_launch.jpg"
+                }
+            ],
+            "heroine": [
+                {
+                    "name": "Deepika Padukone",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Deepika_Padukone_Cannes_2018_%28cropped%29.jpg/359px-Deepika_Padukone_Cannes_2018_%28cropped%29.jpg"
+                }
+            ],
+            "other_characters": [
+                {
+                    "name": "Anil Kapoor",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Anil_Kapoor_snapped_at_Race_3_interviews_at_Sun_N_Sand_hotel_in_Juhu.jpg/480px-Anil_Kapoor_snapped_at_Race_3_interviews_at_Sun_N_Sand_hotel_in_Juhu.jpg"
+                }
+            ],
+            "released": true
         }
     ],
-    "slider":[
+    "slider": [
         {
             "id": 1,
             "name": "Pushpa 2: The Rule",
             "country_name": "India",
-            "genre": ["Romance", "Drama", "Comedy"],
-            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "genre": [
+                "Action",
+                "Drama"
+            ],
+            "writers": [
+                "Sukumar",
+                "Srikanth Vissa"
+            ],
             "release": {
-                "date": 28,
-                "month": "July",
-                "year": 2023
+                "date": 5,
+                "month": "December",
+                "year": 2024
             },
             "thumbnail": "https://4kwallpapers.com/images/walls/thumbs_3t/19900.jpg",
-            "description": "Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
+            "description": "A consignment of red sandalwood arrives at the Yokohama port in Japan, where workers are shocked to find Pushpa hidden inside one of the containers. He attacks them, demanding payment for the load but is shot and falls into the sea, triggering a flashback.",
             "movie_language": "Hindi",
             "director": [
                 {
-                    "name": "Karan Johar",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
+                    "name": "Sukumar",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sukku-one.jpg/453px-Sukku-one.jpg"
                 }
             ],
             "hero": [
                 {
-                    "name": "Ranveer Singh",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                    "name": "Allu Arjun",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Allu_Arjun_at_Pushpa_2_The_Rule_meet.jpg/409px-Allu_Arjun_at_Pushpa_2_The_Rule_meet.jpg"
                 }
             ],
             "heroine": [
                 {
-                    "name": "Alia Bhatt",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
+                    "name": "Rashmika Mandanna",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Rashmika_Mandanna_spotted_during_Goodbye_promotions_at_JW_Marriott.jpg/369px-Rashmika_Mandanna_spotted_during_Goodbye_promotions_at_JW_Marriott.jpg"
                 }
             ],
             "other_characters": [
                 {
-                    "name": "Dharmendra",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
-                }, {
-                    "name": "Jaya Bachchan",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
-                }, {
-                    "name": "Shabana Azmi",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
+                    "name": "Fahadh Faasil",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Fahadh_Faasil_2019.jpg/373px-Fahadh_Faasil_2019.jpg"
                 }
             ],
-            "released": false
+            "released": true
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Mufasa: The Lion King",
             "country_name": "India",
-            "genre": ["Romance", "Drama", "Comedy"],
-            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "genre": [
+                "Animation",
+                "Adventure",
+                "Drama"
+            ],
+            "writers": [
+                "Linda Woolverton",
+                "Irene Mecchi",
+                "Jonathan Roberts"
+            ],
             "release": {
-                "date": 28,
-                "month": "July",
-                "year": 2023
+                "date": 20,
+                "month": "December",
+                "year": 2024
             },
             "thumbnail": "https://images.hdqwalls.com/download/mufasa-the-lion-king-d-box-poster-gf-3840x2160.jpg",
-            "description": "Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
-            "movie_language": "Hindi",
+            "description": "Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of a group of misfits searching for their destiny.",
+            "movie_language": "English",
             "director": [
                 {
-                    "name": "Karan Johar",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
+                    "name": "Barry Jenkins",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Filmmaker_Barry_Jenkins_%28cropped%29.jpg/455px-Filmmaker_Barry_Jenkins_%28cropped%29.jpg"
                 }
             ],
             "hero": [
                 {
-                    "name": "Ranveer Singh",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                    "name": "Aaron Pierre",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/%27MLK_X%27%2C_Kelvin_Harrison_e_Aaron_Pierre_%C2%ABUna_serie_per_capire_la_storia_ancora_pi%C3%B9_a_fondo%C2%BB_%285m30s%29_%28cropped%29.png/359px-%27MLK_X%27%2C_Kelvin_Harrison_e_Aaron_Pierre_%C2%ABUna_serie_per_capire_la_storia_ancora_pi%C3%B9_a_fondo%C2%BB_%285m30s%29_%28cropped%29.png"
+                },
+                {
+                    "name": "Kelvin Harrison Jr.",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Kelvin_Harrison_Jr._during_an_interview%2C_December_2021.png/331px-Kelvin_Harrison_Jr._during_an_interview%2C_December_2021.png"
+                },
+                {
+                    "name": "Seth Rogen",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Seth_Rogen_at_Collision_2019_-_SM0_1823_%2847106936404%29_%28cropped%29.jpg/387px-Seth_Rogen_at_Collision_2019_-_SM0_1823_%2847106936404%29_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Billy Eichner",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Billy_Eichner_May_2014.jpg/319px-Billy_Eichner_May_2014.jpg"
+                },
+                {
+                    "name": "Donald Glover",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Donald_Glover_TIFF_2015.jpg/339px-Donald_Glover_TIFF_2015.jpg"
+                },
+                {
+                    "name": "Mads Mikkelsen",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Stuttgart_2022_-Comic_Con_Germany-Mads_Mikkelsen-_by-RaBoe_007_%28cropped%29.jpg/319px-Stuttgart_2022_-Comic_Con_Germany-Mads_Mikkelsen-_by-RaBoe_007_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Lennie James",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Lennie_James_%2848403597296%29_%28cropped%29.jpg/359px-Lennie_James_%2848403597296%29_%28cropped%29.jpg"
                 }
             ],
             "heroine": [
                 {
-                    "name": "Alia Bhatt",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
-                }
-            ],
-            "other_characters": [
+                    "name": "Tiffany Boone",
+                    "image": ""
+                },
                 {
-                    "name": "Dharmendra",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
-                }, {
-                    "name": "Jaya Bachchan",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
-                }, {
-                    "name": "Shabana Azmi",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
+                    "name": "Thandiwe Newton",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Thandie_Newton_by_Gage_Skidmore_2.jpg/378px-Thandie_Newton_by_Gage_Skidmore_2.jpg"
+                },
+                {
+                    "name": "Anika Noni Rose",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Anika_Noni_Rose_Photo_Op_GalaxyCon_Raleigh_2024_%28cropped%29.jpg/359px-Anika_Noni_Rose_Photo_Op_GalaxyCon_Raleigh_2024_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Blue Ivy Carter",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Blue_Ivy_Carter_-_Beyonc%C3%A9_Renaissance_World_Tour_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%2862_of_118%29_%2852945302082%29_%28cropped%29.jpg/325px-Blue_Ivy_Carter_-_Beyonc%C3%A9_Renaissance_World_Tour_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%2862_of_118%29_%2852945302082%29_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Beyoncé Knowles-Carter",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%285_of_118%29_%2852945900006%29_%28cropped_2%29.jpg/359px-Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%285_of_118%29_%2852945900006%29_%28cropped_2%29.jpg"
                 }
             ],
-            "released": false
+            "other_characters": [],
+            "released": true
         },
         {
-            "id": 1,
-            "name": "Kalki 2898 A.D.",
+            "id": 3,
+            "name": "Kalki 2898 AD",
             "country_name": "India",
-            "genre": ["Romance", "Drama", "Comedy"],
-            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "genre": [
+                "Action",
+                "Adventure",
+                "Drama"
+            ],
+            "writers": [
+                "Nag Ashwin"
+            ],
             "release": {
-                "date": 28,
-                "month": "July",
-                "year": 2023
+                "date": 27,
+                "month": "June",
+                "year": 2024
             },
             "thumbnail": "https://4kwallpapers.com/images/walls/thumbs_3t/17174.jpeg",
-            "description": "Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
+            "description": "The future of those in the dystopian city of Kasi is altered when the destined arrival of Lord Vishnu's final avatar launches a war against darkness.",
             "movie_language": "Hindi",
             "director": [
                 {
-                    "name": "Karan Johar",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
+                    "name": "Nag Ashwin",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nag_Ashwin_by_Gage_Skidmore.jpg/381px-Nag_Ashwin_by_Gage_Skidmore.jpg"
                 }
             ],
             "hero": [
                 {
-                    "name": "Ranveer Singh",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                    "name": "Prabhas",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Prabhas_by_Gage_Skidmore.jpg/380px-Prabhas_by_Gage_Skidmore.jpg"
+                },
+                {
+                    "name": "Amitabh Bachchan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Indian_actor_Amitabh_Bachchan.jpg/345px-Indian_actor_Amitabh_Bachchan.jpg"
                 }
             ],
             "heroine": [
                 {
-                    "name": "Alia Bhatt",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
+                    "name": "Deepika Padukone",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Deepika_Padukone_Cannes_2018_%28cropped%29.jpg/359px-Deepika_Padukone_Cannes_2018_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Disha Patani",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Photos-Disha-Patani-snapped-at-Myntra-event_%28cropped%29.jpg"
                 }
             ],
             "other_characters": [
                 {
-                    "name": "Dharmendra",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
-                }, {
-                    "name": "Jaya Bachchan",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
-                }, {
-                    "name": "Shabana Azmi",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
+                    "name": "Kamal Haasan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Kamal_Haasan_by_Gage_Skidmore.jpg/348px-Kamal_Haasan_by_Gage_Skidmore.jpg"
                 }
             ],
-            "released": false
+            "released": true
         },
         {
-            "id": 1,
+            "id": 4,
             "name": "Red One",
             "country_name": "India",
-            "genre": ["Romance", "Drama", "Comedy"],
-            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "genre": [
+                "Action",
+                "Adventure",
+                "Comedy"
+            ],
+            "writers": [
+                "Chris Morgan",
+                "Hiram Garcia"
+            ],
             "release": {
-                "date": 28,
-                "month": "July",
-                "year": 2023
+                "date": 15,
+                "month": "November",
+                "year": 2024
             },
             "thumbnail": "https://images.hdqwalls.com/download/red-one-2024-5y-3840x2160.jpg",
-            "description": "Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
+            "description": "After Santa Claus is kidnapped, the North Pole's Head of Security must team up with the world's most infamous bounty hunter in a globe-trotting, action-packed mission to save Christmas.",
             "movie_language": "Hindi",
             "director": [
                 {
-                    "name": "Karan Johar",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
+                    "name": "Jake Kasdan",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Jake_Kasdan.jpg/412px-Jake_Kasdan.jpg"
                 }
             ],
             "hero": [
                 {
-                    "name": "Ranveer Singh",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                    "name": "Dwayne Johnson",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg/385px-Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg"
                 }
             ],
             "heroine": [
                 {
-                    "name": "Alia Bhatt",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
+                    "name": "Lucy Liu",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Lucy_Liu_Cannes_2008.jpg/382px-Lucy_Liu_Cannes_2008.jpg"
                 }
             ],
             "other_characters": [
                 {
-                    "name": "Dharmendra",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
-                }, {
-                    "name": "Jaya Bachchan",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
-                }, {
-                    "name": "Shabana Azmi",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
+                    "name": "Chris Evans",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/ChrisEvans2023.jpg/320px-ChrisEvans2023.jpg"
+                },
+                {
+                    "name": "J. K. Simmons",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/JK_Simmons_2009.jpg/326px-JK_Simmons_2009.jpg"
                 }
             ],
-            "released": false
+            "released": true
         },
         {
-            "id": 1,
+            "id": 5,
             "name": "Venom: The Last Dance",
             "country_name": "India",
-            "genre": ["Romance", "Drama", "Comedy"],
-            "writers": ["Ishita Moitra", "Shashank Khaitan", "Sumit Roy"],
+            "genre": [
+                "Action",
+                "Adventure",
+                "Sci-Fi"
+            ],
+            "writers": [
+                "Kelly Marcel",
+                "Tom Hardy",
+                "Todd McFarlane"
+            ],
             "release": {
-                "date": 28,
-                "month": "July",
-                "year": 2023
+                "date": 25,
+                "month": "October",
+                "year": 2024
             },
             "thumbnail": "https://images.hdqwalls.com/download/venom-the-last-dance-2024-movie-vk-3840x2160.jpg",
-            "description": "Rocky Aur Rani Kii Prem Kahaani was released on 28 July 2023 to positive reviews from critics. Made on a production budget of ₹160 crore (US$19 million) and a marketing cost of ₹18 crore (US$2.2 million), it has grossed over ₹355 crore (US$43 million) worldwide, emerging as the year's tenth highest-grossing Indian film and seventh highest-grossing Hindi film.[2][3][4] At the 69th Filmfare Awards, the film received a leading 20 nominations, including Best Film, Best Director, and Best Actor (Singh),[5] and won four awards, including Best Actress (Bhatt) and Best Supporting Actress (Azmi).",
+            "description": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
             "movie_language": "Hindi",
             "director": [
                 {
-                    "name": "Karan Johar",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
+                    "name": "Kelly Marcel",
+                    "image": ""
                 }
             ],
             "hero": [
                 {
-                    "name": "Ranveer Singh",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
+                    "name": "Tom Hardy",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tom_Hardy_by_Gage_Skidmore.jpg/355px-Tom_Hardy_by_Gage_Skidmore.jpg"
+                },
+                {
+                    "name": "Chiwetel Ejiofor",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Chiwetel_Ejiofor_at_the_2024_Toronto_International_Film_Festival_%28cropped%29.jpg/339px-Chiwetel_Ejiofor_at_the_2024_Toronto_International_Film_Festival_%28cropped%29.jpg"
                 }
             ],
             "heroine": [
                 {
-                    "name": "Alia Bhatt",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
+                    "name": "Juno Temple",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Juno_Temple_%288463784497%29_%28cropped%29.jpg"
                 }
             ],
             "other_characters": [
                 {
-                    "name": "Dharmendra",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dharam.jpg/358px-Dharam.jpg"
-                }, {
-                    "name": "Jaya Bachchan",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg/333px-Jaya_Bachchan_at_Neil_Nitin_Mukesh%27s_wedding_reception_enhanced.jpg"
-                }, {
-                    "name": "Shabana Azmi",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg/360px-Shabana_Azmi_SFU_honorary_degree_%28cropped%29.jpg"
+                    "name": "Rhys Ifans",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Rhys_Ifans_2011_cropped_%28cropped%29.jpg/342px-Rhys_Ifans_2011_cropped_%28cropped%29.jpg"
+                },
+                {
+                    "name": "Alanna Ubach",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Alanna_050413_0024.jpg/373px-Alanna_050413_0024.jpg"
+                },
+                {
+                    "name": "Stephen Graham",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Stephen_Graham_%26_Mickey_DeHara_%28crop%29.png"
+                },
+                {
+                    "name": "Peggy Lu",
+                    "image": ""
                 }
             ],
-            "released": false
+            "released": true
         }
     ]
 }
