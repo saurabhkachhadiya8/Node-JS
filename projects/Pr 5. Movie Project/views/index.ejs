@@ -92,9 +92,7 @@
                                     </div>
                                     <div data-swiper-parallax="400" class="slide-text">
                                         <p>
-                                            <% data.genre.map((genre) => { %>
-                                                <%= genre %> / 
-                                            <% }) %>
+                                            <%= data.genre.join(' / ') %>
                                         </p>
                                     </div>
                                     <div data-swiper-parallax="400" class="slide-text">
@@ -103,7 +101,7 @@
                                     <div class="clearfix"></div>
                                     <div data-swiper-parallax="500" class="slide-btns">
                                         <a href="#" class="theme-btn-s2 fs-5">Book now</a>
-                                        <a href="#" class="theme-btn-s3 fs-5"><i class="fas fa-chevron-circle-right"></i> Get Info</a>
+                                        <a href="/getinfo?sliderId=<%= data._id %>" class="theme-btn-s3 fs-5"><i class="fas fa-chevron-circle-right"></i> Get Info</a>
                                     </div>
                                 </div>
                             </div>
@@ -127,12 +125,10 @@
                         <img src="<%= thumbnail %>" alt="<%= thumbnail %>" height="300" width="100%" style="object-fit: cover;transition: all 0.5s;">
                         <div class="img-box-content position-absolute text-end p-4 pe-5 me-2">
                             <h2 class="fs-1"><%= data.name %></h2>
-                            <p class="fs-4"><% data.genre.map((genre) => { %>
-                                <%= genre %> /
-                            <% }) %></p>
+                            <p class="fs-4"><%= data.genre.join(' / ') %></p>
                             <p class="fs-5" style="letter-spacing: 2px;">Release : <%= data.release.date %> <%= data.release.month %> <%= data.release.year %></p>
                         </div>
-                        <a href="#" class="position-absolute text-uppercase text-light px-2">
+                        <a href="/getinfo?moviesId=<%= data._id %>" class="position-absolute text-uppercase text-light px-2">
                             <span>G</span>
                             <span>e</span>
                             <span>t</span>

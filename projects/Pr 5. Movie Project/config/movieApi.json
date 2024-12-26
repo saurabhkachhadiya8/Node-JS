@@ -1,7 +1,7 @@
 {
     "movies": [
         {
-            "id": 1,
+            "_id": 1,
             "name": "Rocky Aur Rani Kii Prem Kahaani",
             "country_name": "India",
             "genre": [
@@ -29,13 +29,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Padma_Shri_Karan_Johar_%28cropped%29.jpg/312px-Padma_Shri_Karan_Johar_%28cropped%29.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Ranveer Singh",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ranveer_Singh_in_2023_%281%29_%28cropped%29.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Alia Bhatt",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg/332px-Alia_Bhatt_at_Berlinale_2022_Ausschnitt.jpg"
@@ -58,7 +58,7 @@
             "released": true
         },
         {
-            "id": 2,
+            "_id": 2,
             "name": "Jawan",
             "country_name": "India",
             "genre": [
@@ -84,13 +84,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Atleeawrd.jpg/480px-Atleeawrd.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Shah Rukh Khan",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/334px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Nayanthara",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Nayanthara_at_Filmfare_Awards.jpg"
@@ -109,7 +109,7 @@
             "released": true
         },
         {
-            "id": 3,
+            "_id": 3,
             "name": "Pathaan",
             "country_name": "India",
             "genre": [
@@ -135,13 +135,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Sid_Anand_on_set.jpg/320px-Sid_Anand_on_set.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Shah Rukh Khan",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/334px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Deepika Padukone",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Deepika_Padukone_Cannes_2018_%28cropped%29.jpg/359px-Deepika_Padukone_Cannes_2018_%28cropped%29.jpg"
@@ -164,7 +164,7 @@
             "released": true
         },
         {
-            "id": 4,
+            "_id": 4,
             "name": "12th Fail",
             "country_name": "India",
             "genre": [
@@ -188,13 +188,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Vidhu_Vinod_Chopra_2023_%28cropped%29.jpg/457px-Vidhu_Vinod_Chopra_2023_%28cropped%29.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Vikrant Massey",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Vikrant_Massey_in_the_closing_ceremony_of_IFFI_2024.jpg/384px-Vikrant_Massey_in_the_closing_ceremony_of_IFFI_2024.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Medha Shankr",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Medha_Shankr_spotted_in_Khar_%28cropped%29.jpg/394px-Medha_Shankr_spotted_in_Khar_%28cropped%29.jpg"
@@ -203,17 +203,17 @@
             "other_characters": [
                 {
                     "name": "Anant V Joshi",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 },
                 {
                     "name": "Anshumaan Pushkar",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 }
             ],
             "released": true
         },
         {
-            "id": 5,
+            "_id": 5,
             "name": "Hanu Man",
             "country_name": "India",
             "genre": [
@@ -235,16 +235,16 @@
             "director": [
                 {
                     "name": "Prasanth Varma",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Teja Sajja",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Teja_Sajja_snapped_at_the_trailer_launch_of_Hanuman.jpg/405px-Teja_Sajja_snapped_at_the_trailer_launch_of_Hanuman.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Amritha Aiyer",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Amritha_Aiyer_at_HanuMan_gratitude_meet_%281%29.jpg/320px-Amritha_Aiyer_at_HanuMan_gratitude_meet_%281%29.jpg"
@@ -261,7 +261,7 @@
                 },
                 {
                     "name": "Vinay Rai",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 },
                 {
                     "name": "Vennela Kishore",
@@ -271,7 +271,7 @@
             "released": true
         },
         {
-            "id": 6,
+            "_id": 6,
             "name": "Satyaprem Ki Katha",
             "country_name": "India",
             "genre": [
@@ -292,16 +292,16 @@
             "director": [
                 {
                     "name": "Sameer Vidwans",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Kartik Aaryan",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Kartik_Aaryan_promoting_Bhool_Bhualiyaa_3.jpg/358px-Kartik_Aaryan_promoting_Bhool_Bhualiyaa_3.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Kiara Advani",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kiara_Advani_snapped_at_the_screening_of_Shershaah_%28cropped%29.jpg/384px-Kiara_Advani_snapped_at_the_screening_of_Shershaah_%28cropped%29.jpg"
@@ -311,7 +311,7 @@
             "released": true
         },
         {
-            "id": 7,
+            "_id": 7,
             "name": "Tiger 3",
             "country_name": "India",
             "genre": [
@@ -334,16 +334,16 @@
             "director": [
                 {
                     "name": "Maneesh Sharma",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Salman Khan",
-                    "imag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Salman_Khan_in_2023_%281%29_%28cropped%29.jpg/480px-Salman_Khan_in_2023_%281%29_%28cropped%29.jpg"
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Salman_Khan_in_2023_%281%29_%28cropped%29.jpg/480px-Salman_Khan_in_2023_%281%29_%28cropped%29.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Katrina Kaif",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Katrina_Kaif_promoting_Bharat_in_2019.jpg/340px-Katrina_Kaif_promoting_Bharat_in_2019.jpg"
@@ -358,7 +358,7 @@
             "released": true
         },
         {
-            "id": 8,
+            "_id": 8,
             "name": "Dunki",
             "country_name": "India",
             "genre": [
@@ -384,13 +384,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Rajkumar_Hirani_2014.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Shah Rukh Khan",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/334px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Taapsee Pannu",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Taapsee_Pannu_in_March_2022.jpg"
@@ -403,11 +403,11 @@
                 },
                 {
                     "name": "Anil Grover",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 },
                 {
                     "name": "Vikram Kochhar",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 },
                 {
                     "name": "Vicky Kaushal",
@@ -417,7 +417,7 @@
             "released": true
         },
         {
-            "id": 9,
+            "_id": 9,
             "name": "Devara Part 1",
             "country_name": "India",
             "genre": [
@@ -442,13 +442,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Koratala_Siva_%28cropped%29.jpg/359px-Koratala_Siva_%28cropped%29.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "N.T. Rama Rao Jr.",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Jr-NTRspotted-promoting-RRR-on-sets-of-The-Kapil-Sharma-Show_%28cropped%29.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Janhvi Kapoor",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Janhvi_Kapoor_snapped_at_the_press_show_of_Bawaal.jpg/354px-Janhvi_Kapoor_snapped_at_the_press_show_of_Bawaal.jpg"
@@ -465,7 +465,7 @@
                 },
                 {
                     "name": "Srikanth",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 },
                 {
                     "name": "Shine Tom Chacko",
@@ -475,7 +475,7 @@
             "released": true
         },
         {
-            "id": 10,
+            "_id": 10,
             "name": "Bade Miyan Chote Miyan",
             "country_name": "India",
             "genre": [
@@ -502,7 +502,7 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Ali_Abbas_Zafar.jpg/359px-Ali_Abbas_Zafar.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Akshay Kumar",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Akshay_Kumar.jpg"
@@ -512,7 +512,7 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Tiger_Shroff_in_2019.jpg/340px-Tiger_Shroff_in_2019.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Sonakshi Sinha",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Sonakshi_Sinha_snapped_at_Krome_Studio_in_Bandra_%285%29.jpg/349px-Sonakshi_Sinha_snapped_at_Krome_Studio_in_Bandra_%285%29.jpg"
@@ -535,7 +535,7 @@
             "released": true
         },
         {
-            "id": 11,
+            "_id": 11,
             "name": "Kisi Ka Bhai Kisi Ki Jaan",
             "country_name": "India",
             "genre": [
@@ -559,16 +559,16 @@
             "director": [
                 {
                     "name": "Farhad Samji",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Salman Khan",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Salman_Khan_in_2023_%281%29_%28cropped%29.jpg/480px-Salman_Khan_in_2023_%281%29_%28cropped%29.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Pooja Hegde",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Pooja_Hegde_at_Beast_Telugu_press_meet.jpg/359px-Pooja_Hegde_at_Beast_Telugu_press_meet.jpg"
@@ -583,7 +583,7 @@
             "released": true
         },
         {
-            "id": 12,
+            "_id": 12,
             "name": "Bholaa",
             "country_name": "India",
             "genre": [
@@ -613,13 +613,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg/343px-Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Ajay Devgn",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg/343px-Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Tabu",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Tabu_in_2024.jpg/359px-Tabu_in_2024.jpg"
@@ -646,7 +646,7 @@
             "released": true
         },
         {
-            "id": 13,
+            "_id": 13,
             "name": "Stree 2: Sarkate Ka Aatank",
             "country_name": "India",
             "genre": [
@@ -672,13 +672,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/The_Director_Amar_Khaushik_of_the_film_AABA%2C_at_the_Presentation%2C_during_the_48th_International_Film_Festival_of_India_%28IFFI-2017%29%2C_in_Panaji%2C_Goa_on_November_27%2C_2017.jpg/480px-thumbnail.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Rajkummar Rao",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Actor_Rajkummar_Rao.jpg/320px-Actor_Rajkummar_Rao.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Shraddha Kapoor",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Shraddha_Kapoor_promoting_Street_Dancer_3D.jpg/326px-Shraddha_Kapoor_promoting_Street_Dancer_3D.jpg"
@@ -691,7 +691,7 @@
                 },
                 {
                     "name": "Abhishek Banerjee",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 },
                 {
                     "name": "Aparshakti Khurana",
@@ -701,7 +701,7 @@
             "released": true
         },
         {
-            "id": 14,
+            "_id": 14,
             "name": "Murder Mubarak",
             "country_name": "India",
             "genre": [
@@ -728,13 +728,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Homi_Adajania_-_Director.jpg/319px-Homi_Adajania_-_Director.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Pankaj Tripathi",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pankaj_Tripathi_World_Premiere_Newton_Zoopalast_Berlinale_2017_06.jpg/320px-Pankaj_Tripathi_World_Premiere_Newton_Zoopalast_Berlinale_2017_06.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Karisma Kapoor",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Karisma_Kapoor_snapped_at_Rotary_Club_of_Bombay_West_%286%29_%28cropped%29.jpg"
@@ -765,7 +765,7 @@
             "released": true
         },
         {
-            "id": 15,
+            "_id": 15,
             "name": "Samrat Prithviraj",
             "country_name": "India",
             "genre": [
@@ -790,13 +790,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Cine-Bahastalab-2012_Dr._Chandra_Prakash_Dwivedi_%28Film_%26_TV_Director%2BActor%29.jpg/480px-Cine-Bahastalab-2012_Dr._Chandra_Prakash_Dwivedi_%28Film_%26_TV_Director%2BActor%29.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Akshay Kumar",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Akshay_Kumar.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Manushi Chhillar",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Manushi_Chhillar_attends_a_press_meet_for_the_Gem_and_Jewellery_Export_Promotion_Council_of_India_%28GJEPC%29_in_2023_%28cropped%29.jpg/427px-Manushi_Chhillar_attends_a_press_meet_for_the_Gem_and_Jewellery_Export_Promotion_Council_of_India_%28GJEPC%29_in_2023_%28cropped%29.jpg"
@@ -815,7 +815,7 @@
             "released": true
         },
         {
-            "id": 16,
+            "_id": 16,
             "name": "Bad Newz",
             "country_name": "India",
             "genre": [
@@ -840,7 +840,7 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Anand_tiwari.jpg/318px-Anand_tiwari.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Vicky Kaushal",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Vicky_Kaushal_snapped_promoting_Zara_Hatke_Zara_Bach_Ke_on_the_sets_of_The_Kapil_Sharma_Show_%28cropped%29.jpg"
@@ -850,7 +850,7 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Ammy_Virk_2019.jpg/384px-Ammy_Virk_2019.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Triptii Dimri",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Triptii_Dimri_snapped_outside_Leap_Club_in_Santacruz_%28cropped%29.jpg/332px-Triptii_Dimri_snapped_outside_Leap_Club_in_Santacruz_%28cropped%29.jpg"
@@ -860,7 +860,7 @@
             "released": true
         },
         {
-            "id": 17,
+            "_id": 17,
             "name": "Singham Again",
             "country_name": "India",
             "genre": [
@@ -886,7 +886,7 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Rohit_Shetty_snapped_during_Simmba_interviews_at_JW_Marriott_in_Juhu.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Ajay Devgn",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg/343px-Ajay_Devgn_at_the_launch_of_MTV_Super_Fight_League.jpg"
@@ -904,7 +904,7 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Tiger_Shroff_in_2019.jpg/340px-Tiger_Shroff_in_2019.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Kareena Kapoor Khan",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Kareena_Kapoor_Khan_in_2023_%281%29_%28cropped%29.jpg"
@@ -923,7 +923,7 @@
             "released": true
         },
         {
-            "id": 18,
+            "_id": 18,
             "name": "Munjya",
             "country_name": "India",
             "genre": [
@@ -946,16 +946,16 @@
             "director": [
                 {
                     "name": "Aditya Sarpotdar",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Abhay Verma",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abhay_Verma_in_2024_%28cropped%29.jpg/415px-Abhay_Verma_in_2024_%28cropped%29.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Sharvari Wagh",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Sharvari_Wagh_snapped_promoting_Munjya_at_Maddock_Films_office_%28cropped%29.jpg/449px-Sharvari_Wagh_snapped_promoting_Munjya_at_Maddock_Films_office_%28cropped%29.jpg"
@@ -974,7 +974,7 @@
             "released": true
         },
         {
-            "id": 19,
+            "_id": 19,
             "name": "The Greatest of All Time",
             "country_name": "India",
             "genre": [
@@ -1000,13 +1000,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Venkat_Prabhu_at_Damaal_Dumeel_Audio_Launch.jpg/320px-Venkat_Prabhu_at_Damaal_Dumeel_Audio_Launch.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Joseph Vijay",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Vijay_at_Protest_of_the_Nadigar_Sangam.jpg/384px-Vijay_at_Protest_of_the_Nadigar_Sangam.jpg"
                 }
             ],
-            "heroine": [],
+            "actress": [],
             "other_characters": [
                 {
                     "name": "Prashanth",
@@ -1032,7 +1032,7 @@
             "released": true
         },
         {
-            "id": 20,
+            "_id": 20,
             "name": "Fighter",
             "country_name": "India",
             "genre": [
@@ -1058,13 +1058,13 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Sid_Anand_on_set.jpg/320px-Sid_Anand_on_set.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Hrithik Roshan",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hrithik_at_Rado_launch.jpg/342px-Hrithik_at_Rado_launch.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Deepika Padukone",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Deepika_Padukone_Cannes_2018_%28cropped%29.jpg/359px-Deepika_Padukone_Cannes_2018_%28cropped%29.jpg"
@@ -1081,7 +1081,7 @@
     ],
     "slider": [
         {
-            "id": 1,
+            "_id": 1,
             "name": "Pushpa 2: The Rule",
             "country_name": "India",
             "genre": [
@@ -1099,20 +1099,20 @@
             },
             "thumbnail": "https://4kwallpapers.com/images/walls/thumbs_3t/19900.jpg",
             "description": "A consignment of red sandalwood arrives at the Yokohama port in Japan, where workers are shocked to find Pushpa hidden inside one of the containers. He attacks them, demanding payment for the load but is shot and falls into the sea, triggering a flashback.",
-            "movie_language": "Hindi",
+            "movie_language": "Telugu",
             "director": [
                 {
                     "name": "Sukumar",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sukku-one.jpg/453px-Sukku-one.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Allu Arjun",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Allu_Arjun_at_Pushpa_2_The_Rule_meet.jpg/409px-Allu_Arjun_at_Pushpa_2_The_Rule_meet.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Rashmika Mandanna",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Rashmika_Mandanna_spotted_during_Goodbye_promotions_at_JW_Marriott.jpg/369px-Rashmika_Mandanna_spotted_during_Goodbye_promotions_at_JW_Marriott.jpg"
@@ -1127,9 +1127,9 @@
             "released": true
         },
         {
-            "id": 2,
+            "_id": 2,
             "name": "Mufasa: The Lion King",
-            "country_name": "India",
+            "country_name": "USA",
             "genre": [
                 "Animation",
                 "Adventure",
@@ -1154,7 +1154,7 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Filmmaker_Barry_Jenkins_%28cropped%29.jpg/455px-Filmmaker_Barry_Jenkins_%28cropped%29.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Aaron Pierre",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/%27MLK_X%27%2C_Kelvin_Harrison_e_Aaron_Pierre_%C2%ABUna_serie_per_capire_la_storia_ancora_pi%C3%B9_a_fondo%C2%BB_%285m30s%29_%28cropped%29.png/359px-%27MLK_X%27%2C_Kelvin_Harrison_e_Aaron_Pierre_%C2%ABUna_serie_per_capire_la_storia_ancora_pi%C3%B9_a_fondo%C2%BB_%285m30s%29_%28cropped%29.png"
@@ -1184,10 +1184,10 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Lennie_James_%2848403597296%29_%28cropped%29.jpg/359px-Lennie_James_%2848403597296%29_%28cropped%29.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Tiffany Boone",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 },
                 {
                     "name": "Thandiwe Newton",
@@ -1210,7 +1210,7 @@
             "released": true
         },
         {
-            "id": 3,
+            "_id": 3,
             "name": "Kalki 2898 AD",
             "country_name": "India",
             "genre": [
@@ -1228,14 +1228,14 @@
             },
             "thumbnail": "https://4kwallpapers.com/images/walls/thumbs_3t/17174.jpeg",
             "description": "The future of those in the dystopian city of Kasi is altered when the destined arrival of Lord Vishnu's final avatar launches a war against darkness.",
-            "movie_language": "Hindi",
+            "movie_language": "Telugu",
             "director": [
                 {
                     "name": "Nag Ashwin",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nag_Ashwin_by_Gage_Skidmore.jpg/381px-Nag_Ashwin_by_Gage_Skidmore.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Prabhas",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Prabhas_by_Gage_Skidmore.jpg/380px-Prabhas_by_Gage_Skidmore.jpg"
@@ -1245,7 +1245,7 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Indian_actor_Amitabh_Bachchan.jpg/345px-Indian_actor_Amitabh_Bachchan.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Deepika Padukone",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Deepika_Padukone_Cannes_2018_%28cropped%29.jpg/359px-Deepika_Padukone_Cannes_2018_%28cropped%29.jpg"
@@ -1264,9 +1264,9 @@
             "released": true
         },
         {
-            "id": 4,
+            "_id": 4,
             "name": "Red One",
-            "country_name": "India",
+            "country_name": "USA",
             "genre": [
                 "Action",
                 "Adventure",
@@ -1283,20 +1283,20 @@
             },
             "thumbnail": "https://images.hdqwalls.com/download/red-one-2024-5y-3840x2160.jpg",
             "description": "After Santa Claus is kidnapped, the North Pole's Head of Security must team up with the world's most infamous bounty hunter in a globe-trotting, action-packed mission to save Christmas.",
-            "movie_language": "Hindi",
+            "movie_language": "English",
             "director": [
                 {
                     "name": "Jake Kasdan",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Jake_Kasdan.jpg/412px-Jake_Kasdan.jpg"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Dwayne Johnson",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg/385px-Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Lucy Liu",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Lucy_Liu_Cannes_2008.jpg/382px-Lucy_Liu_Cannes_2008.jpg"
@@ -1315,9 +1315,9 @@
             "released": true
         },
         {
-            "id": 5,
+            "_id": 5,
             "name": "Venom: The Last Dance",
-            "country_name": "India",
+            "country_name": "USA",
             "genre": [
                 "Action",
                 "Adventure",
@@ -1335,14 +1335,14 @@
             },
             "thumbnail": "https://images.hdqwalls.com/download/venom-the-last-dance-2024-movie-vk-3840x2160.jpg",
             "description": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-            "movie_language": "Hindi",
+            "movie_language": "English",
             "director": [
                 {
                     "name": "Kelly Marcel",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 }
             ],
-            "hero": [
+            "actor": [
                 {
                     "name": "Tom Hardy",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tom_Hardy_by_Gage_Skidmore.jpg/355px-Tom_Hardy_by_Gage_Skidmore.jpg"
@@ -1352,7 +1352,7 @@
                     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Chiwetel_Ejiofor_at_the_2024_Toronto_International_Film_Festival_%28cropped%29.jpg/339px-Chiwetel_Ejiofor_at_the_2024_Toronto_International_Film_Festival_%28cropped%29.jpg"
                 }
             ],
-            "heroine": [
+            "actress": [
                 {
                     "name": "Juno Temple",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Juno_Temple_%288463784497%29_%28cropped%29.jpg"
@@ -1373,7 +1373,7 @@
                 },
                 {
                     "name": "Peggy Lu",
-                    "image": ""
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqn10hDTAqF8h5Cm9_Z716ViBvTspD9uDsJg44j5AuHBY8FUwGB-0OQDXcAKI08cJnjU&usqp=CAU"
                 }
             ],
             "released": true

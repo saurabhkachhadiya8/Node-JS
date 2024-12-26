@@ -2,22 +2,8 @@ const movieModel = require('../models/MovieModel');
 const movieApi = require('../config/movieApi.json');
 const fs = require('fs');
 const path = require('path');
+const movies = require('../models/MovieModel');
 
-const fetchAndStoreMovies = async (req, res) => {
-    try {
-        const movies = movieApi.movies;
-
-        await Movie.deleteMany({});
-
-        await Movie.insertMany(movies);
-
-        console.log('Movies have been successfully saved to MongoDB!');
-        return res.status(200).send('Data stored in MongoDB');
-    } catch (err) {
-        console.error(err);
-        return res.status(500).send('Error storing data in MongoDB');
-    }
-};
 const index = async (req, res) => {
     try {
         const movies = await movieApi;
@@ -115,6 +101,31 @@ const updateTicket = async(req,res) => {
     }
 }
 
+const getinfo = async(req,res) => {
+    try{
+        let moviesId = req.query.moviesId ? req.query.moviesId : null;
+        let sliderId = req.query.sliderId ? req.query.sliderId : null;
+        if(!moviesId && sliderId){
+            let single = await movieApi.slider.find((data) => data._id == sliderId);
+            return res.render('getinfo',{
+                single,
+                slider:movieApi.slider,
+                movies:null
+            });
+        }else{
+            let single = await movieApi.movies.find((data) => data._id == moviesId);
+            return res.render('getinfo',{
+                single,
+                slider:null,
+                movies:movieApi.movies
+            });
+        }
+    }catch(err){
+        console.log(err);
+        return false;
+    }
+}
+
 module.exports = {
-    index, addPage, addTicket, viewPage,deleteTicket,editTicket,updateTicket
+    index, addPage, addTicket, viewPage,deleteTicket,editTicket,updateTicket,getinfo
 }

@@ -1,6 +1,6 @@
 const express = require('express');
 const routes = express.Router();
-const { index, addPage, addTicket, viewPage, deleteTicket, editTicket, updateTicket } = require('../controllers/MovieController');
+const { index, addPage, addTicket, viewPage, deleteTicket, editTicket, updateTicket, getinfo } = require('../controllers/MovieController');
 
 const multer = require('multer');
 const st = multer.diskStorage({
@@ -21,5 +21,7 @@ routes.get('/view',viewPage);
 routes.get('/deleteticket',deleteTicket);
 routes.get('/editticket',editTicket);
 routes.post('/updateticket',fileUpload,updateTicket);
+
+routes.get('/getinfo',getinfo);
 
 module.exports = routes;
