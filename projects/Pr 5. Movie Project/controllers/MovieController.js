@@ -36,46 +36,52 @@ const addTicket = async (req, res) => {
 const viewPage = async (req, res) => {
     try {
         let tickets = await movieModel.find({});
-        return res.render('view',{
+        return res.render('view', {
             tickets
         })
-    }catch (err) {
+    } catch (err) {
         console.log(err);
         return false;
     }
 }
-const deleteTicket = async(req,res) => {
-    try{
+const deleteTicket = async (req, res) => {
+    try {
         let id = req.query.deleteId;
         let single = await movieModel.findById(id);
-        fs.unlinkSync(path.join(__dirname,'../uploads',single.image));
+        let imagePath = path.join(__dirname, '../uploads', single.image);
+        if (fs.existsSync(imagePath)) {
+            fs.unlinkSync(imagePath);
+        }
         await movieModel.findByIdAndDelete(id);
         console.log('Ticket Deleted Successfully');
         return res.redirect('/view');
-    }catch(err){
+    } catch (err) {
         console.log(err);
         return false;
     }
 }
-const editTicket = async(req,res) => {
-    try{
+const editTicket = async (req, res) => {
+    try {
         let id = req.query.editId;
         let single = await movieModel.findById(id);
-        return res.render('edit',{
+        return res.render('edit', {
             single
         });
-    }catch(err){
+    } catch (err) {
         console.log(err);
         return false;
     }
 }
-const updateTicket = async(req,res) => {
-    try{
+const updateTicket = async (req, res) => {
+    try {
         let id = req.body.updateId;
-        if(req.file){
+        if (req.file) {
             let single = await movieModel.findById(id);
-            fs.unlinkSync(path.join(__dirname,'../uploads',single.image));
-            await movieModel.findByIdAndUpdate(id,{
+            let imagePath = path.join(__dirname, '../uploads', single.image);
+            if (fs.existsSync(imagePath)) {
+                fs.unlinkSync(imagePath);
+            }
+            await movieModel.findByIdAndUpdate(id, {
                 name: req.body.name,
                 price: req.body.price,
                 image: req.file.filename,
@@ -83,9 +89,9 @@ const updateTicket = async(req,res) => {
             });
             console.log('Ticket Updated Successfully');
             return res.redirect('/view');
-        }else{
+        } else {
             let single = await movieModel.findById(id);
-            await movieModel.findByIdAndUpdate(id,{
+            await movieModel.findByIdAndUpdate(id, {
                 name: req.body.name,
                 price: req.body.price,
                 image: single.image,
@@ -94,40 +100,40 @@ const updateTicket = async(req,res) => {
             console.log('Ticket Updated Successfully');
             return res.redirect('/view');
         }
-    }catch(err){
+    } catch (err) {
         console.log(err);
         return false;
     }
 }
 
-const getinfo = async(req,res) => {
-    try{
+const getinfo = async (req, res) => {
+    try {
         let moviesId = req.query.moviesId ? req.query.moviesId : null;
         let sliderId = req.query.sliderId ? req.query.sliderId : null;
-        if(!moviesId && sliderId){
+        if (!moviesId && sliderId) {
             let single = await movieApi.slider.find((data) => data._id == sliderId);
-            return res.render('getinfo',{
+            return res.render('getinfo', {
                 single,
-                slider:movieApi.slider,
-                movies:null
+                slider: movieApi.slider,
+                movies: null
             });
-        }else{
+        } else {
             let single = await movieApi.movies.find((data) => data._id == moviesId);
-            return res.render('getinfo',{
+            return res.render('getinfo', {
                 single,
-                slider:null,
-                movies:movieApi.movies
+                slider: null,
+                movies: movieApi.movies
             });
         }
-    }catch(err){
+    } catch (err) {
         console.log(err);
         return false;
     }
 }
-const bookFromGetinfo = async(req,res) => {
-    try{
-        let {ticketId,sliderData,movieData} = req.body;
-        if(!movieData && sliderData){
+const bookFromGetinfo = async (req, res) => {
+    try {
+        let { ticketId, sliderData, movieData } = req.body;
+        if (!movieData && sliderData) {
             let slider = await movieApi.slider.find((data) => data._id == ticketId);
             await movieModel.create({
                 name: slider.name,
@@ -137,7 +143,7 @@ const bookFromGetinfo = async(req,res) => {
             });
             console.log('Ticket Added From Getinfo Successfully');
             return res.redirect('/view');
-        }else{
+        } else {
             let movies = await movieApi.movies.find((data) => data._id == ticketId);
             await movieModel.create({
                 name: movies.name,
@@ -148,12 +154,12 @@ const bookFromGetinfo = async(req,res) => {
             console.log('Ticket Added From Getinfo Successfully');
             return res.redirect('/view');
         }
-    }catch(err){
+    } catch (err) {
         console.log(err);
         return false;
     }
 }
 
 module.exports = {
-    index, addPage, addTicket, viewPage,deleteTicket,editTicket,updateTicket,getinfo,bookFromGetinfo
+    index, addPage, addTicket, viewPage, deleteTicket, editTicket, updateTicket, getinfo, bookFromGetinfo
 }
