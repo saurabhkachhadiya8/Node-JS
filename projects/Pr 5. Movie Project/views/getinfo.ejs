@@ -41,6 +41,19 @@
             letter-spacing: 1.5px;
             background-color: rgba(155, 0, 0, 0.692);
         }
+        ul li form input[type="submit"]{
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            padding: 8px 0;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        ul li form input[type="submit"]:hover{
+            background-color: #fff;
+            color: #f00;
+            padding: 8px 20px;
+        }
     </style>
 </head>
 
@@ -103,14 +116,28 @@
                     <p class="mb-4">
                         <%= single.description %>
                     </p>
-                    <p class="fs-1 text-end text-uppercase mb-2" style="letter-spacing: 1px;">
-                        <%= single.country_name %>
-                    </p>
-                    <p class="fs-3 text-end"><span class="fs-2 fw-semibold">Released on : </span>
-                        <%= single.release.date %><sup>th</sup>
-                            <%= single.release.month %>
-                                <%= single.release.year %>
-                    </p>
+                    <ul class="list-unstyled d-flex align-items-center">
+                        <li class="col-4">
+                            <form action="/bookfromgetinfo" method="post">
+                                <input type="hidden" name="ticketId" value="<%= single._id %>">
+                                <input type="hidden" name="sliderData" value="<%= slider %>">
+                                <input type="hidden" name="moviesData" value="<%= movies %>">
+                                <p class="fs-3 mb-2"><span class="fs-2 fw-semibold">Price : </span> ₹ <%= single.ticket_price %></p>
+                                <input type="submit" value="Book Ticket">
+                            </form>
+                        </li>
+                        <li class="col-8 text-end">
+                            <p class="fs-1 text-uppercase mb-2" style="letter-spacing: 1px;">
+                                <%= single.country_name %>
+                            </p>
+                            <p class="fs-3"><span class="fs-2 fw-semibold">Released on : </span>
+                                <%= single.release.date %><sup>th</sup>
+                                    <%= single.release.month %>
+                                        <%= single.release.year %>
+                            </p>
+                        </li>
+                    </ul>
+                    
                 </div>
             </div>
         </section>

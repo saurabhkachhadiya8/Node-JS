@@ -2,7 +2,6 @@ const movieModel = require('../models/MovieModel');
 const movieApi = require('../config/movieApi.json');
 const fs = require('fs');
 const path = require('path');
-const movies = require('../models/MovieModel');
 
 const index = async (req, res) => {
     try {
@@ -125,7 +124,36 @@ const getinfo = async(req,res) => {
         return false;
     }
 }
+const bookFromGetinfo = async(req,res) => {
+    try{
+        let {ticketId,sliderData,movieData} = req.body;
+        if(!movieData && sliderData){
+            let slider = await movieApi.slider.find((data) => data._id == ticketId);
+            await movieModel.create({
+                name: slider.name,
+                price: slider.ticket_price,
+                image: slider.thumbnail,
+                description: slider.description
+            });
+            console.log('Ticket Added From Getinfo Successfully');
+            return res.redirect('/view');
+        }else{
+            let movies = await movieApi.movies.find((data) => data._id == ticketId);
+            await movieModel.create({
+                name: movies.name,
+                price: movies.ticket_price,
+                image: movies.thumbnail,
+                description: movies.description
+            });
+            console.log('Ticket Added From Getinfo Successfully');
+            return res.redirect('/view');
+        }
+    }catch(err){
+        console.log(err);
+        return false;
+    }
+}
 
 module.exports = {
-    index, addPage, addTicket, viewPage,deleteTicket,editTicket,updateTicket,getinfo
+    index, addPage, addTicket, viewPage,deleteTicket,editTicket,updateTicket,getinfo,bookFromGetinfo
 }

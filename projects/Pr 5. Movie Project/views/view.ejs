@@ -48,7 +48,7 @@
             height: 200%;
             left: 0;
             bottom: 0;
-            background: radial-gradient(circle, rgba(255, 0, 0, 0) 5%, rgb(119, 0, 0) 100%);
+            background: radial-gradient(circle, rgba(255, 0, 0, 0) 5%, #f00 100%);
             opacity: 0;
             visibility: hidden;
             z-index: 1;
@@ -68,8 +68,9 @@
         .view-tickets .view-content{
             position: absolute;
             width: 100%;
+            height: 100%;
             left: 0;
-            top: -50%;
+            bottom: 50%;
             padding: 45px;
             z-index: 2;
             transition: all 0.5s;
@@ -79,7 +80,7 @@
         .view-tickets:hover .view-content{
             opacity: 1;
             visibility: visible;
-            top: 50%;
+            bottom: 0;
         }
         .btns a{
             width: 40%;
@@ -96,7 +97,7 @@
                 <% const {name,price,image,description,_id} = data; %>
                 <div class="col-3 view-tickets p-4 position-relative overflow-hidden" style="height: 590px;">
                     <img src="<%= image %>" alt="<%= image %>" width="100%" height="100%" style="object-fit: cover;">
-                    <div class="view-content">
+                    <div class="view-content d-flex flex-column justify-content-end">
                         <h2><%= name %></h2>
                         <p>₹ <%= price %></p>
                         <p class="fs-5"><%= description %></p>
