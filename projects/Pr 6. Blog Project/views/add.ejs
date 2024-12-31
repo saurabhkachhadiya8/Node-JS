@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="/bootstrap.min.css">
+
+    <style>
+        .addBlog input[type="text"] {
+            box-sizing: border-box;
+            width: 100%;
+            height: calc(3em + 2px);
+            margin: 0 0 1em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 0.5em;
+            background: #fff;
+            resize: none;
+            outline: none;
+        }
+
+        .addBlog input[type="text"][required]:focus,
+        .addBlog textarea[required]:focus {
+            border-color: #9b2e0d;
+        }
+
+        .addBlog input[type="text"][required]:focus+label[placeholder]:before,
+        .addBlog textarea[required]:focus+label[placeholder]:before {
+            color: #9b2e0d;
+        }
+
+        .addBlog input[type="text"][required]:focus+label[placeholder]:before,
+        .addBlog input[type="text"][required]:valid+label[placeholder]:before,
+        .addBlog textarea[required]:focus+label[placeholder]:before,
+        .addBlog textarea[required]:valid+label[placeholder]:before {
+            transition-duration: 0.2s;
+            -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
+            transform: translate(0, -1.5em) scale(0.9, 0.9);
+        }
+
+        .addBlog input[type="text"][required]:invalid+label[placeholder][alt]:before,
+        .addBlog textarea[required]:invalid+label[placeholder][alt]:before {
+            content: attr(alt);
+        }
+
+        .addBlog input[type="text"][required]+label[placeholder] {
+            display: block;
+            pointer-events: none;
+            line-height: 1.25em;
+            margin-top: calc(-3em - 2px);
+            margin-bottom: calc((3em - 1em) + 2px);
+        }
+        .addBlog textarea[required]+label[placeholder] {
+            display: block;
+            pointer-events: none;
+            margin-top: calc(-4.5em - 2px);
+            margin-bottom: calc((4.5em - 1em) + 2px);
+        }
+
+        .addBlog input[type="text"][required]+label[placeholder]:before,
+        .addBlog textarea[required]+label[placeholder]:before {
+            content: attr(placeholder);
+            display: inline-block;
+            margin: 0 calc(1em + 2px);
+            padding: 0 2px;
+            color: #898989;
+            white-space: nowrap;
+            transition: 0.3s ease-in-out;
+            background-image: linear-gradient(to bottom, #fff, #fff);
+            background-size: 100% 5px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .addBlog input[type="text"][required]:focus+label[placeholder]:before,
+        .addBlog textarea[required]:focus+label[placeholder]:before {
+            -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
+            transform: translate(0, -1.5em) scale(0.9, 0.9);
+        }
+
+        .addBlog form input[type="submit"] {
+            width: 100%;
+            background: radial-gradient(circle, rgb(255, 150, 116) 0%, rgb(155, 46, 13) 100%);
+            color: #000;
+            border: 1px solid #9b2e0d;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin-top: 10px;
+            font-size: large;
+            font-weight: 600;
+            transition: all .3s;
+        }
+
+        .addBlog form input[type="submit"]:hover {
+            letter-spacing: 1px;
+        }
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column justify-content-center"
+    style="background-color: #ebebeb;background: radial-gradient(circle, rgb(255, 150, 116) 0%, rgb(155, 46, 13) 100%);">
+
+    <%- include('navbar') %>
+
+        <section class="addBlog">
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-md-6 mx-auto p-5 m-5 position-relative"
+                        style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;background-color: #fff;border-radius: 30px;">
+                        <h2 class="pb-4 text-center">Add Blog</h2>
+                        <form action="/addblog" method="post" class="form-row" enctype="multipart/form-data">
+                            <div>
+                                <input type='file' name="image" class="form-control mb-4 py-2">
+                            </div>
+                            <div>
+                                <input required='' type='text' name="title">
+                                <label placeholder='Blog Title'></label>
+                            </div>
+                            <div>
+                                <textarea rows="3" class="form-control" placeholder="" name="description"
+                                    required=''></textarea>
+                                <label placeholder='Blog Description'></label>
+                            </div>
+                            <div>
+                                <input type='submit' value='Add Blog'>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

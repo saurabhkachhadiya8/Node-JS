@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+
+<body class="d-flex flex-column justify-content-center"
+    style="background-color: #ebebeb;background: radial-gradient(circle, rgb(255, 150, 116) 0%, rgb(155, 46, 13) 100%);">
+
+    <%- include('navbar') %>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="<%= single.image %>" alt="<%= single.image %>" width="100%" class="rounded">
+                    </div>
+                    <div class="col-6">
+                        <h1><%= single.title %></h1>
+                        <p class="fs-5"><%= single.description %></p>
+                        <div class="btns d-flex justify-content-between">
+                            <a href="/editblog?editId=<%= single._id %>" class="btn btn-dark fs-5 py-2" style="width: 48%;">Edit</a>
+                            <a href="/deleteblog?deleteId=<%= single._id %>" class="btn btn-dark fs-5 py-2" style="width: 48%;">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
