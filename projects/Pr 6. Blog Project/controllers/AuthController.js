@@ -68,6 +68,11 @@ const loginUser = async (req, res) => {
         return false;
     }
 }
+const logoutUser = (req, res) => {
+    res.clearCookie('auth');
+    console.log('Logout Successful');
+    return res.redirect('/login');
+}
 const dashboardPage = async (req, res) => {
     try {
         if (!req.cookies['auth']) {
@@ -136,32 +141,32 @@ const updateBlog = async (req, res) => {
         return false;
     }
 }
-const deleteBlog = async(req,res) => {
-    try{
+const deleteBlog = async (req, res) => {
+    try {
         let id = req.query.deleteId;
         let old = await blogModel.findById(id);
         fs.unlinkSync(path.join(__dirname, '../uploads', old.image));
         await blogModel.findByIdAndDelete(id);
         console.log('Blog Deleted Successfully');
         return res.redirect('/dashboard');
-    }catch (err) {
+    } catch (err) {
         console.log(err);
         return false;
     }
 }
-const readmore = async(req,res) => {
-    try{
+const readmore = async (req, res) => {
+    try {
         let id = req.query.readmoreId;
         let single = await blogModel.findById(id);
-        res.render('readmore',{
+        res.render('readmore', {
             single
         })
-    }catch (err) {
+    } catch (err) {
         console.log(err);
         return false;
     }
 }
 
 module.exports = {
-    registerPage, loginPage, registerUser, loginUser, dashboardPage, addPage, addBlog, editBlog, updateBlog,deleteBlog,readmore
+    registerPage, loginPage, registerUser, loginUser, dashboardPage, addPage, addBlog, editBlog, updateBlog, deleteBlog, readmore, logoutUser
 }

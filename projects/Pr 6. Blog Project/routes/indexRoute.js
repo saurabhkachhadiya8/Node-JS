@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
-const { registerPage, loginPage, registerUser, loginUser, dashboardPage, addPage, addBlog, editBlog, updateBlog, deleteBlog, readmore } = require('../controllers/AuthController');
+const { registerPage, loginPage, registerUser, loginUser, dashboardPage, addPage, addBlog, editBlog, updateBlog, deleteBlog, readmore, logoutUser } = require('../controllers/AuthController');
 
 const multer = require('multer');
 const st = multer.diskStorage({
@@ -19,6 +19,7 @@ routes.get('/', registerPage);
 routes.get('/login', loginPage);
 routes.post('/registeruser', registerUser);
 routes.post('/loginuser', loginUser);
+routes.get('/logout', logoutUser);
 routes.get('/dashboard', dashboardPage);
 routes.get('/add', addPage);
 routes.post('/addblog', fileUpload, addBlog);
