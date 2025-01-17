@@ -2,6 +2,9 @@ const userModel = require('../models/UserModel');
 
 const signupPage = async (req, res) => {
     try {
+        if (res.locals.users) {
+            res.redirect('/dashboard');
+        }
         res.render('signup');
     } catch (err) {
         console.log(err);
@@ -10,6 +13,9 @@ const signupPage = async (req, res) => {
 }
 const signinPage = async (req, res) => {
     try {
+        if (res.locals.users) {
+            res.redirect('/dashboard');
+        }
         res.render('signin');
     } catch (err) {
         console.log(err);
@@ -53,14 +59,15 @@ const signinUser = async (req, res) => {
         return false;
     }
 }
-const dashboardPage = async(req,res) => {
-    try{
+const dashboardPage = async (req, res) => {
+    try {
         return res.render('dashboard');
-    }catch(err){
+    } catch (err) {
         console.log(err);
         return false;
     }
 }
+
 module.exports = {
-    signupPage, signinPage, signupUser, signinUser,dashboardPage
+    signupPage, signinPage, signupUser, signinUser, dashboardPage
 }

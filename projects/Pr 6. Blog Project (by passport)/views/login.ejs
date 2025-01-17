@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="/bootstrap.min.css">
+
+    <style>
+        .register input[type="text"],
+        .register input[type="email"],
+        .register input[type="password"],
+        .register input[type="number"] {
+            box-sizing: border-box;
+            width: 100%;
+            height: calc(3em + 2px);
+            margin: 0 0 1em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 0.5em;
+            background: #fff;
+            resize: none;
+            outline: none;
+        }
+
+        .register input[type="text"][required]:focus,
+        .register input[type="email"][required]:focus,
+        .register input[type="password"][required]:focus,
+        .register input[type="number"][required]:focus {
+            border-color: #9b2e0d;
+        }
+
+        .register input[type="text"][required]:focus+label[placeholder]:before,
+        .register input[type="email"][required]:focus+label[placeholder]:before,
+        .register input[type="password"][required]:focus+label[placeholder]:before,
+        .register input[type="number"][required]:focus+label[placeholder]:before {
+            color: #9b2e0d;
+        }
+
+        .register input[type="text"][required]:focus+label[placeholder]:before,
+        .register input[type="text"][required]:valid+label[placeholder]:before,
+        .register input[type="email"][required]:focus+label[placeholder]:before,
+        .register input[type="email"][required]:valid+label[placeholder]:before,
+        .register input[type="password"][required]:focus+label[placeholder]:before,
+        .register input[type="password"][required]:valid+label[placeholder]:before,
+        .register input[type="number"][required]:focus+label[placeholder]:before,
+        .register input[type="number"][required]:valid+label[placeholder]:before {
+            transition-duration: 0.2s;
+            -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
+            transform: translate(0, -1.5em) scale(0.9, 0.9);
+        }
+
+        .register input[type="text"][required]:invalid+label[placeholder][alt]:before,
+        .register input[type="email"][required]:invalid+label[placeholder][alt]:before,
+        .register input[type="password"][required]:invalid+label[placeholder][alt]:before,
+        .register input[type="number"][required]:invalid+label[placeholder][alt]:before {
+            content: attr(alt);
+        }
+
+        .register input[type="text"][required]+label[placeholder],
+        .register input[type="email"][required]+label[placeholder],
+        .register input[type="password"][required]+label[placeholder],
+        .register input[type="number"][required]+label[placeholder] {
+            display: block;
+            pointer-events: none;
+            line-height: 1.25em;
+            margin-top: calc(-3em - 2px);
+            margin-bottom: calc((3em - 1em) + 2px);
+        }
+
+        .register input[type="text"][required]+label[placeholder]:before,
+        .register input[type="email"][required]+label[placeholder]:before,
+        .register input[type="password"][required]+label[placeholder]:before,
+        .register input[type="number"][required]+label[placeholder]:before {
+            content: attr(placeholder);
+            display: inline-block;
+            margin: 0 calc(1em + 2px);
+            padding: 0 2px;
+            color: #898989;
+            white-space: nowrap;
+            transition: 0.3s ease-in-out;
+            background-image: linear-gradient(to bottom, #fff, #fff);
+            background-size: 100% 5px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .register input[type="number"]::-webkit-inner-spin-button {
+            appearance: none;
+        }
+
+        .register form button,
+        .register form input[type="submit"] {
+            width: 100%;
+            background: radial-gradient(circle, rgb(255, 150, 116) 0%, rgb(155, 46, 13) 100%);
+            color: #000;
+            border: 1px solid #9b2e0d;
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-size: large;
+            font-weight: 600;
+            transition: all .3s;
+        }
+
+        .register form button:hover,
+        .register form input[type="submit"]:hover {
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column justify-content-center"
+    style="background-color: #ebebeb;height: 100vh;background: radial-gradient(circle, rgb(255, 150, 116) 0%, rgb(155, 46, 13) 100%);">
+
+    <section class="register">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-5 mx-auto p-5 m-5 position-relative"
+                    style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;background-color: #fff;border-radius: 30px;">
+                    <h2 class="pb-4 text-center">Login User</h2>
+                    <form action="/loginuser" method="post" class="form-row">
+                        <div>
+                            <input required='' type='text' name="emailorphone">
+                            <label placeholder='Email or Phone'></label>
+                        </div>
+                        <div>
+                            <input required='' type='password' name="password">
+                            <label placeholder='Password'></label>
+                        </div>
+                        <div>
+                            <p>I don't have an account <a href='/register' class="text-decoration-none">Register Now</a></p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="col-6 pe-2">
+                                <input type='submit' value='Login'>
+                            </div>
+                            <div class="col-6 ps-2">
+                                <button type="reset">Clear</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

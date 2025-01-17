@@ -32,14 +32,15 @@ passport.deserializeUser(async (id, done) => {
     }
 });
 passport.checkUser = (req,res,next) => {
-    const user = req.isAuthenticated();
-    if(!user){
+    if(!req.isAuthenticated()){
         return res.redirect('/');
     }
     return next();
 }
 passport.setUser = (req,res,next) => {
-    res.locals.users = req.user;
+    if(req.isAuthenticated()){
+        res.locals.users = req.user;
+    }
     return next();
 }
 
