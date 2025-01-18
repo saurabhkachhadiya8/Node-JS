@@ -59,15 +59,31 @@ const signinUser = async (req, res) => {
         return false;
     }
 }
-const dashboardPage = async (req, res) => {
+const logout = async (req, res) => {
     try {
-        return res.render('dashboard');
+        req.logout((err) => {
+            if (err) {
+                console.log(err);
+                return false;
+            }
+            return res.redirect('/');
+        });
     } catch (err) {
         console.log(err);
         return false;
     }
 }
 
+// forgotpassword start
+const forgotPassworPage = async(req,res) => {
+    try{
+
+    }catch(err){
+        
+    }
+}
+// forgotpassword end
+
 module.exports = {
-    signupPage, signinPage, signupUser, signinUser, dashboardPage
+    signupPage, signinPage, signupUser, signinUser, logout
 }
