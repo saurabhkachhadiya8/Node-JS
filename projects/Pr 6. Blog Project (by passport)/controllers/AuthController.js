@@ -45,25 +45,7 @@ const registerUser = async (req, res) => {
 const loginUser = async (req, res) => {
     try {
         // const { emailorphone, password } = req.body;
-        // if (!emailorphone || !password) {
-        //     console.log('All Fields Are Required');
-        //     return res.redirect('/');
-        // }
-        // let user = null;
-        // if (!isNaN(emailorphone) && /^\d+$/.test(emailorphone)) {
-        //     user = await userModel.findOne({ phone: Number(emailorphone), password: password });
-        //     if (!user) {
-        //         console.log('Invalid Phone or Password');
-        //         return res.redirect('/');
-        //     }
-        // } else {
-        //     user = await userModel.findOne({ email: emailorphone, password: password });
-        //     if (!user) {
-        //         console.log('Invalid Email or Password');
-        //         return res.redirect('/');
-        //     }
-        // }
-        // res.cookie('auth', user);
+        
         console.log('Login Successful');
         return res.redirect('/dashboard');
     } catch (err) {

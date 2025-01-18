@@ -75,15 +75,16 @@ const logout = async (req, res) => {
 }
 
 // forgotpassword start
-const forgotPassworPage = async(req,res) => {
-    try{
+const forgotPassworPage = async (req, res) => {
+    try {
 
-    }catch(err){
-        
+    } catch (err) {
+        console.log(err);
+        return false;
     }
 }
 // forgotpassword end
 
 module.exports = {
-    signupPage, signinPage, signupUser, signinUser, logout
+    signupPage, signinPage, signupUser, signinUser, logout, forgotPassworPage
 }
