@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
-const { signinPage, signupPage, signupUser, signinUser, logout, forgotPasswordPage, recoveryCheck, forgotPasswordOtp } = require('../controllers/AuthController');
+const { signinPage, signupPage, signupUser, signinUser, logout, forgotPasswordPage, recoveryCheck, forgotPasswordOtpPage, userOtp, newPasswordPage, newPassword } = require('../controllers/AuthController');
 
 const passport = require('passport');
 
@@ -14,7 +14,10 @@ routes.get('/logout', logout);
 // forgotpassword start
 routes.get('/forgotpassword', forgotPasswordPage);
 routes.post('/recoverycheck', recoveryCheck);
-routes.get('/forgot_password_otp', forgotPasswordOtp);
+routes.get('/forgot_password_otp', forgotPasswordOtpPage);
+routes.post('/userotp', userOtp);
+routes.get('/new_password', newPasswordPage);
+routes.post('/newpassword', newPassword);
 // forgotpassword end
 
 module.exports = routes;

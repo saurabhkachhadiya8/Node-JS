@@ -5,9 +5,9 @@ const nodemailer = require('nodemailer');
 const signupPage = async (req, res) => {
     try {
         if (res.locals.users) {
-            res.redirect('/dashboard');
+            return res.redirect('/dashboard');
         }
-        res.render('signup');
+        return res.render('signup');
     } catch (err) {
         console.log(err);
         return false;
@@ -16,9 +16,9 @@ const signupPage = async (req, res) => {
 const signinPage = async (req, res) => {
     try {
         if (res.locals.users) {
-            res.redirect('/dashboard');
+            return res.redirect('/dashboard');
         }
-        res.render('signin');
+        return res.render('signin');
     } catch (err) {
         console.log(err);
         return false;
@@ -55,6 +55,7 @@ const signinUser = async (req, res) => {
             console.log("Please Fill All Fields");
             return false;
         }
+        console.log("User Signin");
         return res.redirect('/dashboard');
     } catch (err) {
         console.log(err);
@@ -68,6 +69,7 @@ const logout = async (req, res) => {
                 console.log(err);
                 return false;
             }
+            console.log("User Logout");
             return res.redirect('/');
         });
     } catch (err) {
@@ -79,14 +81,20 @@ const logout = async (req, res) => {
 // forgotpassword start
 const forgotPasswordPage = async (req, res) => {
     try {
+        if (res.locals.users) {
+            return res.redirect('/dashboard');
+        }
         return res.render('forgot_password');
     } catch (err) {
         console.log(err);
         return false;
     }
 }
-const forgotPasswordOtp = async (req, res) => {
+const forgotPasswordOtpPage = async (req, res) => {
     try {
+        if (!req.cookies.user) {
+            return res.redirect('/forgotpassword');
+        }
         return res.render('forgot_password_otp');
     } catch (err) {
         console.log(err);
@@ -109,14 +117,12 @@ const recoveryCheck = async (req, res) => {
                 pass: 'ozux pzzq ofdl gaip'
             }
         });
-
         var mailOptions = {
             from: 'saurabhkachhadiya890@gmail.com',
             to: recoveryemail,
             subject: 'ForgotPassword',
             html: `<h2 style="color:green;">Hello ${user?.name}. <br/> Your One Time Password is :- ${otp}</h2>`
         };
-
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
                 console.log(error);
@@ -126,7 +132,7 @@ const recoveryCheck = async (req, res) => {
                     recoveryemail: recoveryemail,
                     otp: otp
                 }
-                res.cookie('user',auth);
+                res.cookie('user', auth);
                 return res.redirect('/forgot_password_otp');
             }
         });
@@ -136,8 +142,53 @@ const recoveryCheck = async (req, res) => {
         return false;
     }
 }
+const userOtp = async (req, res) => {
+    try {
+        const otp = req.body.otp;
+        if (req.cookies.user?.otp == otp) {
+            return res.redirect('/new_password')
+        } else {
+            console.log("Invalid Otp");
+            return res.redirect('forgot_password_otp');
+        }
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const newPasswordPage = async (req, res) => {
+    try {
+        if (!req.cookies.user) {
+            return res.redirect('/forgotpassword');
+        }
+        return res.render('new_password');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const newPassword = async (req, res) => {
+    try {
+        const { new_password, re_password } = req.body;
+        if (new_password != re_password) {
+            console.log("Passwords Are Do Not Match.");
+            return false;
+        } else {
+            let email = req.cookies?.user?.recoveryemail;
+            await userModel.findOneAndUpdate({ email: email }, {
+                password: new_password
+            });
+            console.log("Password Updated");
+            res.clearCookie('user');
+            return res.redirect('/');
+        }
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
 // forgotpassword end
 
 module.exports = {
-    signupPage, signinPage, signupUser, signinUser, logout, forgotPasswordPage, recoveryCheck, forgotPasswordOtp
+    signupPage, signinPage, signupUser, signinUser, logout, forgotPasswordPage, recoveryCheck, forgotPasswordOtpPage, userOtp, newPasswordPage, newPassword
 }
