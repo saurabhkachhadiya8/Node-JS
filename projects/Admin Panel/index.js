@@ -2,10 +2,13 @@ const express = require('express');
 const app = express();
 const port = 8080;
 
-// connect DataBase start
+// connect DataBase
 const db = require('./config/db');
 db();
-// connect DataBase end
+
+// attech cookie
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
 
 const path = require('path');
 

@@ -1,5 +1,7 @@
 const userModel = require('../models/UserModel');
 
+const nodemailer = require('nodemailer');
+
 const signupPage = async (req, res) => {
     try {
         if (res.locals.users) {
@@ -75,9 +77,60 @@ const logout = async (req, res) => {
 }
 
 // forgotpassword start
-const forgotPassworPage = async (req, res) => {
+const forgotPasswordPage = async (req, res) => {
     try {
+        return res.render('forgot_password');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const forgotPasswordOtp = async (req, res) => {
+    try {
+        return res.render('forgot_password_otp');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const recoveryCheck = async (req, res) => {
+    try {
+        const recoveryemail = req.body.recoveryemail;
+        const user = userModel.findOne({ email: recoveryemail });
+        if (!user) {
+            console.log("User Not Found");
+            return false;
+        }
+        const otp = Math.floor(100000 + Math.random() * 999999);
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'saurabhkachhadiya890@gmail.com',
+                pass: 'ozux pzzq ofdl gaip'
+            }
+        });
 
+        var mailOptions = {
+            from: 'saurabhkachhadiya890@gmail.com',
+            to: recoveryemail,
+            subject: 'ForgotPassword',
+            html: `<h2 style="color:green;">Hello ${user?.name}. <br/> Your One Time Password is :- ${otp}</h2>`
+        };
+
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+                let auth = {
+                    recoveryemail: recoveryemail,
+                    otp: otp
+                }
+                res.cookie('user',auth);
+                return res.redirect('/forgot_password_otp');
+            }
+        });
+        // return res.redirect('/forgot_password_otp');
     } catch (err) {
         console.log(err);
         return false;
@@ -86,5 +139,5 @@ const forgotPassworPage = async (req, res) => {
 // forgotpassword end
 
 module.exports = {
-    signupPage, signinPage, signupUser, signinUser, logout, forgotPassworPage
+    signupPage, signinPage, signupUser, signinUser, logout, forgotPasswordPage, recoveryCheck, forgotPasswordOtp
 }
