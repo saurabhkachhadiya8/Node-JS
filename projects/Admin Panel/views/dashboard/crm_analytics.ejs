@@ -7,28 +7,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <title>StarCodeKh - CRM Analytics Dashboard</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
-    <!-- CSS Assets -->
-    <link rel="stylesheet" href="css/app.css">
-
-    <!-- Javascript Assets -->
-    <script src="js/app.js" defer=""></script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <script>
-      /**
-       * THIS SCRIPT REQUIRED FOR PREVENT FLICKERING IN SOME BROWSERS
-       */
-      localStorage.getItem("_x_darkMode_on") === "true" &&
-        document.documentElement.classList.add("dark");
-    </script>
-  </head>
-
-<%- include('upper') %>
+    
+<%- include('../upper') %>
 
       <!-- Main Content Wrapper -->
       <main class="main-content w-full pb-8">
@@ -226,7 +206,7 @@
                   <div class="mt-8 flex items-center justify-between space-x-2">
                     <div class="flex -space-x-3">
                       <div class="avatar size-8 hover:z-10">
-                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-16.jpg" alt="avatar">
+                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="../images/avatar/avatar-16.jpg" alt="avatar">
                       </div>
                       <div class="avatar size-8 hover:z-10">
                         <div class="is-initial rounded-full bg-info text-xs+ uppercase text-white ring ring-white dark:ring-navy-700">
@@ -234,7 +214,7 @@
                         </div>
                       </div>
                       <div class="avatar size-8 hover:z-10">
-                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-20.jpg" alt="avatar">
+                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="../images/avatar/avatar-20.jpg" alt="avatar">
                       </div>
                     </div>
                     <button class="btn size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
@@ -268,7 +248,7 @@
                   <div class="mt-8 flex items-center justify-between space-x-2">
                     <div class="flex -space-x-3">
                       <div class="avatar size-8 hover:z-10">
-                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-16.jpg" alt="avatar">
+                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="../images/avatar/avatar-16.jpg" alt="avatar">
                       </div>
                       <div class="avatar size-8 hover:z-10">
                         <div class="is-initial rounded-full bg-success text-xs+ uppercase text-white ring ring-white dark:ring-navy-700">
@@ -276,7 +256,7 @@
                         </div>
                       </div>
                       <div class="avatar size-8 hover:z-10">
-                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-14.jpg" alt="avatar">
+                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="../images/avatar/avatar-14.jpg" alt="avatar">
                       </div>
                     </div>
                     <button class="btn size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
@@ -315,7 +295,7 @@
                   <div class="mt-8 flex items-center justify-between space-x-2">
                     <div class="flex -space-x-3">
                       <div class="avatar size-8 hover:z-10">
-                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-11.jpg" alt="avatar">
+                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="../images/avatar/avatar-11.jpg" alt="avatar">
                       </div>
                       <div class="avatar size-8 hover:z-10">
                         <div class="is-initial rounded-full bg-error text-xs+ uppercase text-white ring ring-white dark:ring-navy-700">
@@ -323,7 +303,7 @@
                         </div>
                       </div>
                       <div class="avatar size-8 hover:z-10">
-                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-10.jpg" alt="avatar">
+                        <img class="rounded-full ring ring-white dark:ring-navy-700" src="../images/avatar/avatar-10.jpg" alt="avatar">
                       </div>
                     </div>
                     <button class="btn size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
@@ -506,7 +486,7 @@
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar">
-                    <img class="mask is-squircle" src="images/avatar/avatar-5.jpg" alt="image">
+                    <img class="mask is-squircle" src="../images/avatar/avatar-5.jpg" alt="image">
                   </div>
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -592,9 +572,9 @@
               </div>
               <div class="flex justify-between">
                 <div class="flex space-x-2">
-                  <img x-tooltip="'Award Level 1'" class="size-6" src="images/awards/award-19.svg" alt="avatar">
-                  <img x-tooltip="'Award Level 2'" class="size-6" src="images/awards/award-2.svg" alt="avatar">
-                  <img x-tooltip="'Award Level 3'" class="size-6" src="images/awards/award-5.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 1'" class="size-6" src="../images/awards/award-19.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 2'" class="size-6" src="../images/awards/award-2.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 3'" class="size-6" src="../images/awards/award-5.svg" alt="avatar">
                 </div>
                 <button class="btn -mr-1.5 size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
                   <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -608,7 +588,7 @@
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar">
-                    <img class="mask is-squircle" src="images/avatar/avatar-18.jpg" alt="image">
+                    <img class="mask is-squircle" src="../images/avatar/avatar-18.jpg" alt="image">
                   </div>
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -691,9 +671,9 @@
               </div>
               <div class="flex justify-between">
                 <div class="flex space-x-2">
-                  <img x-tooltip="'Award Level 1'" class="size-6" src="images/awards/award-1.svg" alt="avatar">
-                  <img x-tooltip="'Award Level 2'" class="size-6" src="images/awards/award-6.svg" alt="avatar">
-                  <img x-tooltip="'Award Level 3'" class="size-6" src="images/awards/award-9.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 1'" class="size-6" src="../images/awards/award-1.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 2'" class="size-6" src="../images/awards/award-6.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 3'" class="size-6" src="../images/awards/award-9.svg" alt="avatar">
                 </div>
                 <button class="btn -mr-1.5 size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
                   <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -707,7 +687,7 @@
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar">
-                    <img class="mask is-squircle" src="images/avatar/avatar-6.jpg" alt="image">
+                    <img class="mask is-squircle" src="../images/avatar/avatar-6.jpg" alt="image">
                   </div>
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -790,8 +770,8 @@
               </div>
               <div class="flex justify-between">
                 <div class="flex space-x-2">
-                  <img x-tooltip="'Award Level 2'" class="size-6" src="images/awards/award-14.svg" alt="avatar">
-                  <img x-tooltip="'Award Level 3'" class="size-6" src="images/awards/award-13.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 2'" class="size-6" src="../images/awards/award-14.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 3'" class="size-6" src="../images/awards/award-13.svg" alt="avatar">
                 </div>
                 <button class="btn -mr-1.5 size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
                   <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -805,7 +785,7 @@
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar">
-                    <img class="mask is-squircle" src="images/avatar/avatar-11.jpg" alt="image">
+                    <img class="mask is-squircle" src="../images/avatar/avatar-11.jpg" alt="image">
                   </div>
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -888,8 +868,8 @@
               </div>
               <div class="flex justify-between">
                 <div class="flex space-x-2">
-                  <img x-tooltip="'Award Level 2'" class="size-6" src="images/awards/award-15.svg" alt="avatar">
-                  <img x-tooltip="'Award Level 3'" class="size-6" src="images/awards/award-13.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 2'" class="size-6" src="../images/awards/award-15.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 3'" class="size-6" src="../images/awards/award-13.svg" alt="avatar">
                 </div>
                 <button class="btn -mr-1.5 size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
                   <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -903,7 +883,7 @@
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar">
-                    <img class="mask is-squircle" src="images/avatar/avatar-19.jpg" alt="image">
+                    <img class="mask is-squircle" src="../images/avatar/avatar-19.jpg" alt="image">
                   </div>
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -983,9 +963,9 @@
               </div>
               <div class="flex justify-between">
                 <div class="flex space-x-2">
-                  <img x-tooltip="'Award Level 2'" class="size-6" src="images/awards/award-15.svg" alt="avatar">
-                  <img x-tooltip="'Award Level 3'" class="size-6" src="images/awards/award-5.svg" alt="avatar">
-                  <img x-tooltip="'Award Level 3'" class="size-6" src="images/awards/award-25.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 2'" class="size-6" src="../images/awards/award-15.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 3'" class="size-6" src="../images/awards/award-5.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 3'" class="size-6" src="../images/awards/award-25.svg" alt="avatar">
                 </div>
                 <button class="btn -mr-1.5 size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
                   <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -999,7 +979,7 @@
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar">
-                    <img class="mask is-squircle" src="images/avatar/avatar-7.jpg" alt="image">
+                    <img class="mask is-squircle" src="../images/avatar/avatar-7.jpg" alt="image">
                   </div>
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
@@ -1085,9 +1065,9 @@
 
               <div class="flex justify-between">
                 <div class="flex space-x-2">
-                  <img x-tooltip="'Award Level 2'" class="size-6" src="images/awards/award-1.svg" alt="avatar">
-                  <img x-tooltip="'Award Level 3'" class="size-6" src="images/awards/award-24.svg" alt="avatar">
-                  <img x-tooltip="'Award Level 3'" class="size-6" src="images/awards/award-30.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 2'" class="size-6" src="../images/awards/award-1.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 3'" class="size-6" src="../images/awards/award-24.svg" alt="avatar">
+                  <img x-tooltip="'Award Level 3'" class="size-6" src="../images/awards/award-30.svg" alt="avatar">
                 </div>
                 <button class="btn -mr-1.5 size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
                   <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -1273,7 +1253,7 @@
                   </div>
                   <p class="py-1">John Doe changed his avatar photo</p>
                   <div class="avatar mt-2 size-16">
-                    <img class="mask is-squircle" src="images/avatar/avatar-19.jpg" alt="avatar">
+                    <img class="mask is-squircle" src="../images/avatar/avatar-19.jpg" alt="avatar">
                   </div>
                 </div>
               </li>
@@ -1331,7 +1311,7 @@
                     <div class="mt-2 flex justify-between">
                       <div class="flex flex-wrap -space-x-2">
                         <div class="avatar size-7 hover:z-10">
-                          <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-16.jpg" alt="avatar">
+                          <img class="rounded-full ring ring-white dark:ring-navy-700" src="../images/avatar/avatar-16.jpg" alt="avatar">
                         </div>
 
                         <div class="avatar size-7 hover:z-10">
@@ -1341,15 +1321,15 @@
                         </div>
 
                         <div class="avatar size-7 hover:z-10">
-                          <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-20.jpg" alt="avatar">
+                          <img class="rounded-full ring ring-white dark:ring-navy-700" src="../images/avatar/avatar-20.jpg" alt="avatar">
                         </div>
 
                         <div class="avatar size-7 hover:z-10">
-                          <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-8.jpg" alt="avatar">
+                          <img class="rounded-full ring ring-white dark:ring-navy-700" src="../images/avatar/avatar-8.jpg" alt="avatar">
                         </div>
 
                         <div class="avatar size-7 hover:z-10">
-                          <img class="rounded-full ring ring-white dark:ring-navy-700" src="images/avatar/avatar-5.jpg" alt="avatar">
+                          <img class="rounded-full ring ring-white dark:ring-navy-700" src="../images/avatar/avatar-5.jpg" alt="avatar">
                         </div>
                       </div>
                       <button class="btn size-7 rounded-full bg-slate-150 p-0 font-medium text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">
@@ -1379,4 +1359,4 @@
           </div>
         </div>
       </main>
-<%- include('lower') %>
+<%- include('../lower') %>
