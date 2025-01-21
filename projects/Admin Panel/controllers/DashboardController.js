@@ -16,6 +16,24 @@ const crmAnalyticsPage = async (req, res) => {
         return false;
     }
 }
+// category start
+const categoriesPage = async (req, res) => {
+    try {
+        return res.render('dashboard/category/view');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const createCategory = async (req, res) => {
+    try {
+        return res.render('dashboard/category/create');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+// category end
 const ordersPage = async (req, res) => {
     try {
         return res.render('dashboard/orders');
@@ -40,7 +58,7 @@ const cryptocurrencyPage2 = async (req, res) => {
         return false;
     }
 }
-const bankingPage1 = async(req,res) => {
+const bankingPage1 = async (req, res) => {
     try {
         return res.render('dashboard/banking1');
     } catch (err) {
@@ -48,7 +66,7 @@ const bankingPage1 = async(req,res) => {
         return false;
     }
 }
-const bankingPage2 = async(req,res) => {
+const bankingPage2 = async (req, res) => {
     try {
         return res.render('dashboard/banking2');
     } catch (err) {
@@ -56,7 +74,7 @@ const bankingPage2 = async(req,res) => {
         return false;
     }
 }
-const personalPage = async(req,res) => {
+const personalPage = async (req, res) => {
     try {
         return res.render('dashboard/personal');
     } catch (err) {
@@ -128,7 +146,47 @@ const employeesPage = async (req, res) => {
         return false;
     }
 }
+const workspacesPage = async (req, res) => {
+    try {
+        return res.render('dashboard/workspaces');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const meetingsPage = async (req, res) => {
+    try {
+        return res.render('dashboard/meetings');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const projectBoardsPage = async (req, res) => {
+    try {
+        return res.render('dashboard/project_boards');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const widgetUiPage = async (req, res) => {
+    try {
+        return res.render('dashboard/widget_ui');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const widgetContactPage = async (req, res) => {
+    try {
+        return res.render('dashboard/widget_contacts');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
 
 module.exports = {
-    dashboardPage, crmAnalyticsPage, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2,bankingPage1,bankingPage2,personalPage,cmsAnalyticsPage,influencerPage,travelPage,teacherPage,educationPage,authorsPage,doctorsPage,employeesPage
+    dashboardPage, crmAnalyticsPage, categoriesPage, createCategory, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage, meetingsPage, projectBoardsPage, widgetUiPage, widgetContactPage
 }

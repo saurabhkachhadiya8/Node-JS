@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const signupPage = async (req, res) => {
     try {
         if (res.locals.users) {
-            return res.redirect('/dashboard');
+            return res.redirect('/dashboard/crm_analytics');
         }
         return res.render('signup');
     } catch (err) {
@@ -16,7 +16,7 @@ const signupPage = async (req, res) => {
 const signinPage = async (req, res) => {
     try {
         if (res.locals.users) {
-            return res.redirect('/dashboard');
+            return res.redirect('/dashboard/crm_analytics');
         }
         return res.render('signin');
     } catch (err) {
@@ -56,7 +56,7 @@ const signinUser = async (req, res) => {
             return false;
         }
         console.log("User Signin");
-        return res.redirect('/dashboard');
+        return res.redirect('/dashboard/crm_analytics');
     } catch (err) {
         console.log(err);
         return false;
@@ -82,7 +82,7 @@ const logout = async (req, res) => {
 const forgotPasswordPage = async (req, res) => {
     try {
         if (res.locals.users) {
-            return res.redirect('/dashboard');
+            return res.redirect('/dashboard/crm_analytics');
         }
         return res.render('forgot_password');
     } catch (err) {
