@@ -10,10 +10,11 @@ db();
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
-const path = require('path');
-
 app.set('view engine', 'ejs');
+
+const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // PassportJS Authentication start
 const passport = require('passport');
@@ -43,4 +44,4 @@ app.listen(port, (err) => {
         return false;
     }
     console.log(`server is running on port :- ${port}`);
-})
+});

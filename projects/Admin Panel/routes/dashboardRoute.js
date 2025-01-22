@@ -1,13 +1,14 @@
 const express = require('express');
 const routes = express.Router();
 
-const { dashboardPage, crmAnalyticsPage, categoriesPage, createCategory, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage, meetingsPage, projectBoardsPage, widgetUiPage, widgetContactPage } = require('../controllers/DashboardController');
+const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, createCategory, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage } = require('../controllers/DashboardController');
 
 routes.get('/', dashboardPage);
 routes.get('/crm_analytics', crmAnalyticsPage);
 // category start
-routes.get('/categories', categoriesPage);
-routes.get('/create_category', createCategory);
+routes.get('/category', categoryPage);
+routes.get('/create_category', createCategoryPage);
+routes.post('/createcategory', createCategory);
 // category end
 routes.get('/orders', ordersPage);
 routes.get('/cryptocurrency1', cryptocurrencyPage1);
@@ -24,9 +25,5 @@ routes.get('/authors', authorsPage);
 routes.get('/doctors', doctorsPage);
 routes.get('/employees', employeesPage);
 routes.get('/workspaces', workspacesPage);
-routes.get('/meetings', meetingsPage);
-routes.get('/project_boards', projectBoardsPage);
-routes.get('/widget_ui', widgetUiPage);
-routes.get('/widget_contacts', widgetContactPage);
 
 module.exports = routes;

@@ -1,4 +1,5 @@
 const userModel = require('../models/UserModel');
+const categoryModel = require('../models/CategoryModel');
 
 const dashboardPage = async (req, res) => {
     try {
@@ -17,9 +18,20 @@ const crmAnalyticsPage = async (req, res) => {
     }
 }
 // category start
-const categoriesPage = async (req, res) => {
+const categoryPage = async (req, res) => {
     try {
-        return res.render('dashboard/category/view');
+        let categories = await categoryModel.find({});
+        return res.render('dashboard/category/view',{
+            categories
+        });
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const createCategoryPage = async (req, res) => {
+    try {
+        return res.render('dashboard/category/create');
     } catch (err) {
         console.log(err);
         return false;
@@ -27,7 +39,13 @@ const categoriesPage = async (req, res) => {
 }
 const createCategory = async (req, res) => {
     try {
-        return res.render('dashboard/category/create');
+        const { title, description, tags } = req.body;
+        let category = await categoryModel.create({
+            title: title,
+            description: description,
+            tags: tags
+        });
+        return res.redirect('/dashboard/create_category');
     } catch (err) {
         console.log(err);
         return false;
@@ -154,39 +172,7 @@ const workspacesPage = async (req, res) => {
         return false;
     }
 }
-const meetingsPage = async (req, res) => {
-    try {
-        return res.render('dashboard/meetings');
-    } catch (err) {
-        console.log(err);
-        return false;
-    }
-}
-const projectBoardsPage = async (req, res) => {
-    try {
-        return res.render('dashboard/project_boards');
-    } catch (err) {
-        console.log(err);
-        return false;
-    }
-}
-const widgetUiPage = async (req, res) => {
-    try {
-        return res.render('dashboard/widget_ui');
-    } catch (err) {
-        console.log(err);
-        return false;
-    }
-}
-const widgetContactPage = async (req, res) => {
-    try {
-        return res.render('dashboard/widget_contacts');
-    } catch (err) {
-        console.log(err);
-        return false;
-    }
-}
 
 module.exports = {
-    dashboardPage, crmAnalyticsPage, categoriesPage, createCategory, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage, meetingsPage, projectBoardsPage, widgetUiPage, widgetContactPage
+    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, createCategory, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
 }

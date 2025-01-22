@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const categorySchema = mongoose.Schema({
     title:{
         type:String,
@@ -8,10 +8,10 @@ const categorySchema = mongoose.Schema({
         type:String,
         required:true
     },
-    image:{
-        type:String,
-        required:true
-    },
+    // image:{
+    //     type:String,
+    //     required:true
+    // },
     tags:{
         type:Array,
         required:true

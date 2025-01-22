@@ -8,7 +8,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <title>StarCodeKh - From Layout v4</title>
+    <title>StarCodeKh - Categories</title>
 
     <%- include("../../upper") %>
 
@@ -16,11 +16,10 @@
         <main class="main-content w-full px-[var(--margin-x)] pb-8">
             <div class="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
                 <div class="flex items-center space-x-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewbox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                        </path>
+                            d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
                     </svg>
                     <h2 class="text-xl font-medium text-slate-700 line-clamp-1 dark:text-navy-50">
                         Categories
@@ -43,27 +42,29 @@
                             </th>
                             <th
                                 class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                Image
+                            </th>
+                            <th
+                                class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
                                 Title
                             </th>
                             <th
                                 class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
                                 Products
                             </th>
-                            <th
-                                class="whitespace-nowrap rounded-r-lg bg-slate-200 px-3 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                                Actions
-                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="border border-transparent border-b-slate-200 dark:border-b-navy-500">
-                            <td class="whitespace-nowrap rounded-l-lg px-4 py-3 sm:px-5">1</td>
-                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">Cy Ganderton</td>
-                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                                Quality Control Specialist
-                            </td>
-                            <td class="whitespace-nowrap rounded-r-lg px-4 py-3 sm:px-5">Blue</td>
-                        </tr>
+                        <% categories.map((cat,index) => { %>
+                            <tr class="border border-transparent border-b-slate-200 dark:border-b-navy-500">
+                                <td class="whitespace-nowrap rounded-l-lg px-4 py-3 sm:px-5"><%= ++index %></td>
+                                <td></td>
+                                <td class="whitespace-nowrap px-4 py-3 sm:px-5"><%= cat.title %></td>
+                                <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                                    <%= cat.description %>
+                                </td>
+                            </tr>
+                        <% }) %>
                     </tbody>
                 </table>
             </div>
