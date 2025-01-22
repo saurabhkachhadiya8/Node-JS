@@ -21,7 +21,7 @@ const crmAnalyticsPage = async (req, res) => {
 const categoryPage = async (req, res) => {
     try {
         let categories = await categoryModel.find({});
-        return res.render('dashboard/category/view',{
+        return res.render('dashboard/category/view', {
             categories
         });
     } catch (err) {
@@ -31,7 +31,14 @@ const categoryPage = async (req, res) => {
 }
 const createCategoryPage = async (req, res) => {
     try {
-        return res.render('dashboard/category/create');
+        const id = req.query.id;
+        let singleCategory = null;
+        if (id) {
+            singleCategory = await categoryModel.findById(id);
+        }
+        return res.render('dashboard/category/create', {
+            singleCategory
+        });
     } catch (err) {
         console.log(err);
         return false;
@@ -39,13 +46,27 @@ const createCategoryPage = async (req, res) => {
 }
 const createCategory = async (req, res) => {
     try {
+        const id = req.query.id;
+        console.log(id);
+        
         const { title, description, tags } = req.body;
-        let category = await categoryModel.create({
-            title: title,
-            description: description,
-            tags: tags
-        });
-        return res.redirect('/dashboard/create_category');
+        if (!id) {
+            await categoryModel.create({
+                title: title,
+                description: description,
+                // image:req.file.filename,
+                tags: tags
+            });
+            return res.redirect('/dashboard/create_category');
+        } else {
+            await categoryModel.findByIdAndUpdate(id, {
+                title: title,
+                description: description,
+                // image:req.file.filename,
+                tags: tags
+            });
+            return res.redirect('/dashboard/category');
+        }
     } catch (err) {
         console.log(err);
         return false;

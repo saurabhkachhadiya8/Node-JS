@@ -52,16 +52,33 @@
                                 class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
                                 Products
                             </th>
+                            <th
+                                class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                Tags
+                            </th>
+                            <th
+                                class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                Actions
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <% categories.map((cat,index) => { %>
-                            <tr class="border border-transparent border-b-slate-200 dark:border-b-navy-500">
-                                <td class="whitespace-nowrap rounded-l-lg px-4 py-3 sm:px-5"><%= ++index %></td>
+                        <% categories.map((category,index) => { 
+                            const {id,title,description,image,tags} = category; %>
+                            <tr class="border border-transparent border-b-slate-200 dark:border-b-navy-500 position-relative" style="position: relative;">
+                                <td class="whitespace-nowrap rounded-l-lg px-4 py-3 sm:px-5"><%= ++index %>
+                                    <a href="/dashboard/create_category?id=<%= id %>" style="position: absolute;width: 100%;height: 100%;top: 0;left: 0;"></a>
+                                </td>
                                 <td></td>
-                                <td class="whitespace-nowrap px-4 py-3 sm:px-5"><%= cat.title %></td>
+                                <td class="whitespace-nowrap px-4 py-3 sm:px-5"><%= title %></td>
                                 <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                                    <%= cat.description %>
+                                    <%= description.slice(0,40) %>...
+                                </td>
+                                <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                                    <%= tags %>...
+                                </td>
+                                <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                                    <a href="#" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         <% }) %>
