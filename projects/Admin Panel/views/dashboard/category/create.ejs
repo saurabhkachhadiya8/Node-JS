@@ -127,13 +127,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center justify-end space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
-                        <a href="/dashboard/category_crud?deleteid=<%= id %>"
-                            class="btn min-w-[7rem] bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
-                            Delete Category
-                        </a>
-                    </div>
                 <% } %>
+            </form>
+            <form action="/dashboard/category_crud?deleteid=<%= singleCategory?.id %>" method="post">
+                <div class="flex flex-col items-center justify-end space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
+                    <button
+                        class="btn min-w-[7rem] bg-error font-medium text-white hover:bg-error-focus    focus:bg-error-focus active:bg-error-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+                        Delete Category
+                    </button>
+                </div>
             </form>
         </main>
 

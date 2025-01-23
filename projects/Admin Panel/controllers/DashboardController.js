@@ -48,8 +48,6 @@ const categoryCrud = async (req, res) => {
     try {
         const updateid = req.query.updateid;
         const deleteid = req.query.deleteid;
-        console.log(deleteid);
-        
         const { title, description, tags } = req.body;
         if (updateid) {
             await categoryModel.findByIdAndUpdate(updateid, {
