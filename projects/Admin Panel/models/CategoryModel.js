@@ -6,7 +6,7 @@ const categorySchema = mongoose.Schema({
     },
     description:{
         type:String,
-        required:true
+        required:false
     },
     // image:{
     //     type:String,
@@ -14,7 +14,7 @@ const categorySchema = mongoose.Schema({
     // },
     tags:{
         type:Array,
-        required:true
+        required:false
     }
 });
 module.exports = mongoose.model('category',categorySchema);

@@ -31,10 +31,10 @@ const categoryPage = async (req, res) => {
 }
 const createCategoryPage = async (req, res) => {
     try {
-        const id = req.query.id;
+        const editid = req.query.editid;
         let singleCategory = null;
-        if (id) {
-            singleCategory = await categoryModel.findById(id);
+        if (editid) {
+            singleCategory = await categoryModel.findById(editid);
         }
         return res.render('dashboard/category/create', {
             singleCategory
@@ -44,22 +44,15 @@ const createCategoryPage = async (req, res) => {
         return false;
     }
 }
-const createCategory = async (req, res) => {
+const categoryCrud = async (req, res) => {
     try {
-        const id = req.query.id;
-        console.log(id);
+        const updateid = req.query.updateid;
+        const deleteid = req.query.deleteid;
+        console.log(deleteid);
         
         const { title, description, tags } = req.body;
-        if (!id) {
-            await categoryModel.create({
-                title: title,
-                description: description,
-                // image:req.file.filename,
-                tags: tags
-            });
-            return res.redirect('/dashboard/create_category');
-        } else {
-            await categoryModel.findByIdAndUpdate(id, {
+        if (updateid) {
+            await categoryModel.findByIdAndUpdate(updateid, {
                 title: title,
                 description: description,
                 // image:req.file.filename,
@@ -67,6 +60,17 @@ const createCategory = async (req, res) => {
             });
             return res.redirect('/dashboard/category');
         }
+        if(deleteid){
+            await categoryModel.findByIdAndDelete(deleteid);
+            return res.redirect('/dashboard/category');
+        }
+        await categoryModel.create({
+            title: title,
+            description: description,
+            // image:req.file.filename,
+            tags: tags
+        });
+        return res.redirect('/dashboard/create_category');
     } catch (err) {
         console.log(err);
         return false;
@@ -195,5 +199,5 @@ const workspacesPage = async (req, res) => {
 }
 
 module.exports = {
-    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, createCategory, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
+    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
 }

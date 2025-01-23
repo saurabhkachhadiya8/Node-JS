@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
-const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, createCategory, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage } = require('../controllers/DashboardController');
+const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage } = require('../controllers/DashboardController');
 
 // const fileUpload = require("../config/multer");
 
@@ -10,7 +10,7 @@ routes.get('/crm_analytics', crmAnalyticsPage);
 // category start
 routes.get('/category', categoryPage);
 routes.get('/create_category', createCategoryPage);
-routes.post('/createcategory', /*fileUpload.single('category_image'),*/ createCategory);
+routes.post('/category_crud', /*fileUpload.single('category_image'),*/ categoryCrud);
 // category end
 routes.get('/orders', ordersPage);
 routes.get('/cryptocurrency1', cryptocurrencyPage1);
