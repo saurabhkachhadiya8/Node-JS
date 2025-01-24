@@ -47,7 +47,6 @@ const createCategoryPage = async (req, res) => {
 const categoryCrud = async (req, res) => {
     try {
         const updateid = req.query.updateid;
-        const deleteid = req.query.deleteid;
         const { title, description, tags } = req.body;
         if (updateid) {
             await categoryModel.findByIdAndUpdate(updateid, {
@@ -58,10 +57,6 @@ const categoryCrud = async (req, res) => {
             });
             return res.redirect('/dashboard/category');
         }
-        if(deleteid){
-            await categoryModel.findByIdAndDelete(deleteid);
-            return res.redirect('/dashboard/category');
-        }
         await categoryModel.create({
             title: title,
             description: description,
@@ -69,6 +64,34 @@ const categoryCrud = async (req, res) => {
             tags: tags
         });
         return res.redirect('/dashboard/create_category');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const deleteCategory = async (req, res) => {
+    try {
+        const deleteid = req.query.deleteid;
+        await categoryModel.findByIdAndDelete(deleteid);
+        return res.redirect('/dashboard/category');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const categoryStatus = async (req, res) => {
+    try {
+        const { statusid, status } = req.query;
+        if (status === "deactive") {
+            await categoryModel.findByIdAndUpdate(statusid, {
+                status: "active"
+            });
+        } else {
+            await categoryModel.findByIdAndUpdate(statusid, {
+                status: "deactive"
+            });
+        }
+        return res.redirect('/dashboard/category');
     } catch (err) {
         console.log(err);
         return false;
@@ -197,5 +220,5 @@ const workspacesPage = async (req, res) => {
 }
 
 module.exports = {
-    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
+    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
 }
