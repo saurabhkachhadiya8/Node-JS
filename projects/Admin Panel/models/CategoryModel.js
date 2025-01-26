@@ -13,7 +13,7 @@ const categorySchema = mongoose.Schema({
     //     required:true
     // },
     tags: {
-        type: Array,
+        type: String,
         required: false
     },
     status: {

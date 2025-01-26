@@ -97,6 +97,18 @@ const categoryStatus = async (req, res) => {
         return false;
     }
 }
+const deleteByCheckboxes = async (req, res) => {
+    try {
+        const checkedid = req.body.category_checkbox;
+        for (let i = 0; i < checkedid.length; i++) {
+            await categoryModel.findByIdAndDelete(checkedid);
+        }
+        return res.redirect('/dashboard/category');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
 // category end
 const ordersPage = async (req, res) => {
     try {
@@ -220,5 +232,5 @@ const workspacesPage = async (req, res) => {
 }
 
 module.exports = {
-    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
+    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, deleteByCheckboxes, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
 }
