@@ -130,7 +130,16 @@ const changesCatByCheckboxes = async (req, res) => {
 // subcategory start 
 const subcategoryPage = async (req, res) => {
     try {
-        return res.render('dashboard/category/subcategory/create');
+        const category = await categoryModel.find({});
+        const editid = req.query.editid;
+        let singleSubcategory = null;
+        if (editid) {
+            singleSubcategory = await subcategoryModel.findById(editid);
+        }
+        return res.render('dashboard/category/subcategory/create', {
+            category,
+            singleSubcategory
+        });
     } catch (err) {
         console.log(err);
         return false;
@@ -139,7 +148,7 @@ const subcategoryPage = async (req, res) => {
 const subcategoryCrud = async (req, res) => {
     try {
         // const updateid = req.query.updateid;
-        const { title, description, tags } = req.body;
+        const { category, title, description, tags } = req.body;
         // if (updateid) {
         //     await categoryModel.findByIdAndUpdate(updateid, {
         //         title: title,
@@ -150,12 +159,31 @@ const subcategoryCrud = async (req, res) => {
         //     return res.redirect('/dashboard/category');
         // }
         await subcategoryModel.create({
+            categoryId: category,
             title: title,
             description: description,
             // image:req.file.filename,
             tags: tags
         });
         return res.redirect('/dashboard/create_subcategory');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const subCategoryStatus = async (req, res) => {
+    try {
+        const { statusid, status } = req.query;
+        if (status === "deactive") {
+            await subcategoryModel.findByIdAndUpdate(statusid, {
+                status: "active"
+            });
+        } else {
+            await subcategoryModel.findByIdAndUpdate(statusid, {
+                status: "deactive"
+            });
+        }
+        return res.redirect('/dashboard/category');
     } catch (err) {
         console.log(err);
         return false;
@@ -285,5 +313,5 @@ const workspacesPage = async (req, res) => {
 }
 
 module.exports = {
-    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, subcategoryCrud, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
+    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, subcategoryCrud, subCategoryStatus, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
 }

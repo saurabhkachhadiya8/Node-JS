@@ -35,27 +35,48 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 document.addEventListener("DOMContentLoaded", () => {
-    const [theadFirstTr, theadSecondTr] = document.querySelectorAll(".viewCategories .thead .tr");
-    const mainCheckbox = theadFirstTr.querySelector("input[type='checkbox']");
-    const secondTrCheckbox = theadSecondTr.querySelector("input[type='checkbox']");
-    const rowCheckboxes = document.querySelectorAll(".viewCategories .tbody input[type='checkbox']");
-
-    const updateHeaderVisibility = () => {
-        const anyChecked = Array.from(rowCheckboxes).some(cb => cb.checked);
-        const allChecked = Array.from(rowCheckboxes).every(cb => cb.checked);
-        theadFirstTr.classList.toggle("hidden", anyChecked);
-        theadSecondTr.classList.toggle("hidden", !anyChecked);
-        mainCheckbox.checked = secondTrCheckbox.checked = allChecked;
-    };
-
-    const toggleCheckboxes = (isChecked) => {
-        rowCheckboxes.forEach(cb => (cb.checked = isChecked));
-        updateHeaderVisibility();
-    };
-
-    mainCheckbox?.addEventListener("change", () => toggleCheckboxes(mainCheckbox.checked));
-    secondTrCheckbox?.addEventListener("change", () => toggleCheckboxes(secondTrCheckbox.checked));
-    rowCheckboxes.forEach(cb => cb.addEventListener("change", updateHeaderVisibility));
-
-    updateHeaderVisibility(); // Initial check
+    const category = () => {
+        const [theadFirstTr, theadSecondTr] = document.querySelectorAll(".viewCategories .theadCategory .tr");
+        const mainCheckbox = theadFirstTr.querySelector("input[type='checkbox']");
+        const secondTrCheckbox = theadSecondTr.querySelector("input[type='checkbox']");
+        const rowCheckboxes = document.querySelectorAll(".viewCategories .tbodyCategory input[type='checkbox'].categoryCheckbox");
+        const updateHeaderVisibility = () => {
+            const anyChecked = Array.from(rowCheckboxes).some(cb => cb.checked);
+            const allChecked = Array.from(rowCheckboxes).every(cb => cb.checked);
+            theadFirstTr.classList.toggle("hidden", anyChecked);
+            theadSecondTr.classList.toggle("hidden", !anyChecked);
+            mainCheckbox.checked = secondTrCheckbox.checked = allChecked;
+        };
+        const toggleCheckboxes = (isChecked) => {
+            rowCheckboxes.forEach(cb => (cb.checked = isChecked));
+            updateHeaderVisibility();
+        };
+        mainCheckbox?.addEventListener("change", () => toggleCheckboxes(mainCheckbox.checked));
+        secondTrCheckbox?.addEventListener("change", () => toggleCheckboxes(secondTrCheckbox.checked));
+        rowCheckboxes.forEach(cb => cb.addEventListener("change", updateHeaderVisibility));
+        updateHeaderVisibility(); // Initial check
+    }
+    category();
+    const subcategory = () => {
+        const [theadFirstTr, theadSecondTr] = document.querySelectorAll(".viewCategories .theadSubcategory .tr");
+        const mainCheckbox = theadFirstTr.querySelector("input[type='checkbox']");
+        const secondTrCheckbox = theadSecondTr.querySelector("input[type='checkbox']");
+        const rowCheckboxes = document.querySelectorAll(".viewCategories .tbodySubcategory input[type='checkbox'].subcategoryCheckbox");
+        const updateHeaderVisibility = () => {
+            const anyChecked = Array.from(rowCheckboxes).some(cb => cb.checked);
+            const allChecked = Array.from(rowCheckboxes).every(cb => cb.checked);
+            theadFirstTr.classList.toggle("hidden", anyChecked);
+            theadSecondTr.classList.toggle("hidden", !anyChecked);
+            mainCheckbox.checked = secondTrCheckbox.checked = allChecked;
+        };
+        const toggleCheckboxes = (isChecked) => {
+            rowCheckboxes.forEach(cb => (cb.checked = isChecked));
+            updateHeaderVisibility();
+        };
+        mainCheckbox?.addEventListener("change", () => toggleCheckboxes(mainCheckbox.checked));
+        secondTrCheckbox?.addEventListener("change", () => toggleCheckboxes(secondTrCheckbox.checked));
+        rowCheckboxes.forEach(cb => cb.addEventListener("change", updateHeaderVisibility));
+        updateHeaderVisibility(); // Initial check
+    }
+    subcategory();
 });
