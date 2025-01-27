@@ -35,71 +35,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 document.addEventListener("DOMContentLoaded", () => {
-    // Main checkbox in the first <tr> of <thead> and the second <tr>'s checkbox
-    const mainCheckbox = document.querySelector('thead tr:first-of-type input[type="checkbox"]');
-    const secondTrCheckbox = document.querySelector('thead tr:last-of-type th input[type="checkbox"]'); // Corrected selector
-    
-    // All checkboxes in <tbody>
-    const rowCheckboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-    
-    // First and second <tr> in <thead>
-    const theadFirstTr = document.querySelector('thead tr:first-of-type'); // First <tr> in <thead>
-    const theadSecondTr = document.querySelector('thead tr:last-of-type'); // Second <tr> in <thead>
+    const [theadFirstTr, theadSecondTr] = document.querySelectorAll(".viewCategories .thead .tr");
+    const mainCheckbox = theadFirstTr.querySelector("input[type='checkbox']");
+    const secondTrCheckbox = theadSecondTr.querySelector("input[type='checkbox']");
+    const rowCheckboxes = document.querySelectorAll(".viewCategories .tbody input[type='checkbox']");
 
-    // Function to toggle the visibility of the <thead> <tr> elements
     const updateHeaderVisibility = () => {
-        // If any checkbox in tbody is checked, hide the first <tr> and show the second <tr>
-        if (Array.from(rowCheckboxes).some(checkbox => checkbox.checked)) {
-            theadFirstTr.classList.add('hidden');
-            theadSecondTr.classList.remove('hidden');
-        } else {
-            // If no checkboxes are checked, show the first <tr> and hide the second <tr>
-            theadFirstTr.classList.remove('hidden');
-            theadSecondTr.classList.add('hidden');
-        }
-
-        // Update the state of the second <tr>'s checkbox based on tbody checkboxes
-        const allChecked = Array.from(rowCheckboxes).every(checkbox => checkbox.checked);
-        secondTrCheckbox.checked = allChecked; // Check or uncheck the second checkbox
+        const anyChecked = Array.from(rowCheckboxes).some(cb => cb.checked);
+        const allChecked = Array.from(rowCheckboxes).every(cb => cb.checked);
+        theadFirstTr.classList.toggle("hidden", anyChecked);
+        theadSecondTr.classList.toggle("hidden", !anyChecked);
+        mainCheckbox.checked = secondTrCheckbox.checked = allChecked;
     };
 
-    // Handle the main checkbox in the first <tr> of <thead> (Toggles all tbody checkboxes)
-    if (mainCheckbox) {
-        mainCheckbox.addEventListener("change", () => {
-            const isChecked = mainCheckbox.checked;
-            rowCheckboxes.forEach(checkbox => {
-                checkbox.checked = isChecked;
-            });
-            updateHeaderVisibility(); // Update header visibility and second <tr> checkbox
-        });
-    }
+    const toggleCheckboxes = (isChecked) => {
+        rowCheckboxes.forEach(cb => (cb.checked = isChecked));
+        updateHeaderVisibility();
+    };
 
-    // Handle the second checkbox in the second <tr> of <thead>
-    if (secondTrCheckbox) {
-        secondTrCheckbox.addEventListener("change", () => {
-            const isChecked = secondTrCheckbox.checked;
-            rowCheckboxes.forEach(checkbox => {
-                checkbox.checked = isChecked;
-            });
-            updateHeaderVisibility(); // Update header visibility and second <tr> checkbox
-        });
-    }
+    mainCheckbox?.addEventListener("change", () => toggleCheckboxes(mainCheckbox.checked));
+    secondTrCheckbox?.addEventListener("change", () => toggleCheckboxes(secondTrCheckbox.checked));
+    rowCheckboxes.forEach(cb => cb.addEventListener("change", updateHeaderVisibility));
 
-    // Handle individual checkboxes in <tbody> (Update the main checkbox in first <tr> and second checkbox in second <tr>)
-    rowCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener("change", () => {
-            // Update the main checkbox in the first <tr> if all checkboxes in <tbody> are checked
-            if (Array.from(rowCheckboxes).every(cb => cb.checked)) {
-                mainCheckbox.checked = true;
-            } else {
-                mainCheckbox.checked = false;
-            }
-
-            // Update the second checkbox (last <tr>) in <thead> if all checkboxes are checked in <tbody>
-            updateHeaderVisibility();
-        });
-    });
-
-    // Initial visibility check in case checkboxes are already checked
-    updateHeaderVisibility();
+    updateHeaderVisibility(); // Initial check
 });

@@ -1,5 +1,6 @@
 const userModel = require('../models/UserModel');
 const categoryModel = require('../models/CategoryModel');
+const subcategoryModel = require('../models/SubcategoryModel');
 
 const dashboardPage = async (req, res) => {
     try {
@@ -21,8 +22,10 @@ const crmAnalyticsPage = async (req, res) => {
 const categoryPage = async (req, res) => {
     try {
         let categories = await categoryModel.find({});
+        let subcategories = await subcategoryModel.find({});
         return res.render('dashboard/category/view', {
-            categories
+            categories,
+            subcategories
         });
     } catch (err) {
         console.log(err);
@@ -97,11 +100,26 @@ const categoryStatus = async (req, res) => {
         return false;
     }
 }
-const deleteByCheckboxes = async (req, res) => {
+const changesCatByCheckboxes = async (req, res) => {
     try {
         const checkedid = req.body.category_checkbox;
-        for (let i = 0; i < checkedid.length; i++) {
-            await categoryModel.findByIdAndDelete(checkedid);
+        const { deactivate, activate, deleteCat } = req.body;
+        if (deactivate) {
+            for (let i = 0; i < checkedid.length; i++) {
+                await categoryModel.findByIdAndUpdate(checkedid[i], {
+                    status: "deactive"
+                });
+            }
+        } else if (activate) {
+            for (let i = 0; i < checkedid.length; i++) {
+                await categoryModel.findByIdAndUpdate(checkedid[i], {
+                    status: "active"
+                });
+            }
+        } else if (deleteCat) {
+            for (let i = 0; i < checkedid.length; i++) {
+                await categoryModel.findByIdAndDelete(checkedid);
+            }
         }
         return res.redirect('/dashboard/category');
     } catch (err) {
@@ -109,6 +127,41 @@ const deleteByCheckboxes = async (req, res) => {
         return false;
     }
 }
+// subcategory start 
+const subcategoryPage = async (req, res) => {
+    try {
+        return res.render('dashboard/category/subcategory/create');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const subcategoryCrud = async (req, res) => {
+    try {
+        // const updateid = req.query.updateid;
+        const { title, description, tags } = req.body;
+        // if (updateid) {
+        //     await categoryModel.findByIdAndUpdate(updateid, {
+        //         title: title,
+        //         description: description,
+        //         // image:req.file.filename,
+        //         tags: tags
+        //     });
+        //     return res.redirect('/dashboard/category');
+        // }
+        await subcategoryModel.create({
+            title: title,
+            description: description,
+            // image:req.file.filename,
+            tags: tags
+        });
+        return res.redirect('/dashboard/create_subcategory');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+// subcategory end 
 // category end
 const ordersPage = async (req, res) => {
     try {
@@ -232,5 +285,5 @@ const workspacesPage = async (req, res) => {
 }
 
 module.exports = {
-    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, deleteByCheckboxes, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
+    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, subcategoryCrud, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
 }

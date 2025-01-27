@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
-const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, deleteByCheckboxes, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage } = require('../controllers/DashboardController');
+const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, subcategoryCrud, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage } = require('../controllers/DashboardController');
 
 // const fileUpload = require("../config/multer");
 
@@ -13,7 +13,11 @@ routes.get('/create_category', createCategoryPage);
 routes.post('/category_crud', /*fileUpload.single('category_image'),*/ categoryCrud);
 routes.get('/delete_category', deleteCategory);
 routes.get('/category_status', categoryStatus);
-routes.post('/delete_by_checkboxes', deleteByCheckboxes);
+routes.post('/changes_cat_by_checkboxes', changesCatByCheckboxes);
+// subcategory start 
+routes.get('/create_subcategory', subcategoryPage);
+routes.post('/subcategory_crud', subcategoryCrud);
+// subcategory end 
 // category end
 routes.get('/orders', ordersPage);
 routes.get('/cryptocurrency1', cryptocurrencyPage1);

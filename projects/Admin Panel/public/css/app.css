@@ -36,6 +36,24 @@
 .filepond .filepond--drop-label{
     height: 100%;
 }
+.viewCategories div.tr div.th.checkbox{
+    width: 4%;
+}
+.viewCategories div.tr div.th.srno{
+    width: 6%;
+}
+.viewCategories div.tr div.th.image{
+    width: 10%;
+}
+.viewCategories div.tr div.th.title{
+    width: 45%;
+}
+.viewCategories div.tr div.th.products{
+    width: 15%;
+}
+.viewCategories div.tr div.th.tags{
+    width: 20%;
+}
 /*!
  * Quill Editor v1.3.7
  * https://quilljs.com/
