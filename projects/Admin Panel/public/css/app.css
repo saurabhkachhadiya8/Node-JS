@@ -36,23 +36,26 @@
 .filepond .filepond--drop-label{
     height: 100%;
 }
-.viewCategories div.tr div.th.checkbox{
+.viewCategories div.tr div.th.checkbox,.viewCategories div.tr div.td.checkbox{
     width: 4%;
 }
-.viewCategories div.tr div.th.srno{
+.viewCategories div.tr div.th.srno,.viewCategories div.tr div.td.srno{
     width: 6%;
 }
-.viewCategories div.tr div.th.image{
+.viewCategories div.tr div.th.image,.viewCategories div.tr div.td.image{
     width: 10%;
 }
-.viewCategories div.tr div.th.title{
-    width: 45%;
+.viewCategories div.tr div.th.title,.viewCategories div.tr div.td.title{
+    width: 25%;
 }
-.viewCategories div.tr div.th.products{
-    width: 15%;
-}
-.viewCategories div.tr div.th.tags{
+.viewCategories div.tr div.th.products,.viewCategories div.tr div.td.products{
     width: 20%;
+}
+.viewCategories div.tr div.th.tags,.viewCategories div.tr div.td.tags{
+    width: 20%;
+}
+.viewCategories div.tr div.th.status,.viewCategories div.tr div.td.status{
+    width: 15%;
 }
 /*!
  * Quill Editor v1.3.7

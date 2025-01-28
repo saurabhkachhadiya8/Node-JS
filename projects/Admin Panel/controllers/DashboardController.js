@@ -134,7 +134,7 @@ const subcategoryPage = async (req, res) => {
         const editid = req.query.editid;
         let singleSubcategory = null;
         if (editid) {
-            singleSubcategory = await subcategoryModel.findById(editid);
+            singleSubcategory = await subcategoryModel.findById(editid).populate('categoryId');
         }
         return res.render('dashboard/category/subcategory/create', {
             category,
@@ -147,17 +147,20 @@ const subcategoryPage = async (req, res) => {
 }
 const subcategoryCrud = async (req, res) => {
     try {
-        // const updateid = req.query.updateid;
+        const updateid = req.query.updateid;
         const { category, title, description, tags } = req.body;
-        // if (updateid) {
-        //     await categoryModel.findByIdAndUpdate(updateid, {
-        //         title: title,
-        //         description: description,
-        //         // image:req.file.filename,
-        //         tags: tags
-        //     });
-        //     return res.redirect('/dashboard/category');
-        // }
+        console.log(category);
+
+        if (updateid) {
+            await subcategoryModel.findByIdAndUpdate(updateid, {
+                categoryId: category,
+                title: title,
+                description: description,
+                // image:req.file.filename,
+                tags: tags
+            });
+            return res.redirect('/dashboard/category');
+        }
         await subcategoryModel.create({
             categoryId: category,
             title: title,
@@ -166,6 +169,16 @@ const subcategoryCrud = async (req, res) => {
             tags: tags
         });
         return res.redirect('/dashboard/create_subcategory');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const deleteSubcategory = async (req, res) => {
+    try {
+        const deleteid = req.query.deleteid;
+        await subcategoryModel.findByIdAndDelete(deleteid);
+        return res.redirect('/dashboard/category');
     } catch (err) {
         console.log(err);
         return false;
@@ -313,5 +326,5 @@ const workspacesPage = async (req, res) => {
 }
 
 module.exports = {
-    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, subcategoryCrud, subCategoryStatus, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
+    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
 }
