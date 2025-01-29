@@ -1,6 +1,7 @@
 const userModel = require('../models/UserModel');
 const categoryModel = require('../models/CategoryModel');
 const subcategoryModel = require('../models/SubcategoryModel');
+const extrasubcategoryModel = require('../models/ExtrasubcategoryModel');
 
 const dashboardPage = async (req, res) => {
     try {
@@ -130,6 +131,17 @@ const changesCatByCheckboxes = async (req, res) => {
 // subcategory start 
 const subcategoryPage = async (req, res) => {
     try {
+        const subcategories = await subcategoryModel.find({}).populate('categoryId');
+        return res.render('dashboard/category/subcategory/view', {
+            subcategories
+        });
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const createSubcategoryPage = async (req, res) => {
+    try {
         const category = await categoryModel.find({});
         const editid = req.query.editid;
         let singleSubcategory = null;
@@ -149,8 +161,6 @@ const subcategoryCrud = async (req, res) => {
     try {
         const updateid = req.query.updateid;
         const { category, title, description, tags } = req.body;
-        console.log(category);
-
         if (updateid) {
             await subcategoryModel.findByIdAndUpdate(updateid, {
                 categoryId: category,
@@ -159,7 +169,7 @@ const subcategoryCrud = async (req, res) => {
                 // image:req.file.filename,
                 tags: tags
             });
-            return res.redirect('/dashboard/category');
+            return res.redirect('/dashboard/subcategory');
         }
         await subcategoryModel.create({
             categoryId: category,
@@ -178,7 +188,7 @@ const deleteSubcategory = async (req, res) => {
     try {
         const deleteid = req.query.deleteid;
         await subcategoryModel.findByIdAndDelete(deleteid);
-        return res.redirect('/dashboard/category');
+        return res.redirect('/dashboard/subcategory');
     } catch (err) {
         console.log(err);
         return false;
@@ -196,12 +206,169 @@ const subCategoryStatus = async (req, res) => {
                 status: "deactive"
             });
         }
-        return res.redirect('/dashboard/category');
+        return res.redirect('/dashboard/subcategory');
     } catch (err) {
         console.log(err);
         return false;
     }
 }
+const changesSubcatByCheckboxes = async (req, res) => {
+    try {
+        const checkedid = req.body.subcategory_checkbox;
+        const { deactivate, activate, deleteSubcat } = req.body;
+        if (deactivate) {
+            for (let i = 0; i < checkedid.length; i++) {
+                await subcategoryModel.findByIdAndUpdate(checkedid[i], {
+                    status: "deactive"
+                });
+            }
+        } else if (activate) {
+            for (let i = 0; i < checkedid.length; i++) {
+                await subcategoryModel.findByIdAndUpdate(checkedid[i], {
+                    status: "active"
+                });
+            }
+        } else if (deleteSubcat) {
+            for (let i = 0; i < checkedid.length; i++) {
+                await subcategoryModel.findByIdAndDelete(checkedid);
+            }
+        }
+        return res.redirect('/dashboard/subcategory');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+// extrasubcategory start 
+const extarsubcategoryPage = async (req, res) => {
+    try {
+        const extrasubcategories = await extrasubcategoryModel.find({}).populate('categoryId').populate('subcategoryId');
+        return res.render('dashboard/category/extrasubcategory/view', {
+            extrasubcategories
+        });
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const createExtrasubcategoryPage = async (req, res) => {
+    try {
+        const category = await categoryModel.find({});
+        const subcategory = await subcategoryModel.find({});
+        const editid = req.query.editid;
+        let singleExtrasubcategory = null;
+        if (editid) {
+            singleExtrasubcategory = await extrasubcategoryModel.findById(editid).populate('categoryId').populate('subcategoryId');
+        }
+        return res.render('dashboard/category/extrasubcategory/create', {
+            category,
+            subcategory,
+            singleExtrasubcategory
+        });
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const extrasubcategoryCrud = async (req, res) => {
+    try {
+        const updateid = req.query.updateid;
+        const { category, subcategory, title, description, tags } = req.body;
+        if (updateid) {
+            await extrasubcategoryModel.findByIdAndUpdate(updateid, {
+                categoryId: category,
+                subcategoryId: subcategory,
+                title: title,
+                description: description,
+                // image:req.file.filename,
+                tags: tags
+            });
+            return res.redirect('/dashboard/extrasubcategory');
+        }
+        await extrasubcategoryModel.create({
+            categoryId: category,
+            subcategoryId: subcategory,
+            title: title,
+            description: description,
+            // image:req.file.filename,
+            tags: tags
+        });
+        return res.redirect('/dashboard/create_extrasubcategory');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const ajaxCategoryWiseRecord = async (req, res) => {
+    try {
+        let categoryid = req.query.categoryId;
+        let subcategory = await subcategoryModel.find({categoryId:categoryid}).populate('categoryId');
+        return res.status(200).send({
+            success:true,
+            message: "record successfully fetch",
+            subcategory
+        })
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const deleteExtrasubcategory = async (req, res) => {
+    try {
+        const deleteid = req.query.deleteid;
+        await extrasubcategoryModel.findByIdAndDelete(deleteid);
+        return res.redirect('/dashboard/extrasubcategory');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const extrasubcategoryStatus = async (req, res) => {
+    try {
+        const { statusid, status } = req.query;
+        if (status === "deactive") {
+            await extrasubcategoryModel.findByIdAndUpdate(statusid, {
+                status: "active"
+            });
+        } else {
+            await extrasubcategoryModel.findByIdAndUpdate(statusid, {
+                status: "deactive"
+            });
+        }
+        return res.redirect('/dashboard/extrasubcategory');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const changesExtrasubcatByCheckboxes = async (req, res) => {
+    try {
+        const checkedid = req.body.extrasubcategory_checkbox;
+        const { deactivate, activate, deleteExtrasubcat } = req.body;
+        if (deactivate) {
+            for (let i = 0; i < checkedid.length; i++) {
+                await extrasubcategoryModel.findByIdAndUpdate(checkedid[i], {
+                    status: "deactive"
+                });
+            }
+        } else if (activate) {
+            for (let i = 0; i < checkedid.length; i++) {
+                await extrasubcategoryModel.findByIdAndUpdate(checkedid[i], {
+                    status: "active"
+                });
+            }
+        } else if (deleteExtrasubcat) {
+            for (let i = 0; i < checkedid.length; i++) {
+                await extrasubcategoryModel.findByIdAndDelete(checkedid);
+            }
+        }
+        return res.redirect('/dashboard/extrasubcategory');
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+// extrasubcategory end 
 // subcategory end 
 // category end
 const ordersPage = async (req, res) => {
@@ -326,5 +493,5 @@ const workspacesPage = async (req, res) => {
 }
 
 module.exports = {
-    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
+    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, createSubcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, changesSubcatByCheckboxes, extarsubcategoryPage, createExtrasubcategoryPage, extrasubcategoryCrud, ajaxCategoryWiseRecord, deleteExtrasubcategory, extrasubcategoryStatus, changesExtrasubcatByCheckboxes, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
 }

@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
-const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, subcategoryCrud, subCategoryStatus, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage, deleteSubcategory } = require('../controllers/DashboardController');
+const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, createSubcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, changesSubcatByCheckboxes, extarsubcategoryPage, createExtrasubcategoryPage, extrasubcategoryCrud, ajaxCategoryWiseRecord, deleteExtrasubcategory, extrasubcategoryStatus, changesExtrasubcatByCheckboxes, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage } = require('../controllers/DashboardController');
 
 // const fileUpload = require("../config/multer");
 
@@ -15,10 +15,21 @@ routes.get('/delete_category', deleteCategory);
 routes.get('/category_status', categoryStatus);
 routes.post('/changes_cat_by_checkboxes', changesCatByCheckboxes);
 // subcategory start 
-routes.get('/create_subcategory', subcategoryPage);
+routes.get('/subcategory', subcategoryPage);
+routes.get('/create_subcategory', createSubcategoryPage);
 routes.post('/subcategory_crud', subcategoryCrud);
 routes.get('/delete_subcategory', deleteSubcategory);
 routes.get('/subcategory_status', subCategoryStatus);
+routes.post('/changes_subcat_by_checkboxes', changesSubcatByCheckboxes);
+// extrasubcategory start 
+routes.get('/extrasubcategory', extarsubcategoryPage);
+routes.get('/create_extrasubcategory', createExtrasubcategoryPage);
+routes.post('/extrasubcategory_crud', extrasubcategoryCrud);
+routes.get('/ajax_category_wise_record', ajaxCategoryWiseRecord);
+routes.get('/delete_extrasubcategory', deleteExtrasubcategory);
+routes.get('/extrasubcategory_status', extrasubcategoryStatus);
+routes.post('/changes_extrasubcat_by_checkboxes', changesExtrasubcatByCheckboxes);
+// extrasubcategory end 
 // subcategory end 
 // category end
 routes.get('/orders', ordersPage);

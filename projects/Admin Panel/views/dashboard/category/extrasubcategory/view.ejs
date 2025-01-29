@@ -14,7 +14,7 @@
 
         <!-- Main Content Wrapper -->
         <main class="viewCategories main-content w-full px-[var(--margin-x)] pb-8">
-            <% if(!subcategories.length){ %>
+            <% if(!extrasubcategories.length){ %>
                 <div class="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
                     <div class="flex items-center space-x-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24"
@@ -23,7 +23,7 @@
                                 d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
                         </svg>
                         <h2 class="text-xl font-medium text-slate-700 line-clamp-1 dark:text-navy-50">
-                            Subcategories
+                            Extrasubcategories
                         </h2>
                     </div>
                 </div>
@@ -38,9 +38,9 @@
                             Use categories to organize your products into subcategories and extrasubcategories for your
                             online store.
                         </p>
-                        <a href="/dashboard/create_subcategory"
+                        <a href="/dashboard/create_extrasubcategory"
                             class="btn min-w-[7rem] bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90 my-5">
-                            Create Subcategory
+                            Create Extrasubcategory
                         </a>
                     </div>
                 </div>
@@ -54,17 +54,17 @@
                                     d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
                             </svg>
                             <h2 class="text-xl font-medium text-slate-700 line-clamp-1 dark:text-navy-50">
-                                Subcategories
+                                Extrasubcategories
                             </h2>
                         </div>
                         <div class="flex justify-center space-x-2">
-                            <a href="/dashboard/create_subcategory"
+                            <a href="/dashboard/create_extrasubcategory"
                                 class="btn min-w-[7rem] bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
-                                Create Subcategory
+                                Create Extrasubcategory
                             </a>
                         </div>
                     </div>
-                    <form action="/dashboard/changes_subcat_by_checkboxes" method="post">
+                    <form action="/dashboard/changes_extrasubcat_by_checkboxes" method="post">
                         <div class="is-scrollbar-hidden min-w-full overflow-x-auto">
                             <div class="is-hoverable w-full">
                                 <div class="theadCategory">
@@ -140,7 +140,7 @@
                                                         <input
                                                             class="flex items-center px-3 h-8 pr-12 font-medium text-error tracking-wide outline-none transition-all hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-navy-600 dark:focus:bg-navy-600 w-full"
                                                             style="cursor: pointer;" type="submit"  
-                                                            name="deleteSubcat" value="Delete Subcategory">
+                                                            name="deleteExtrasubcat" value="Delete Extrasubcategory">
                                                     </div>
                                                 </div>
                                             </div>
@@ -148,10 +148,10 @@
                                     </div>
                                 </div>
                                 <div class="tbodyCategory">
-                                    <% subcategories.map((subcat, index)=> { %>
+                                    <% extrasubcategories.map((extrasubcat, index)=> { %>
                                         <div class="tr flex items-center border border-transparent border-b-slate-200 dark:border-b-navy-500 relative w-full hover:bg-slate-100 dark:hover:bg-navy-800"
-                                            key="<%= subcat?._id %>" style="margin: 0;">
-                                            <a href="/dashboard/create_subcategory?editid=<%= subcat?._id %>"
+                                            key="<%= extrasubcat?._id %>" style="margin: 0;">
+                                            <a href="/dashboard/create_extrasubcategory?editid=<%= extrasubcat?._id %>"
                                                 class="z-10 absolute w-full h-full"></a>
                                             <div
                                                 class="td checkbox whitespace-nowrap rounded-l-lg px-4 py-3 sm:px-5 text-center">
@@ -159,8 +159,8 @@
                                                     class="inline-flex items-center space-x-2 z-10 relative">
                                                     <input
                                                         class="categoryCheckbox form-checkbox is-basic size-5 rounded border-slate-400/70 checked:bg-primary checked:border-primary hover:border-primary focus:border-primary dark:border-navy-400 dark:checked:bg-accent dark:checked:border-accent dark:hover:border-accent dark:focus:border-accent"
-                                                        type="checkbox" name="subcategory_checkbox"
-                                                        value="<%= subcat?._id %>" />
+                                                        type="checkbox" name="extrasubcategory_checkbox"
+                                                        value="<%= extrasubcat?._id %>" />
                                                 </label>
                                             </div>
                                             <div
@@ -171,36 +171,36 @@
                                             </div>
                                             <div class="td image whitespace-nowrap px-4 py-3 sm:px-5"></div>
                                             <div class="td title whitespace-nowrap px-4 py-3 sm:px-5">
-                                                <a href="/dashboard/create_subcategory?editid=<%= subcat?._id %>"
+                                                <a href="/dashboard/create_extrasubcategory?editid=<%= extrasubcat?._id %>"
                                                     class="z-10 relative hover:underline">
-                                                    <%= subcat?.categoryId?.title %> -> <%= subcat?.title %>
+                                                    <%= extrasubcat?.categoryId?.title %> -> <%= extrasubcat?.subcategoryId?.title %> -> <%= extrasubcat?.title %>
                                                 </a>
                                             </div>
                                             <div class="td products whitespace-nowrap px-4 py-3 sm:px-5">
                                                 <span class="z-10 relative">
-                                                    <% if(subcat?.description.length >= 20){ %>
-                                                        <%= subcat?.description.slice(0, 20) %>...
+                                                    <% if(extrasubcat?.description.length >= 20){ %>
+                                                        <%= extrasubcat?.description.slice(0, 20) %>...
                                                             <% } else { %>
-                                                                <%= subcat?.description %>
+                                                                <%= extrasubcat?.description %>
                                                                     <% } %>
                                                 </span>
                                             </div>
                                             <div class="td tags whitespace-nowrap px-4 py-3 sm:px-5">
                                                 <span class="z-10 relative">
-                                                    <% if(subcat?.tags.length >= 20){ %>
-                                                        <%= subcat?.tags.slice(0, 20) %>...
+                                                    <% if(extrasubcat?.tags.length >= 20){ %>
+                                                        <%= extrasubcat?.tags.slice(0, 20) %>...
                                                             <% } else { %>
-                                                                <%= subcat?.tags %>
+                                                                <%= extrasubcat?.tags %>
                                                                     <% } %>
                                                 </span>
                                             </div>
                                             <div
                                                 class="td status whitespace-nowrap rounded-r-lg px-4 py-3 sm:px-5 text-center">
-                                                <% if (subcat?.status==="deactive" ) { %>
-                                                    <a href="/dashboard/subcategory_status?statusid=<%= subcat?._id %>&status=deactive"
+                                                <% if (extrasubcat?.status==="deactive" ) { %>
+                                                    <a href="/dashboard/extrasubcategory_status?statusid=<%= extrasubcat?._id %>&status=deactive"
                                                         class="btn min-w-[7rem] bg-error font-medium text-white hover:bg-error-focus focus:bg-error-focus active:bg-error-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90 z-10 relative">Deactive</a>
                                                     <% } else { %>
-                                                        <a href="/dashboard/subcategory_status?statusid=<%= subcat?._id %>&status=active"
+                                                        <a href="/dashboard/extrasubcategory_status?statusid=<%= extrasubcat?._id %>&status=active"
                                                             class="btn min-w-[7rem] bg-success font-medium text-white hover:bg-success-focus focus:bg-success-focus active:bg-success-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90 z-10 relative">Active</a>
                                                         <% } %>
                                             </div>
