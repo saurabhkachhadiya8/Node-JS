@@ -22,7 +22,7 @@ const crmAnalyticsPage = async (req, res) => {
 const categoryPage = async (req, res) => {
     try {
         let categories = await categoryModel.find({});
-        let subcategories = await subcategoryModel.find({});
+        let subcategories = await subcategoryModel.find({}).populate('categoryId');
         return res.render('dashboard/category/view', {
             categories,
             subcategories
