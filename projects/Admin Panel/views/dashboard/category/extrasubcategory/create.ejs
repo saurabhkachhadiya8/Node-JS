@@ -246,7 +246,7 @@
                                 subcatoption += `<option value="${subcat?._id}">${subcat?.title}</option>`
                             }else{
                                 if(!single){
-                                    subcatoption += `<option ${subcat?._id === '<%= singleExtrasubcategory?.subcategoryId?._id  %>' ? 'selected' : ''} value="${subcat?._id}">${subcat?.title}</option>`
+                                    subcatoption += `<option ${subcat?._id === singleExtrasubcategory ? 'selected' : ''} value="${subcat?._id}">${subcat?.title}</option>`
                                 }else{
                                     subcatoption += `<option value="${subcat?._id}">${subcat?.title}</option>`
                                 }

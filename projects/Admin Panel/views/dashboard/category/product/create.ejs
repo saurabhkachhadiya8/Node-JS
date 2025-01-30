@@ -47,8 +47,7 @@
                                     <div class="space-y-5">
                                         <label class="block">
                                             <span class="font-medium text-slate-600 dark:text-navy-100">Category</span>
-                                            <select
-                                                onchange="categoryRecord('<% JSON.stringify(singleProduct) %>')"
+                                            <select onchange="categoryRecord('<% JSON.stringify(singleProduct) %>')"
                                                 id="category" name="category"
                                                 class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                                 <option value="" disabled selected>----Select Category----</option>
@@ -62,21 +61,19 @@
                                         <label class="block">
                                             <span
                                                 class="font-medium text-slate-600 dark:text-navy-100">Subcategory</span>
-                                            <select id="subcategory" name="subcategory"
+                                            <select onchange="subcategoryRecord('<% JSON.stringify(singleProduct) %>')"
+                                                id="subcategory" name="subcategory"
                                                 class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                                 <option value="" disabled selected>----Select Subcategory----</option>
                                             </select>
                                         </label>
                                         <label class="block">
-                                            <span class="font-medium text-slate-600 dark:text-navy-100">Extrasubcategory</span>
+                                            <span
+                                                class="font-medium text-slate-600 dark:text-navy-100">Extrasubcategory</span>
                                             <select id="extrasubcategory" name="extrasubcategory"
                                                 class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
-                                                <option value="" disabled selected>----Select Extrasubcategory----</option>
-                                                <% extrasubcategory.map((extrasubcat)=> { %>
-                                                    <option value="<%= extrasubcat?._id %>">
-                                                        <%= extrasubcat?.title %>
-                                                    </option>
-                                                    <% }) %>
+                                                <option value="" disabled selected>----Select Extrasubcategory----
+                                                </option>
                                             </select>
                                         </label>
                                         <label class="block">
@@ -117,9 +114,10 @@
                     </div>
                 </div>
                 </form>
-                <% }else{ const {_id,categoryId,subcategoryId,extrasubcategoryId,title,description,image,tags}=singleProduct; %>
+                <% }else{ const
+                    {_id,categoryId,subcategoryId,extrasubcategoryId,title,description,image,tags}=singleProduct; %>
                     <form action="/dashboard/product_crud?updateid=<%= _id %>" method="post"
-                        /*enctype="multipart/form-data" * />
+                        /*enctype="multipart/form-data"*/>
                     <div
                         class="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
                         <div class="flex items-center space-x-1">
@@ -161,8 +159,9 @@
                                                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                                     <option value="" disabled>----Select Category----</option>
                                                     <% category.map((cat)=> { %>
-                                                        <option <% if(categoryId?.title == cat?.title){ %> selected <% } %> value="<%= cat?._id %>">
-                                                            <%= cat?.title %>
+                                                        <option <% if(categoryId?.title==cat?.title){ %> selected <% }
+                                                                %> value="<%= cat?._id %>">
+                                                                    <%= cat?.title %>
                                                         </option>
                                                         <% }) %>
                                                 </select>
@@ -170,21 +169,18 @@
                                             <label class="block">
                                                 <span
                                                     class="font-medium text-slate-600 dark:text-navy-100">Subcategory</span>
-                                                <select id="subcategory" name="subcategory"
+                                                <select id="subcategory"
+                                                    onchange="subcategoryRecord('<%= JSON.stringify(singleProduct) %>')"
+                                                    name="subcategory"
                                                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                                 </select>
                                             </label>
                                             <label class="block">
                                                 <span
-                                                    class="font-medium text-slate-600 dark:text-navy-100">Category</span>
+                                                    class="font-medium text-slate-600 dark:text-navy-100">Extrasubcategory</span>
                                                 <select id="extrasubcategory" name="extrasubcategory"
                                                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                                     <option value="" disabled>----Select Extrasubcategory----</option>
-                                                    <% extrasubcategory.map((extrasubcat)=> { %>
-                                                        <option <% if(extrasubcategoryId?.title == extrasubcat?.title){ %> selected <% } %> value="<%= extrasubcat?._id %>">
-                                                            <%= extrasubcat?.title %>
-                                                        </option>
-                                                        <% }) %>
                                                 </select>
                                             </label>
                                             <label class="block">
@@ -248,21 +244,46 @@
                         let subcategory = res.subcategory;
                         let subcatoption = '<option value="" disabled selected>----Select Subcategory----</option>';
                         subcategory.map((subcat) => {
-                            if(!singleProduct){
+                            if (!singleProduct) {
                                 subcatoption += `<option value="${subcat?._id}">${subcat?.title}</option>`
-                            }else{
-                                if(!single){
-                                    subcatoption += `<option ${subcat?._id === '<%= singleProduct?.subcategoryId?._id  %>' ? 'selected' : ''} value="${subcat?._id}">${subcat?.title}</option>`
-                                }else{
+                            } else {
+                                if (!single) {
+                                    subcatoption += `<option ${subcat?._id === singleProduct ? 'selected' : ''} value="${subcat?._id}">${subcat?.title}</option>`
+                                } else {
                                     subcatoption += `<option value="${subcat?._id}">${subcat?.title}</option>`
                                 }
                             }
                         })
                         document.getElementById('subcategory').innerHTML = subcatoption;
+                        subcategoryRecord();
                     }
                 })
             }
             categoryRecord();
+            const subcategoryRecord = (single) => {
+                let singleProduct = '<%= singleProduct?.extrasubcategoryId?._id %>';
+                let subcategoryId = document.getElementById('subcategory').value;
+                $.ajax({
+                    type: "GET",
+                    url: `/dashboard/ajax_subcategory_wise_record?subcategoryId=${subcategoryId}`,
+                    success: function (res) {
+                        let extrasubcategory = res.extrasubcategory;
+                        let extrasubcatoption = `<option value="" disabled selected>----Select Extrasubcategory----</option>`
+                        extrasubcategory.map((extrasubcat) => {
+                            if (!singleProduct) {
+                                extrasubcatoption += `<option value="${extrasubcat?._id}">${extrasubcat?.title}</option>`
+                            } else {
+                                if (!single) {
+                                    extrasubcatoption += `<option ${extrasubcat?._id === singleProduct ? 'selected' : ''} value="${extrasubcat?._id}">${extrasubcat?.title}</option>`
+                                } else {
+                                    extrasubcatoption += `<option value="${extrasubcat?._id}">${extrasubcat?.title}</option>`
+                                }
+                            }
+                        })
+                        document.getElementById('extrasubcategory').innerHTML = extrasubcatoption;
+                    }
+                })
+            }
         </script>
 
         <%- include("../../../lower") %>
