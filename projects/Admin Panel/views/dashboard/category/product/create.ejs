@@ -14,8 +14,8 @@
 
         <!-- Main Content Wrapper -->
         <main class="main-content w-full px-[var(--margin-x)] pb-8">
-            <% if(!singleExtrasubcategory){ %>
-                <form action="/dashboard/extrasubcategory_crud" method="post" /*enctype="multipart/form-data" * />
+            <% if(!singleProduct){ %>
+                <form action="/dashboard/product_crud" method="post" /*enctype="multipart/form-data" * />
                 <div class="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
                     <div class="flex items-center space-x-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24"
@@ -24,11 +24,11 @@
                                 d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
                         </svg>
                         <h2 class="text-xl font-medium text-slate-700 line-clamp-1 dark:text-navy-50">
-                            Create Extrasubcategory
+                            Create Product
                         </h2>
                     </div>
                     <div class="flex justify-center space-x-2">
-                        <a href="/dashboard/extrasubcategory"
+                        <a href="/dashboard/product"
                             class="btn min-w-[7rem] border border-slate-300 font-medium text-slate-700 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-100 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90">
                             Preview
                         </a>
@@ -48,7 +48,7 @@
                                         <label class="block">
                                             <span class="font-medium text-slate-600 dark:text-navy-100">Category</span>
                                             <select
-                                                onchange="categoryRecord('<% JSON.stringify(singleExtrasubcategory) %>')"
+                                                onchange="categoryRecord('<% JSON.stringify(singleProduct) %>')"
                                                 id="category" name="category"
                                                 class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                                 <option value="" disabled selected>----Select Category----</option>
@@ -65,6 +65,18 @@
                                             <select id="subcategory" name="subcategory"
                                                 class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                                 <option value="" disabled selected>----Select Subcategory----</option>
+                                            </select>
+                                        </label>
+                                        <label class="block">
+                                            <span class="font-medium text-slate-600 dark:text-navy-100">Extrasubcategory</span>
+                                            <select id="extrasubcategory" name="extrasubcategory"
+                                                class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
+                                                <option value="" disabled selected>----Select Extrasubcategory----</option>
+                                                <% extrasubcategory.map((extrasubcat)=> { %>
+                                                    <option value="<%= extrasubcat?._id %>">
+                                                        <%= extrasubcat?.title %>
+                                                    </option>
+                                                    <% }) %>
                                             </select>
                                         </label>
                                         <label class="block">
@@ -105,8 +117,8 @@
                     </div>
                 </div>
                 </form>
-                <% }else{ const {_id,categoryId,subcategoryId,title,description,image,tags}=singleExtrasubcategory; %>
-                    <form action="/dashboard/extrasubcategory_crud?updateid=<%= _id %>" method="post"
+                <% }else{ const {_id,categoryId,subcategoryId,extrasubcategoryId,title,description,image,tags}=singleProduct; %>
+                    <form action="/dashboard/product_crud?updateid=<%= _id %>" method="post"
                         /*enctype="multipart/form-data" * />
                     <div
                         class="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
@@ -119,7 +131,7 @@
                             <h2 class="text-xl font-medium text-slate-700 line-clamp-1 dark:text-navy-50">
                                 Modify <span class="text-primary" style="font-size: 1.75rem;">
                                     <%= title %>
-                                </span> Extrasubcategory
+                                </span> Product
                             </h2>
                         </div>
                         <div class="flex justify-center space-x-2">
@@ -144,7 +156,7 @@
                                                 <span
                                                     class="font-medium text-slate-600 dark:text-navy-100">Category</span>
                                                 <select id="category"
-                                                    onchange="categoryRecord('<%= JSON.stringify(singleExtrasubcategory) %>')"
+                                                    onchange="categoryRecord('<%= JSON.stringify(singleProduct) %>')"
                                                     name="category"
                                                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
                                                     <option value="" disabled>----Select Category----</option>
@@ -160,6 +172,19 @@
                                                     class="font-medium text-slate-600 dark:text-navy-100">Subcategory</span>
                                                 <select id="subcategory" name="subcategory"
                                                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
+                                                </select>
+                                            </label>
+                                            <label class="block">
+                                                <span
+                                                    class="font-medium text-slate-600 dark:text-navy-100">Category</span>
+                                                <select id="extrasubcategory" name="extrasubcategory"
+                                                    class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
+                                                    <option value="" disabled>----Select Extrasubcategory----</option>
+                                                    <% extrasubcategory.map((extrasubcat)=> { %>
+                                                        <option <% if(extrasubcategoryId?.title == extrasubcat?.title){ %> selected <% } %> value="<%= extrasubcat?._id %>">
+                                                            <%= extrasubcat?.title %>
+                                                        </option>
+                                                        <% }) %>
                                                 </select>
                                             </label>
                                             <label class="block">
@@ -192,25 +217,6 @@
                                             name="subcategory_image">
                                     </div>
                                 </div>
-                                <div class="flex flex-col items-center justify-between pt-2 sm:flex-row sm:space-y-0 lg:py-1"
-                                    style="margin-top: 0;">
-                                    <div class="flex items-center space-x-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
-                                        </svg>
-                                        <h2 class="text-xl font-medium text-slate-700 line-clamp-1 dark:text-navy-50">
-                                            Extrasubcategory
-                                        </h2>
-                                    </div>
-                                    <div class="flex justify-center space-x-2">
-                                        <a href="/dashboard/create_product"
-                                            class="btn min-w-[7rem] border border-slate-300 font-medium text-slate-700 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-100 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90">
-                                            Create
-                                        </a>
-                                    </div>
-                                </div>
                                 <label class="block">
                                     <span class="font-medium text-slate-600 dark:text-navy-100">Tags</span>
                                     <input class="mt-1.5 w-full" placeholder="Enter Tags"
@@ -221,7 +227,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-center justify-end space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
-                        <a href="/dashboard/delete_extrasubcategory?deleteid=<%= _id %>"
+                        <a href="/dashboard/delete_product?deleteid=<%= _id %>"
                             class="btn min-w-[7rem] bg-error font-medium text-white hover:bg-error-focus focus:bg-error-focus active:bg-error-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
                             Delete Subcategory
                         </a>
@@ -233,7 +239,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script>
             const categoryRecord = (single) => {
-                let singleExtrasubcategory = '<%= singleExtrasubcategory?.subcategoryId?._id %>';
+                let singleProduct = '<%= singleProduct?.subcategoryId?._id %>';
                 let categoryId = document.getElementById('category').value;
                 $.ajax({
                     type: "GET",
@@ -242,11 +248,11 @@
                         let subcategory = res.subcategory;
                         let subcatoption = '<option value="" disabled selected>----Select Subcategory----</option>';
                         subcategory.map((subcat) => {
-                            if(!singleExtrasubcategory){
+                            if(!singleProduct){
                                 subcatoption += `<option value="${subcat?._id}">${subcat?.title}</option>`
                             }else{
                                 if(!single){
-                                    subcatoption += `<option ${subcat?._id === '<%= singleExtrasubcategory?.subcategoryId?._id  %>' ? 'selected' : ''} value="${subcat?._id}">${subcat?.title}</option>`
+                                    subcatoption += `<option ${subcat?._id === '<%= singleProduct?.subcategoryId?._id  %>' ? 'selected' : ''} value="${subcat?._id}">${subcat?.title}</option>`
                                 }else{
                                     subcatoption += `<option value="${subcat?._id}">${subcat?.title}</option>`
                                 }

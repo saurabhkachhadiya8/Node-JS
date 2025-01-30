@@ -131,13 +131,14 @@
                                     <div class="tab-content p-4 sm:p-5">
                                         <div class="space-y-5">
                                             <label class="block">
-                                                <span class="font-medium text-slate-600 dark:text-navy-100">Category</span>
+                                                <span
+                                                    class="font-medium text-slate-600 dark:text-navy-100">Category</span>
                                                 <select name="category"
                                                     class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
-                                                    <option value="<%= categoryId?._id %>"><%= categoryId?.title %></option>
                                                     <% category.map((cat)=> { %>
-                                                        <option value="<%= cat?._id %>">
-                                                            <%= cat?.title %>
+                                                        <option <% if(categoryId?.title===cat?.title){ %> selected <% }
+                                                                %> value="<%= cat?._id %>">
+                                                                    <%= cat?.title %>
                                                         </option>
                                                         <% }) %>
                                                 </select>
@@ -172,8 +173,8 @@
                                             name="subcategory_image">
                                     </div>
                                 </div>
-                                <div
-                                    class="flex flex-col items-center justify-between pt-2 sm:flex-row sm:space-y-0 lg:py-1" style="margin-top: 0;">
+                                <div class="flex flex-col items-center justify-between pt-2 sm:flex-row sm:space-y-0 lg:py-1"
+                                    style="margin-top: 0;">
                                     <div class="flex items-center space-x-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -185,7 +186,7 @@
                                         </h2>
                                     </div>
                                     <div class="flex justify-center space-x-2">
-                                        <a href="/dashboard/category"
+                                        <a href="/dashboard/create_extrasubcategory"
                                             class="btn min-w-[7rem] border border-slate-300 font-medium text-slate-700 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-100 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90">
                                             Create
                                         </a>

@@ -1,7 +1,11 @@
 const express = require('express');
 const routes = express.Router();
 
-const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, createSubcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, changesSubcatByCheckboxes, extarsubcategoryPage, createExtrasubcategoryPage, extrasubcategoryCrud, ajaxCategoryWiseRecord, deleteExtrasubcategory, extrasubcategoryStatus, changesExtrasubcatByCheckboxes, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage } = require('../controllers/DashboardController');
+const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, createSubcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, changesSubcatByCheckboxes, extarsubcategoryPage, createExtrasubcategoryPage, extrasubcategoryCrud, ajaxCategoryWiseRecord, deleteExtrasubcategory, extrasubcategoryStatus, changesExtrasubcatByCheckboxes, productPage
+    
+    , ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
+    , createProductPage, productCrud, deleteProduct, productStatus,
+    changesProductByCheckboxes} = require('../controllers/DashboardController');
 
 // const fileUpload = require("../config/multer");
 
@@ -29,6 +33,14 @@ routes.get('/ajax_category_wise_record', ajaxCategoryWiseRecord);
 routes.get('/delete_extrasubcategory', deleteExtrasubcategory);
 routes.get('/extrasubcategory_status', extrasubcategoryStatus);
 routes.post('/changes_extrasubcat_by_checkboxes', changesExtrasubcatByCheckboxes);
+// product start 
+routes.get('/product', productPage);
+routes.get('/create_product', createProductPage);
+routes.post('/product_crud', productCrud);
+routes.get('/delete_product', deleteProduct);
+routes.get('/product_status', productStatus);
+routes.post('/changes_product_by_checkboxes', changesProductByCheckboxes);
+// product end 
 // extrasubcategory end 
 // subcategory end 
 // category end
