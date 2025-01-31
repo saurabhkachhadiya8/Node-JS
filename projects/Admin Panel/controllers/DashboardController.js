@@ -3,6 +3,7 @@ const categoryModel = require('../models/CategoryModel');
 const subcategoryModel = require('../models/SubcategoryModel');
 const extrasubcategoryModel = require('../models/ExtrasubcategoryModel');
 const productModel = require('../models/ProductModel');
+const { status } = require('express/lib/response');
 
 const dashboardPage = async (req, res) => {
     try {
@@ -94,8 +95,26 @@ const categoryStatus = async (req, res) => {
             await categoryModel.findByIdAndUpdate(statusid, {
                 status: "active"
             });
+            await subcategoryModel.updateMany({ categoryId: statusid }, {
+                status: "active"
+            });
+            await extrasubcategoryModel.updateMany({ categoryId: statusid }, {
+                status: "active"
+            });
+            await productModel.updateMany({ categoryId: statusid }, {
+                status: "active"
+            });
         } else {
             await categoryModel.findByIdAndUpdate(statusid, {
+                status: "deactive"
+            });
+            await subcategoryModel.updateMany({ categoryId: statusid }, {
+                status: "deactive"
+            });
+            await extrasubcategoryModel.updateMany({ categoryId: statusid }, {
+                status: "deactive"
+            });
+            await productModel.updateMany({ categoryId: statusid }, {
                 status: "deactive"
             });
         }
@@ -115,12 +134,30 @@ const changesCatByCheckboxes = async (req, res) => {
                     status: "deactive"
                 });
             }
+            await subcategoryModel.updateMany({ categoryId: checkedid }, {
+                status: "deactive"
+            });
+            await extrasubcategoryModel.updateMany({ categoryId: checkedid }, {
+                status: "deactive"
+            });
+            await productModel.updateMany({ categoryId: checkedid }, {
+                status: "deactive"
+            });
         } else if (activate) {
             for (let i = 0; i < checkedid.length; i++) {
                 await categoryModel.findByIdAndUpdate(checkedid[i], {
                     status: "active"
                 });
             }
+            await subcategoryModel.updateMany({ categoryId: checkedid }, {
+                status: "active"
+            });
+            await extrasubcategoryModel.updateMany({ categoryId: checkedid }, {
+                status: "active"
+            });
+            await productModel.updateMany({ categoryId: checkedid }, {
+                status: "active"
+            });
         } else if (deleteCat) {
             for (let i = 0; i < checkedid.length; i++) {
                 await categoryModel.findByIdAndDelete(checkedid);
@@ -211,17 +248,29 @@ const subCategoryStatus = async (req, res) => {
         const subcategory = await subcategoryModel.findById(statusid);
         const category = await categoryModel.findById(subcategory.categoryId);
         if (status === "deactive") {
-            if(category.status == 'active'){
+            if (category.status === 'active') {
                 await subcategoryModel.findByIdAndUpdate(statusid, {
                     status: "active"
                 });
-            }else{
+                await extrasubcategoryModel.updateMany({ subcategoryId: statusid }, {
+                    status: "active"
+                });
+                await productModel.updateMany({ subcategoryId: statusid }, {
+                    status: "active"
+                });
+            } else {
                 await subcategoryModel.findByIdAndUpdate(statusid, {
                     status: "deactive"
                 });
             }
         } else {
             await subcategoryModel.findByIdAndUpdate(statusid, {
+                status: "deactive"
+            });
+            await extrasubcategoryModel.updateMany({ subcategoryId: statusid }, {
+                status: "deactive"
+            });
+            await productModel.updateMany({ subcategoryId: statusid }, {
                 status: "deactive"
             });
         }
@@ -240,16 +289,28 @@ const changesSubcatByCheckboxes = async (req, res) => {
                 await subcategoryModel.findByIdAndUpdate(checkedid[i], {
                     status: "deactive"
                 });
+                await extrasubcategoryModel.updateMany({ subcategoryId: checkedid }, {
+                    status: "deactive"
+                });
+                await productModel.updateMany({ subcategoryId: checkedid }, {
+                    status: "deactive"
+                });
             }
         } else if (activate) {
             for (let i = 0; i < checkedid.length; i++) {
                 const subcategory = await subcategoryModel.findById(checkedid[i]);
                 const category = await categoryModel.findById(subcategory.categoryId);
-                if(category.status == 'active'){
+                if (category.status == 'active') {
                     await subcategoryModel.findByIdAndUpdate(checkedid[i], {
                         status: "active"
                     });
-                }else{
+                    await extrasubcategoryModel.updateMany({ subcategoryId: checkedid }, {
+                        status: "active"
+                    });
+                    await productModel.updateMany({ subcategoryId: checkedid }, {
+                        status: "active"
+                    });
+                } else {
                     await subcategoryModel.findByIdAndUpdate(checkedid[i], {
                         status: "deactive"
                     });
@@ -303,6 +364,7 @@ const extrasubcategoryCrud = async (req, res) => {
     try {
         const updateid = req.query.updateid;
         const { categoryId, subcategoryId, title, description, tags } = req.body;
+        const subcategory = await subcategoryModel.findById(subcategoryId);
         if (updateid) {
             await extrasubcategoryModel.findByIdAndUpdate(updateid, {
                 categoryId: categoryId,
@@ -320,7 +382,8 @@ const extrasubcategoryCrud = async (req, res) => {
             title: title,
             description: description,
             // image:req.file.filename,
-            tags: tags
+            tags: tags,
+            status: subcategory.status
         });
         return res.redirect('/dashboard/create_extrasubcategory');
     } catch (err) {
@@ -356,12 +419,26 @@ const deleteExtrasubcategory = async (req, res) => {
 const extrasubcategoryStatus = async (req, res) => {
     try {
         const { statusid, status } = req.query;
+        const extrasubcategory = extrasubcategoryModel.findById(statusid);
+        const subcategory = subcategoryModel.findById(extrasubcategory.subcategoryId);
         if (status === "deactive") {
-            await extrasubcategoryModel.findByIdAndUpdate(statusid, {
-                status: "active"
-            });
+            if (subcategory.status === 'active') {
+                await extrasubcategoryModel.findByIdAndUpdate(statusid, {
+                    status: "active"
+                });
+                await productModel.updateMany({ extrasubcategoryId: statusid }, {
+                    status: "active"
+                });
+            } else {
+                await extrasubcategoryModel.findByIdAndUpdate(statusid, {
+                    status: "deactive"
+                });
+            }
         } else {
             await extrasubcategoryModel.findByIdAndUpdate(statusid, {
+                status: "deactive"
+            });
+            await productModel.updateMany({ subcategoryId: statusid }, {
                 status: "deactive"
             });
         }
@@ -380,12 +457,26 @@ const changesExtrasubcatByCheckboxes = async (req, res) => {
                 await extrasubcategoryModel.findByIdAndUpdate(checkedid[i], {
                     status: "deactive"
                 });
+                await productModel.updateMany({ extrasubcategoryId: checkedid }, {
+                    status: "deactive"
+                });
             }
         } else if (activate) {
             for (let i = 0; i < checkedid.length; i++) {
-                await extrasubcategoryModel.findByIdAndUpdate(checkedid[i], {
-                    status: "active"
-                });
+                const extrasubcategory = extrasubcategoryModel.findById(checkedid[i]);
+                const subcategory = subcategoryModel.findById(extrasubcategory.subcategoryId);
+                if (subcategory.status === 'active') {
+                    await extrasubcategoryModel.findByIdAndUpdate(checkedid[i], {
+                        status: "active"
+                    });
+                    await productModel.updateMany({ extrasubcategoryId: checkedid }, {
+                        status: "active"
+                    });
+                } else {
+                    await extrasubcategoryModel.findByIdAndUpdate(checkedid[i], {
+                        status: "deactive"
+                    });
+                }
             }
         } else if (deleteExtrasubcat) {
             for (let i = 0; i < checkedid.length; i++) {
