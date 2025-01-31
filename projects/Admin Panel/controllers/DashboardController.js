@@ -167,10 +167,11 @@ const createSubcategoryPage = async (req, res) => {
 const subcategoryCrud = async (req, res) => {
     try {
         const updateid = req.query.updateid;
-        const { category, title, description, tags } = req.body;
+        const { categoryId, title, description, tags } = req.body;
+        const category = await categoryModel.findById(categoryId);
         if (updateid) {
             await subcategoryModel.findByIdAndUpdate(updateid, {
-                categoryId: category,
+                categoryId: categoryId,
                 title: title,
                 description: description,
                 // image:req.file.filename,
@@ -179,11 +180,12 @@ const subcategoryCrud = async (req, res) => {
             return res.redirect('/dashboard/subcategory');
         }
         await subcategoryModel.create({
-            categoryId: category,
+            categoryId: categoryId,
             title: title,
             description: description,
             // image:req.file.filename,
-            tags: tags
+            tags: tags,
+            status: category.status
         });
         return res.redirect('/dashboard/create_subcategory');
     } catch (err) {
@@ -206,10 +208,18 @@ const deleteSubcategory = async (req, res) => {
 const subCategoryStatus = async (req, res) => {
     try {
         const { statusid, status } = req.query;
+        const subcategory = await subcategoryModel.findById(statusid);
+        const category = await categoryModel.findById(subcategory.categoryId);
         if (status === "deactive") {
-            await subcategoryModel.findByIdAndUpdate(statusid, {
-                status: "active"
-            });
+            if(category.status == 'active'){
+                await subcategoryModel.findByIdAndUpdate(statusid, {
+                    status: "active"
+                });
+            }else{
+                await subcategoryModel.findByIdAndUpdate(statusid, {
+                    status: "deactive"
+                });
+            }
         } else {
             await subcategoryModel.findByIdAndUpdate(statusid, {
                 status: "deactive"
@@ -233,9 +243,17 @@ const changesSubcatByCheckboxes = async (req, res) => {
             }
         } else if (activate) {
             for (let i = 0; i < checkedid.length; i++) {
-                await subcategoryModel.findByIdAndUpdate(checkedid[i], {
-                    status: "active"
-                });
+                const subcategory = await subcategoryModel.findById(checkedid[i]);
+                const category = await categoryModel.findById(subcategory.categoryId);
+                if(category.status == 'active'){
+                    await subcategoryModel.findByIdAndUpdate(checkedid[i], {
+                        status: "active"
+                    });
+                }else{
+                    await subcategoryModel.findByIdAndUpdate(checkedid[i], {
+                        status: "deactive"
+                    });
+                }
             }
         } else if (deleteSubcat) {
             for (let i = 0; i < checkedid.length; i++) {
@@ -284,11 +302,11 @@ const createExtrasubcategoryPage = async (req, res) => {
 const extrasubcategoryCrud = async (req, res) => {
     try {
         const updateid = req.query.updateid;
-        const { category, subcategory, title, description, tags } = req.body;
+        const { categoryId, subcategoryId, title, description, tags } = req.body;
         if (updateid) {
             await extrasubcategoryModel.findByIdAndUpdate(updateid, {
-                categoryId: category,
-                subcategoryId: subcategory,
+                categoryId: categoryId,
+                subcategoryId: subcategoryId,
                 title: title,
                 description: description,
                 // image:req.file.filename,
@@ -297,8 +315,8 @@ const extrasubcategoryCrud = async (req, res) => {
             return res.redirect('/dashboard/extrasubcategory');
         }
         await extrasubcategoryModel.create({
-            categoryId: category,
-            subcategoryId: subcategory,
+            categoryId: categoryId,
+            subcategoryId: subcategoryId,
             title: title,
             description: description,
             // image:req.file.filename,
@@ -417,12 +435,12 @@ const createProductPage = async (req, res) => {
 const productCrud = async (req, res) => {
     try {
         const updateid = req.query.updateid;
-        const { category, subcategory, extrasubcategory, title, description, tags } = req.body;
+        const { categoryId, subcategoryId, extrasubcategoryId, title, description, tags } = req.body;
         if (updateid) {
             await productModel.findByIdAndUpdate(updateid, {
-                categoryId: category,
-                subcategoryId: subcategory,
-                extrasubcategoryId: extrasubcategory,
+                categoryId: categoryId,
+                subcategoryId: subcategoryId,
+                extrasubcategoryId: extrasubcategoryId,
                 title: title,
                 description: description,
                 // image:req.file.filename,
@@ -431,9 +449,9 @@ const productCrud = async (req, res) => {
             return res.redirect('/dashboard/product');
         }
         await productModel.create({
-            categoryId: category,
-            subcategoryId: subcategory,
-            extrasubcategoryId: extrasubcategory,
+            categoryId: categoryId,
+            subcategoryId: subcategoryId,
+            extrasubcategoryId: extrasubcategoryId,
             title: title,
             description: description,
             // image:req.file.filename,
