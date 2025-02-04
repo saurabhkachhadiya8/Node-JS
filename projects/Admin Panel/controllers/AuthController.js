@@ -31,6 +31,13 @@ const signupUser = async (req, res) => {
             console.log("Please Fill All Fields");
             return false;
         }
+        let duplicateUser = await userModel.findOne({ email: email });
+        if(duplicateUser){
+            console.log(duplicateUser);
+            
+            console.log("User Already Exists");
+            return false;
+        }
         if (password !== re_password) {
             console.log("Passwords Are Do Not Match.");
             return false;
