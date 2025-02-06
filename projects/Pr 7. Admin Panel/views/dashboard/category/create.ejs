@@ -71,7 +71,7 @@
                                     <span class="font-medium text-slate-600 dark:text-navy-100">Image</span>
                                     <div id="filepond" class="filepond fp-bordered fp-grid mt-1.5 [--fp-grid:2]">
                                         <input type="file" id="categoryImage" name="category_image">
-                                        <span id="dragText" class="drag-text">Drag & Drop your file or
+                                        <span id="dragText" class="drag-text" style="font-size: larger;">Drag & Drop your file or
                                             <u>Upload</u></span>
                                         <div id="uploadedImages" class="uploaded-images"></div>
                                     </div>
@@ -147,12 +147,15 @@
                                     <span class="font-medium text-slate-600 dark:text-navy-100">Image</span>
                                     <div id="filepond" class="filepond fp-bordered fp-grid mt-1.5 [--fp-grid:2]">
                                         <input type="file" id="categoryImage" name="category_image">
-                                        <span id="dragText" class="drag-text">Drag & Drop your file or
-                                            <u>Upload</u></span>
+                                        <% if(!image){ %>
+                                            <span id="dragText" class="drag-text" style="font-size: larger;">Drag & Drop your file or <u>Upload</u></span>
+                                        <% }else{ %>
+                                            <span id="dragText" class="drag-text" style="font-size: larger;">Replace your new file</span>
+                                        <% } %>
                                         <div id="uploadedImages" class="uploaded-images"></div>
                                     </div>
                                 </div>
-                                <div class="flex flex-col items-center justify-between pt-2 sm:flex-row sm:space-y-0 lg:py-1"
+                                <div class="flex flex-col items-center justify-between pt-4 sm:flex-row sm:space-y-0 lg:py-1"
                                     style="margin-top: 0;">
                                     <div class="flex items-center space-x-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none"

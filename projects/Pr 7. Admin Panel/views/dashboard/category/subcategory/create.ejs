@@ -15,7 +15,7 @@
         <!-- Main Content Wrapper -->
         <main class="main-content w-full px-[var(--margin-x)] pb-8">
             <% if(!singleSubcategory){ %>
-                <form action="/dashboard/subcategory_crud" method="post" /*enctype="multipart/form-data" * />
+                <form action="/dashboard/subcategory_crud" method="post" enctype="multipart/form-data">
                 <div class="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
                     <div class="flex items-center space-x-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24"
@@ -80,9 +80,11 @@
                         <div class="card space-y-5 p-4 sm:p-5">
                             <div>
                                 <span class="font-medium text-slate-600 dark:text-navy-100">Image</span>
-                                <div class="filepond fp-bordered fp-grid mt-1.5 [--fp-grid:2]">
-                                    <input type="file" x-init="$el._x_filepond = FilePond.create($el)"
-                                        name="category_image">
+                                <div id="filepond" class="filepond fp-bordered fp-grid mt-1.5 [--fp-grid:2]">
+                                    <input type="file" id="categoryImage" name="subcategory_image">
+                                    <span id="dragText" class="drag-text" style="font-size: larger;">Drag & Drop your file or
+                                        <u>Upload</u></span>
+                                    <div id="uploadedImages" class="uploaded-images"></div>
                                 </div>
                             </div>
                             <label class="block">
@@ -96,8 +98,7 @@
                 </div>
                 </form>
                 <% }else{ const {_id,categoryId,title,description,image,tags}=singleSubcategory; %>
-                    <form action="/dashboard/subcategory_crud?updateid=<%= _id %>" method="post"
-                        /*enctype="multipart/form-data" * />
+                    <form action="/dashboard/subcategory_crud?updateid=<%= _id %>" method="post" enctype="multipart/form-data">
                     <div
                         class="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
                         <div class="flex items-center space-x-1">
@@ -168,9 +169,14 @@
                             <div class="card space-y-5 p-4 sm:p-5">
                                 <div>
                                     <span class="font-medium text-slate-600 dark:text-navy-100">Image</span>
-                                    <div class="filepond fp-bordered fp-grid mt-1.5 [--fp-grid:2]">
-                                        <input type="file" x-init="$el._x_filepond = FilePond.create($el)"
-                                            name="subcategory_image">
+                                    <div id="filepond" class="filepond fp-bordered fp-grid mt-1.5 [--fp-grid:2]">
+                                        <input type="file" id="categoryImage" name="subcategory_image">
+                                        <% if(!image){ %>
+                                            <span id="dragText" class="drag-text" style="font-size: larger;">Drag & Drop your file or <u>Upload</u></span>
+                                        <% }else{ %>
+                                            <span id="dragText" class="drag-text" style="font-size: larger;">Replace your new file</span>
+                                        <% } %>
+                                        <div id="uploadedImages" class="uploaded-images"></div>
                                     </div>
                                 </div>
                                 <div class="flex flex-col items-center justify-between pt-2 sm:flex-row sm:space-y-0 lg:py-1"

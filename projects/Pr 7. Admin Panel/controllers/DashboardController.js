@@ -57,24 +57,22 @@ const categoryCrud = async (req, res) => {
         const updateid = req.query.updateid;
         const { title, description, tags } = req.body;
         if (updateid) {
-            const category = categoryModel.findById(updateid);
-            console.log(category);
-            
+            const category = await categoryModel.findById(updateid);
             if (req.file) {
-                if(fs.existsSync(path.join(__dirname, '../uploads', category.image))){
-                    fs.unlinkSync(path.join(__dirname, '../uploads', category.image));
+                if (fs.existsSync(category?.image)) {
+                    fs.unlinkSync(category?.image);
                 }
                 await categoryModel.findByIdAndUpdate(updateid, {
                     title: title,
                     description: description,
-                    image: req.file.path,
+                    image: req.file?.path,
                     tags: tags
                 });
             } else {
                 await categoryModel.findByIdAndUpdate(updateid, {
                     title: title,
                     description: description,
-                    image: category.image,
+                    image: category?.image,
                     tags: tags
                 });
             }
@@ -95,6 +93,28 @@ const categoryCrud = async (req, res) => {
 const deleteCategory = async (req, res) => {
     try {
         const deleteid = req.query.deleteid;
+        let category = await categoryModel.findById(deleteid);
+        if (fs.existsSync(category?.image)) {
+            fs.unlinkSync(category?.image);
+        }
+        let subcategory = await subcategoryModel.findById({ categoryId: deleteid });
+        subcategory.map((subcat) => {
+            if (fs.existsSync(subcat?.image)) {
+                fs.unlinkSync(subcat?.image);
+            }
+        });
+        let extrasubcategory = await extrasubcategoryModel.findById({ categoryId: deleteid });
+        extrasubcategory.map((extrasubcat) => {
+            if (fs.existsSync(extrasubcat?.image)) {
+                fs.unlinkSync(extrasubcat?.image);
+            }
+        });
+        let product = await productModel.findById({ categoryId: deleteid });
+        product.map((pro) => {
+            if (fs.existsSync(pro?.image)) {
+                fs.unlinkSync(pro?.image);
+            }
+        });
         await categoryModel.findByIdAndDelete(deleteid);
         await subcategoryModel.deleteMany({ categoryId: deleteid });
         await extrasubcategoryModel.deleteMany({ categoryId: deleteid });
@@ -177,6 +197,28 @@ const changesCatByCheckboxes = async (req, res) => {
             });
         } else if (deleteCat) {
             for (let i = 0; i < checkedid.length; i++) {
+                let category = await categoryModel.findById(checkedid[i]);
+                if (fs.existsSync(category?.image)) {
+                    fs.unlinkSync(category?.image);
+                }
+                let subcategory = await subcategoryModel.find({ categoryId: checkedid[i] });
+                subcategory.map((subcat) => {
+                    if (fs.existsSync(subcat?.image)) {
+                        fs.unlinkSync(subcat?.image);
+                    }
+                });
+                let extrasubcategory = await extrasubcategoryModel.find({ categoryId: checkedid[i] });
+                extrasubcategory.map((extrasubcat) => {
+                    if (fs.existsSync(extrasubcat?.image)) {
+                        fs.unlinkSync(extrasubcat?.image);
+                    }
+                });
+                let product = await productModel.find({ categoryId: checkedid[i] });
+                product.map((pro) => {
+                    if (fs.existsSync(pro?.image)) {
+                        fs.unlinkSync(pro?.image);
+                    }
+                });
                 await categoryModel.findByIdAndDelete(checkedid);
             }
             await subcategoryModel.deleteMany({ categoryId: checkedid });
@@ -224,20 +266,34 @@ const subcategoryCrud = async (req, res) => {
         const { categoryId, title, description, tags } = req.body;
         const category = await categoryModel.findById(categoryId);
         if (updateid) {
-            await subcategoryModel.findByIdAndUpdate(updateid, {
-                categoryId: categoryId,
-                title: title,
-                description: description,
-                // image:req.file.filename,
-                tags: tags
-            });
+            const subcategory = await subcategoryModel.findById(updateid);
+            if (req.file) {
+                if (fs.existsSync(subcategory?.image)) {
+                    fs.unlinkSync(subcategory?.image);
+                }
+                await subcategoryModel.findByIdAndUpdate(updateid, {
+                    categoryId: categoryId,
+                    title: title,
+                    description: description,
+                    image: req.file?.path,
+                    tags: tags
+                });
+            } else {
+                await subcategoryModel.findByIdAndUpdate(updateid, {
+                    categoryId: categoryId,
+                    title: title,
+                    description: description,
+                    image: subcategory?.image,
+                    tags: tags
+                });
+            }
             return res.redirect('/dashboard/subcategory');
         }
         await subcategoryModel.create({
             categoryId: categoryId,
             title: title,
             description: description,
-            // image:req.file.filename,
+            image: req.file?.path,
             tags: tags,
             status: category.status
         });
@@ -250,6 +306,22 @@ const subcategoryCrud = async (req, res) => {
 const deleteSubcategory = async (req, res) => {
     try {
         const deleteid = req.query.deleteid;
+        let subcategory = await subcategoryModel.findById(deleteid);
+        if (fs.existsSync(subcategory?.image)) {
+            fs.unlinkSync(subcategory?.image);
+        }
+        let extrasubcategory = await extrasubcategoryModel.find({ subcategoryId: deleteid });
+        extrasubcategory.map((extrasubcat) => {
+            if (fs.existsSync(extrasubcat?.image)) {
+                fs.unlinkSync(extrasubcat?.image);
+            }
+        });
+        let product = await productModel.find({ subcategoryId: deleteid });
+        product.map((pro) => {
+            if (fs.existsSync(pro?.image)) {
+                fs.unlinkSync(pro?.image);
+            }
+        });
         await subcategoryModel.findByIdAndDelete(deleteid);
         await extrasubcategoryModel.deleteMany({ subcategoryId: deleteid });
         await productModel.deleteMany({ subcategoryId: deleteid });
@@ -335,6 +407,22 @@ const changesSubcatByCheckboxes = async (req, res) => {
             }
         } else if (deleteSubcat) {
             for (let i = 0; i < checkedid.length; i++) {
+                let subcategory = await subcategoryModel.findById(checkedid[i]);
+                if (fs.existsSync(subcategory?.image)) {
+                    fs.unlinkSync(subcategory?.image);
+                }
+                let extrasubcategory = await extrasubcategoryModel.find({ subcategoryId: checkedid[i] });
+                extrasubcategory.map((extrasubcat) => {
+                    if (fs.existsSync(extrasubcat?.image)) {
+                        fs.unlinkSync(extrasubcat?.image);
+                    }
+                });
+                let product = await productModel.find({ subcategoryId: checkedid[i] });
+                product.map((pro) => {
+                    if (fs.existsSync(pro?.image)) {
+                        fs.unlinkSync(pro?.image);
+                    }
+                });
                 await subcategoryModel.findByIdAndDelete(checkedid);
             }
             await extrasubcategoryModel.deleteMany({ subcategoryId: checkedid });
@@ -383,14 +471,29 @@ const extrasubcategoryCrud = async (req, res) => {
         const { categoryId, subcategoryId, title, description, tags } = req.body;
         const subcategory = await subcategoryModel.findById(subcategoryId);
         if (updateid) {
-            await extrasubcategoryModel.findByIdAndUpdate(updateid, {
-                categoryId: categoryId,
-                subcategoryId: subcategoryId,
-                title: title,
-                description: description,
-                // image:req.file.filename,
-                tags: tags
-            });
+            const extrasubcategory = await extrasubcategoryModel.findById(updateid);
+            if (req.file) {
+                if (fs.existsSync(extrasubcategory?.image)) {
+                    fs.unlinkSync(extrasubcategory?.image);
+                }
+                await extrasubcategoryModel.findByIdAndUpdate(updateid, {
+                    categoryId: categoryId,
+                    subcategoryId: subcategoryId,
+                    title: title,
+                    description: description,
+                    image: req.file?.path,
+                    tags: tags
+                });
+            } else {
+                await extrasubcategoryModel.findByIdAndUpdate(updateid, {
+                    categoryId: categoryId,
+                    subcategoryId: subcategoryId,
+                    title: title,
+                    description: description,
+                    image: extrasubcategory?.image,
+                    tags: tags
+                });
+            }
             return res.redirect('/dashboard/extrasubcategory');
         }
         await extrasubcategoryModel.create({
@@ -398,7 +501,7 @@ const extrasubcategoryCrud = async (req, res) => {
             subcategoryId: subcategoryId,
             title: title,
             description: description,
-            // image:req.file.filename,
+            image: req.file?.path,
             tags: tags,
             status: subcategory.status
         });
@@ -425,6 +528,16 @@ const ajaxCategoryWiseRecord = async (req, res) => {
 const deleteExtrasubcategory = async (req, res) => {
     try {
         const deleteid = req.query.deleteid;
+        let extrasubcategory = await extrasubcategoryModel.findById(deleteid);
+        if (fs.existsSync(extrasubcategory?.image)) {
+            fs.unlinkSync(extrasubcategory?.image);
+        }
+        let product = await productModel.find({ extrasubcategoryId: deleteid });
+        product.map((pro) => {
+            if (fs.existsSync(pro?.image)) {
+                fs.unlinkSync(pro?.image);
+            }
+        });
         await extrasubcategoryModel.findByIdAndDelete(deleteid);
         await productModel.deleteMany({ extrasubcategoryId: deleteid });
         return res.redirect('/dashboard/extrasubcategory');
@@ -497,6 +610,16 @@ const changesExtrasubcatByCheckboxes = async (req, res) => {
             }
         } else if (deleteExtrasubcat) {
             for (let i = 0; i < checkedid.length; i++) {
+                let extrasubcategory = await extrasubcategoryModel.findById(checkedid[i]);
+                if (fs.existsSync(extrasubcategory?.image)) {
+                    fs.unlinkSync(extrasubcategory?.image);
+                }
+                let product = await productModel.find({ extrasubcategoryId: checkedid[i] });
+                product.map((pro) => {
+                    if (fs.existsSync(pro?.image)) {
+                        fs.unlinkSync(pro?.image);
+                    }
+                });
                 await extrasubcategoryModel.findByIdAndDelete(checkedid);
             }
             await productModel.deleteMany({ extrasubcategoryId: checkedid });
@@ -546,15 +669,31 @@ const productCrud = async (req, res) => {
         const { categoryId, subcategoryId, extrasubcategoryId, title, description, tags } = req.body;
         const extrasubcategory = await extrasubcategoryModel.findById(extrasubcategoryId);
         if (updateid) {
-            await productModel.findByIdAndUpdate(updateid, {
-                categoryId: categoryId,
-                subcategoryId: subcategoryId,
-                extrasubcategoryId: extrasubcategoryId,
-                title: title,
-                description: description,
-                // image:req.file.filename,
-                tags: tags
-            });
+            const product = await productModel.findById(updateid);
+            if (req.file) {
+                if (fs.existsSync(product?.image)) {
+                    fs.unlinkSync(product?.image);
+                }
+                await productModel.findByIdAndUpdate(updateid, {
+                    categoryId: categoryId,
+                    subcategoryId: subcategoryId,
+                    extrasubcategoryId: extrasubcategoryId,
+                    title: title,
+                    description: description,
+                    image: req.file?.path,
+                    tags: tags
+                });
+            } else {
+                await productModel.findByIdAndUpdate(updateid, {
+                    categoryId: categoryId,
+                    subcategoryId: subcategoryId,
+                    extrasubcategoryId: extrasubcategoryId,
+                    title: title,
+                    description: description,
+                    image: product?.image,
+                    tags: tags
+                });
+            }
             return res.redirect('/dashboard/product');
         }
         await productModel.create({
@@ -563,7 +702,7 @@ const productCrud = async (req, res) => {
             extrasubcategoryId: extrasubcategoryId,
             title: title,
             description: description,
-            // image:req.file.filename,
+            image: req.file?.path,
             tags: tags,
             status: extrasubcategory.status
         });
@@ -590,6 +729,10 @@ const ajaxSubcategoryWiseRecord = async (req, res) => {
 const deleteProduct = async (req, res) => {
     try {
         const deleteid = req.query.deleteid;
+        let product = await productModel.findById(deleteid);
+        if (fs.existsSync(product?.image)) {
+            fs.unlinkSync(product?.image);
+        }
         await productModel.findByIdAndDelete(deleteid);
         return res.redirect('/dashboard/product');
     } catch (err) {
@@ -649,6 +792,10 @@ const changesProductByCheckboxes = async (req, res) => {
             }
         } else if (deleteProduct) {
             for (let i = 0; i < checkedid.length; i++) {
+                let product = await productModel.findById(checkedid[i]);
+                if (fs.existsSync(product?.image)) {
+                    fs.unlinkSync(product?.image);
+                }
                 await productModel.findByIdAndDelete(checkedid);
             }
         }

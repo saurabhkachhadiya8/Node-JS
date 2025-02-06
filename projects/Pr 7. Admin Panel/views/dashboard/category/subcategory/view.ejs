@@ -169,7 +169,15 @@
                                                     <%= ++index %>
                                                 </span>
                                             </div>
-                                            <div class="td image whitespace-nowrap px-4 py-3 sm:px-5"></div>
+                                            <div class="td image whitespace-nowrap px-4 py-3 sm:px-5 text-center">
+                                                <% if(subcat?.image){ %>
+                                                    <a href="/dashboard/create_subcategory?editid=<%= subcat?._id %>">
+                                                        <img src="/<%= subcat?.image %>" alt="<%= subcat?.image %>" class="w-20 h-20 object-cover mx-auto z-10 relative" style="filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.294));">
+                                                    </a>
+                                                <% }else{ %>
+                                                    <a href="/dashboard/create_subcategory?editid=<%= subcat?._id %>" class="z-10 relative hover:underline">Add Image</a>
+                                                <% } %>
+                                            </div>
                                             <div class="td title whitespace-nowrap px-4 py-3 sm:px-5">
                                                 <a href="/dashboard/create_subcategory?editid=<%= subcat?._id %>"
                                                     class="z-10 relative hover:underline">

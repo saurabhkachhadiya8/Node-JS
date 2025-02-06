@@ -17,14 +17,14 @@ routes.post('/changes_cat_by_checkboxes', changesCatByCheckboxes);
 // subcategory start 
 routes.get('/subcategory', subcategoryPage);
 routes.get('/create_subcategory', createSubcategoryPage);
-routes.post('/subcategory_crud', subcategoryCrud);
+routes.post('/subcategory_crud', fileUpload.single('subcategory_image'), subcategoryCrud);
 routes.get('/delete_subcategory', deleteSubcategory);
 routes.get('/subcategory_status', subCategoryStatus);
 routes.post('/changes_subcat_by_checkboxes', changesSubcatByCheckboxes);
 // extrasubcategory start 
 routes.get('/extrasubcategory', extarsubcategoryPage);
 routes.get('/create_extrasubcategory', createExtrasubcategoryPage);
-routes.post('/extrasubcategory_crud', extrasubcategoryCrud);
+routes.post('/extrasubcategory_crud', fileUpload.single('extrasubcategory_image'), extrasubcategoryCrud);
 routes.get('/ajax_category_wise_record', ajaxCategoryWiseRecord);
 routes.get('/delete_extrasubcategory', deleteExtrasubcategory);
 routes.get('/extrasubcategory_status', extrasubcategoryStatus);
@@ -32,7 +32,7 @@ routes.post('/changes_extrasubcat_by_checkboxes', changesExtrasubcatByCheckboxes
 // product start 
 routes.get('/product', productPage);
 routes.get('/create_product', createProductPage);
-routes.post('/product_crud', productCrud);
+routes.post('/product_crud', fileUpload.single('product_image'), productCrud);
 routes.get('/ajax_subcategory_wise_record', ajaxSubcategoryWiseRecord);
 routes.get('/delete_product', deleteProduct);
 routes.get('/product_status', productStatus);
