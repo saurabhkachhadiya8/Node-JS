@@ -4,6 +4,9 @@ const subcategoryModel = require('../models/SubcategoryModel');
 const extrasubcategoryModel = require('../models/ExtrasubcategoryModel');
 const productModel = require('../models/ProductModel');
 
+const fs = require('fs');
+const path = require('path');
+
 const dashboardPage = async (req, res) => {
     try {
         return res.render('dashboard/dashboard');
@@ -51,23 +54,36 @@ const createCategoryPage = async (req, res) => {
 }
 const categoryCrud = async (req, res) => {
     try {
-        console.log("Received request:", req.body);
-        console.log("Uploaded file:", req.file);
         const updateid = req.query.updateid;
         const { title, description, tags } = req.body;
         if (updateid) {
-            await categoryModel.findByIdAndUpdate(updateid, {
-                title: title,
-                description: description,
-                // image:req.file.filename,
-                tags: tags
-            });
+            const category = categoryModel.findById(updateid);
+            console.log(category);
+            
+            if (req.file) {
+                if(fs.existsSync(path.join(__dirname, '../uploads', category.image))){
+                    fs.unlinkSync(path.join(__dirname, '../uploads', category.image));
+                }
+                await categoryModel.findByIdAndUpdate(updateid, {
+                    title: title,
+                    description: description,
+                    image: req.file.path,
+                    tags: tags
+                });
+            } else {
+                await categoryModel.findByIdAndUpdate(updateid, {
+                    title: title,
+                    description: description,
+                    image: category.image,
+                    tags: tags
+                });
+            }
             return res.redirect('/dashboard/category');
         }
         await categoryModel.create({
             title: title,
             description: description,
-            image: req.file.filename,
+            image: req.file?.path,
             tags: tags
         });
         return res.redirect('/dashboard/create_category');

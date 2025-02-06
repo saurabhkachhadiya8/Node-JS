@@ -2,31 +2,15 @@ const express = require('express');
 const routes = express.Router();
 
 const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, createSubcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, changesSubcatByCheckboxes, extarsubcategoryPage, createExtrasubcategoryPage, extrasubcategoryCrud, ajaxCategoryWiseRecord, deleteExtrasubcategory, extrasubcategoryStatus, changesExtrasubcatByCheckboxes, productPage, createProductPage, productCrud, ajaxSubcategoryWiseRecord, deleteProduct, productStatus, changesProductByCheckboxes, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage } = require('../controllers/DashboardController');
-const multer = require("multer");
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        return cb(null, 'uploads');
-    },
-    filename: function (req, file, cb) {
-        const unique = Math.floor(Math.random() * 100000000);
-        console.log("done file name");
-        
-        console.log("file name :- " + file.fieldname + '-' + unique);
-        
-        return cb(null, file.fieldname + '-' + unique);
-    }
-});
-
-const fileUpload = multer({ storage: storage }).single('image');
-// const fileUpload = require("../config/multer");
+const fileUpload = require("../config/multer");
 
 routes.get('/', dashboardPage);
 routes.get('/crm_analytics', crmAnalyticsPage);
 // category start
 routes.get('/category', categoryPage);
 routes.get('/create_category', createCategoryPage);
-routes.post('/category_crud', fileUpload, categoryCrud);
+routes.post('/category_crud', fileUpload.single('category_image'), categoryCrud);
 routes.get('/delete_category', deleteCategory);
 routes.get('/category_status', categoryStatus);
 routes.post('/changes_cat_by_checkboxes', changesCatByCheckboxes);

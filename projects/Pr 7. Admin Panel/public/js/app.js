@@ -80,3 +80,78 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     subcategory();
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const filepond = document.getElementById("filepond");
+    const fileInput = document.getElementById("categoryImage");
+    const uploadedImagesDiv = document.getElementById("uploadedImages");
+    const dragText = document.getElementById("dragText");
+
+    // Handle file input change (when files are selected)
+    fileInput.addEventListener('change', function () {
+        const files = fileInput.files;
+        if (files.length > 0) {
+            updateUploadedImages(files); // Update the displayed image thumbnails and names
+        }
+    });
+
+    function updateUploadedImages(files) {
+        // Clear the current uploaded images display
+        uploadedImagesDiv.innerHTML = '';
+
+        // Show drag text at top if images are uploaded
+        if (files.length > 0) {
+            dragText.style.top = '15px';
+            dragText.style.transform = 'translateY(0)';
+        } else {
+            dragText.style.top = '50%';
+            dragText.style.transform = 'translateY(-50%)';
+        }
+
+        // Loop through the selected files and create the image elements
+        Array.from(files).forEach(file => {
+            const imgElement = document.createElement('img');
+            const fileURL = URL.createObjectURL(file);
+            imgElement.src = fileURL;
+
+            const fileName = document.createElement('span');
+            fileName.textContent = file.name;
+
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'X';
+
+            uploadedImagesDiv.style.height = '80%';
+            uploadedImagesDiv.style.marginTop = '10%';
+            // Wait for the image to load to get its height
+            imgElement.onload = function () {
+                const imgHeight = imgElement.height;
+
+                // Set the filepond height based on the image height (for example, add half the height)
+                filepond.style.height = `${230 + imgHeight / 5}px`;
+            };
+
+            // Event listener to remove the image and the corresponding name
+            removeBtn.addEventListener('click', function () {
+                imgElement.remove();
+                fileName.remove();
+                removeBtn.remove();
+
+                // Update file input list by removing the file that was removed
+                const updatedFiles = Array.from(fileInput.files).filter(f => f !== file);
+                const dataTransfer = new DataTransfer();
+                updatedFiles.forEach(f => dataTransfer.items.add(f));
+                fileInput.files = dataTransfer.files;
+
+                uploadedImagesDiv.style.height = '0';
+                uploadedImagesDiv.style.marginTop = '0';
+                filepond.style.height = '230px';
+
+                // Re-update the uploaded images
+                updateUploadedImages(fileInput.files);
+            });
+
+            uploadedImagesDiv.appendChild(imgElement);
+            uploadedImagesDiv.appendChild(fileName);
+            uploadedImagesDiv.appendChild(removeBtn);
+        });
+    }
+});
