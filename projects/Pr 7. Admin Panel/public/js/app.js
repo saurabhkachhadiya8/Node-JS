@@ -169,3 +169,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+const closeNotification = () => {
+    const notification = document.querySelector('.notification');
+    notification.style.top = '-6%';
+    notification.style.opacity = '0';
+    notification.style.visibility = 'hidden';
+}
+const setNotificationTime = () => {
+    const notification = document.querySelector('.notification');
+    setTimeout(()=>{
+        notification.style.top = '-6%';
+        notification.style.opacity = '0';
+        notification.style.visibility = 'hidden';
+    },3000);
+}
+setNotificationTime();

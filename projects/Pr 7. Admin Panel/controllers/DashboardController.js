@@ -103,6 +103,7 @@ const categoryCrud = async (req, res) => {
                     tags: tags
                 });
             }
+            req.flash('success', 'Category Successfully Updated.');
             return res.redirect('/dashboard/category');
         }
         await categoryModel.create({
@@ -111,6 +112,7 @@ const categoryCrud = async (req, res) => {
             image: req.file?.path,
             tags: tags
         });
+        req.flash('success', 'Category Successfully Created.');
         return res.redirect('/dashboard/create_category');
     } catch (err) {
         console.log(err);
@@ -146,6 +148,7 @@ const deleteCategory = async (req, res) => {
         await subcategoryModel.deleteMany({ categoryId: deleteid });
         await extrasubcategoryModel.deleteMany({ categoryId: deleteid });
         await productModel.deleteMany({ categoryId: deleteid });
+        req.flash('error', 'Records Successfully Deleted.');
         return res.redirect('/dashboard/category');
     } catch (err) {
         console.log(err);
@@ -168,6 +171,7 @@ const categoryStatus = async (req, res) => {
             await productModel.updateMany({ categoryId: statusid }, {
                 status: "active"
             });
+            req.flash('success', 'Category Successfully Activate.');
         } else {
             await categoryModel.findByIdAndUpdate(statusid, {
                 status: "deactive"
@@ -181,6 +185,7 @@ const categoryStatus = async (req, res) => {
             await productModel.updateMany({ categoryId: statusid }, {
                 status: "deactive"
             });
+            req.flash('success', 'Category Successfully Deactivate.');
         }
         return res.redirect('/dashboard/category');
     } catch (err) {
@@ -207,6 +212,7 @@ const changesCatByCheckboxes = async (req, res) => {
             await productModel.updateMany({ categoryId: checkedid }, {
                 status: "deactive"
             });
+            req.flash('success', 'Records Successfully Deactivate.');
         } else if (activate) {
             for (let i = 0; i < checkedid.length; i++) {
                 await categoryModel.findByIdAndUpdate(checkedid[i], {
@@ -222,6 +228,7 @@ const changesCatByCheckboxes = async (req, res) => {
             await productModel.updateMany({ categoryId: checkedid }, {
                 status: "active"
             });
+            req.flash('success', 'Records Successfully Activate.');
         } else if (deleteCat) {
             for (let i = 0; i < checkedid.length; i++) {
                 let category = await categoryModel.findById(checkedid[i]);
@@ -251,6 +258,7 @@ const changesCatByCheckboxes = async (req, res) => {
             await subcategoryModel.deleteMany({ categoryId: checkedid });
             await extrasubcategoryModel.deleteMany({ categoryId: checkedid });
             await productModel.deleteMany({ categoryId: checkedid });
+            req.flash('error', 'Records Successfully Deleted.');
         }
         return res.redirect('/dashboard/category');
     } catch (err) {
@@ -314,6 +322,7 @@ const subcategoryCrud = async (req, res) => {
                     tags: tags
                 });
             }
+            req.flash('success', 'Subcategory Successfully Updated.');
             return res.redirect('/dashboard/subcategory');
         }
         await subcategoryModel.create({
@@ -324,6 +333,7 @@ const subcategoryCrud = async (req, res) => {
             tags: tags,
             status: category.status
         });
+        req.flash('success', 'Subcategory Successfully Created.');
         return res.redirect('/dashboard/create_subcategory');
     } catch (err) {
         console.log(err);
@@ -352,6 +362,7 @@ const deleteSubcategory = async (req, res) => {
         await subcategoryModel.findByIdAndDelete(deleteid);
         await extrasubcategoryModel.deleteMany({ subcategoryId: deleteid });
         await productModel.deleteMany({ subcategoryId: deleteid });
+        req.flash('error', 'Records Successfully Deleted.');
         return res.redirect('/dashboard/subcategory');
     } catch (err) {
         console.log(err);
@@ -374,10 +385,12 @@ const subCategoryStatus = async (req, res) => {
                 await productModel.updateMany({ subcategoryId: statusid }, {
                     status: "active"
                 });
+                req.flash('success', 'Subcategory Successfully Activate.');
             } else {
                 await subcategoryModel.findByIdAndUpdate(statusid, {
                     status: "deactive"
                 });
+                req.flash('error', 'Not Allowed for Activate.');
             }
         } else {
             await subcategoryModel.findByIdAndUpdate(statusid, {
@@ -389,6 +402,7 @@ const subCategoryStatus = async (req, res) => {
             await productModel.updateMany({ subcategoryId: statusid }, {
                 status: "deactive"
             });
+            req.flash('success', 'Subcategory Successfully Deactivate.');
         }
         return res.redirect('/dashboard/subcategory');
     } catch (err) {
@@ -412,6 +426,7 @@ const changesSubcatByCheckboxes = async (req, res) => {
                     status: "deactive"
                 });
             }
+            req.flash('success', 'Records Successfully Deactivate.');
         } else if (activate) {
             for (let i = 0; i < checkedid.length; i++) {
                 const subcategory = await subcategoryModel.findById(checkedid[i]);
@@ -426,10 +441,12 @@ const changesSubcatByCheckboxes = async (req, res) => {
                     await productModel.updateMany({ subcategoryId: checkedid }, {
                         status: "active"
                     });
+                    req.flash('success', 'Records Successfully Activate.');
                 } else {
                     await subcategoryModel.findByIdAndUpdate(checkedid[i], {
                         status: "deactive"
                     });
+                    req.flash('error', 'Not Allowed for Activate.');
                 }
             }
         } else if (deleteSubcat) {
@@ -454,6 +471,7 @@ const changesSubcatByCheckboxes = async (req, res) => {
             }
             await extrasubcategoryModel.deleteMany({ subcategoryId: checkedid });
             await productModel.deleteMany({ subcategoryId: checkedid });
+            req.flash('success', 'Records Successfully Deleted.');
         }
         return res.redirect('/dashboard/subcategory');
     } catch (err) {
@@ -521,6 +539,7 @@ const extrasubcategoryCrud = async (req, res) => {
                     tags: tags
                 });
             }
+            req.flash('success', 'Extrasubcategory Successfully Updated.');
             return res.redirect('/dashboard/extrasubcategory');
         }
         await extrasubcategoryModel.create({
@@ -532,6 +551,7 @@ const extrasubcategoryCrud = async (req, res) => {
             tags: tags,
             status: subcategory.status
         });
+        req.flash('success', 'Extrasubcategory Successfully Created.');
         return res.redirect('/dashboard/create_extrasubcategory');
     } catch (err) {
         console.log(err);
@@ -567,6 +587,7 @@ const deleteExtrasubcategory = async (req, res) => {
         });
         await extrasubcategoryModel.findByIdAndDelete(deleteid);
         await productModel.deleteMany({ extrasubcategoryId: deleteid });
+        req.flash('error', 'Records Successfully Deleted.');
         return res.redirect('/dashboard/extrasubcategory');
     } catch (err) {
         console.log(err);
@@ -586,10 +607,12 @@ const extrasubcategoryStatus = async (req, res) => {
                 await productModel.updateMany({ extrasubcategoryId: statusid }, {
                     status: "active"
                 });
+                req.flash('success', 'Extrasubcategory Successfully Activate.');
             } else {
                 await extrasubcategoryModel.findByIdAndUpdate(statusid, {
                     status: "deactive"
                 });
+                req.flash('error', 'Not Allowed for Activate.');
             }
         } else {
             await extrasubcategoryModel.findByIdAndUpdate(statusid, {
@@ -598,6 +621,7 @@ const extrasubcategoryStatus = async (req, res) => {
             await productModel.updateMany({ subcategoryId: statusid }, {
                 status: "deactive"
             });
+            req.flash('success', 'Extrasubcategory Successfully Deactivate.');
         }
         return res.redirect('/dashboard/extrasubcategory');
     } catch (err) {
@@ -618,6 +642,7 @@ const changesExtrasubcatByCheckboxes = async (req, res) => {
                     status: "deactive"
                 });
             }
+            req.flash('success', 'Records Successfully Deactivate.');
         } else if (activate) {
             for (let i = 0; i < checkedid.length; i++) {
                 const extrasubcategory = await extrasubcategoryModel.findById(checkedid[i]);
@@ -629,10 +654,12 @@ const changesExtrasubcatByCheckboxes = async (req, res) => {
                     await productModel.updateMany({ extrasubcategoryId: checkedid }, {
                         status: "active"
                     });
+                    req.flash('success', 'Records Successfully Activate.');
                 } else {
                     await extrasubcategoryModel.findByIdAndUpdate(checkedid[i], {
                         status: "deactive"
                     });
+                    req.flash('error', 'Not Allowed for Activate.');
                 }
             }
         } else if (deleteExtrasubcat) {
@@ -650,6 +677,7 @@ const changesExtrasubcatByCheckboxes = async (req, res) => {
                 await extrasubcategoryModel.findByIdAndDelete(checkedid);
             }
             await productModel.deleteMany({ extrasubcategoryId: checkedid });
+            req.flash('success', 'Records Successfully Deleted.');
         }
         return res.redirect('/dashboard/extrasubcategory');
     } catch (err) {
@@ -721,6 +749,7 @@ const productCrud = async (req, res) => {
                     tags: tags
                 });
             }
+            req.flash('success', 'Product Successfully Updated.');
             return res.redirect('/dashboard/product');
         }
         await productModel.create({
@@ -733,6 +762,7 @@ const productCrud = async (req, res) => {
             tags: tags,
             status: extrasubcategory.status
         });
+        req.flash('success', 'Product Successfully Created.');
         return res.redirect('/dashboard/create_product');
     } catch (err) {
         console.log(err);
@@ -761,6 +791,7 @@ const deleteProduct = async (req, res) => {
             fs.unlinkSync(product?.image);
         }
         await productModel.findByIdAndDelete(deleteid);
+        req.flash('error', 'Records Successfully Deleted.');
         return res.redirect('/dashboard/product');
     } catch (err) {
         console.log(err);
@@ -777,15 +808,18 @@ const productStatus = async (req, res) => {
                 await productModel.findByIdAndUpdate(statusid, {
                     status: "active"
                 });
+                req.flash('success', 'Product Successfully Activate.');
             } else {
                 await productModel.findByIdAndUpdate(statusid, {
                     status: "deactive"
                 });
+                req.flash('error', 'Not Allowed for Activate.');
             }
         } else {
             await productModel.findByIdAndUpdate(statusid, {
                 status: "deactive"
             });
+            req.flash('success', 'Product Successfully Deactivate.');
         }
         return res.redirect('/dashboard/product');
     } catch (err) {
@@ -803,6 +837,7 @@ const changesProductByCheckboxes = async (req, res) => {
                     status: "deactive"
                 });
             }
+            req.flash('success', 'Records Successfully Deactivate.');
         } else if (activate) {
             for (let i = 0; i < checkedid.length; i++) {
                 const product = await productModel.findById(checkedid[i]);
@@ -811,10 +846,12 @@ const changesProductByCheckboxes = async (req, res) => {
                     await productModel.findByIdAndUpdate(checkedid[i], {
                         status: "active"
                     });
+                    req.flash('success', 'Records Successfully Activate.');
                 } else {
                     await productModel.findByIdAndUpdate(checkedid[i], {
                         status: "deactive"
                     });
+                    req.flash('error', 'Not Allowed for Activate.');
                 }
             }
         } else if (deleteProduct) {
@@ -825,6 +862,7 @@ const changesProductByCheckboxes = async (req, res) => {
                 }
                 await productModel.findByIdAndDelete(checkedid);
             }
+            req.flash('success', 'Records Successfully Deleted.');
         }
         return res.redirect('/dashboard/product');
     } catch (err) {

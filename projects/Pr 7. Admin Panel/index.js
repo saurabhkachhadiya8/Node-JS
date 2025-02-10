@@ -34,6 +34,15 @@ app.use(passport.session());
 app.use(passport.setUser);
 // PassportJS Authentication end
 
+// connect-flash start 
+const flash = require('connect-flash');
+app.use(flash());
+app.use(function (req, res, next) {
+    res.locals.message = req.flash();
+    return next();
+});
+// connect-flash end
+
 app.use(express.urlencoded());
 
 app.use('/', require('./routes/indexRoute'));
