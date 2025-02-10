@@ -57,7 +57,7 @@ const ajaxPagination = async (req, res) => {
             categories,
             limitedCategories,
             skipedData,
-            totalPages:parseInt(totalPages)
+            totalPages: parseInt(totalPages)
         });
     } catch (err) {
         console.log(err);
@@ -124,19 +124,19 @@ const deleteCategory = async (req, res) => {
         if (fs.existsSync(category?.image)) {
             fs.unlinkSync(category?.image);
         }
-        let subcategory = await subcategoryModel.findById({ categoryId: deleteid });
+        let subcategory = await subcategoryModel.find({ categoryId: deleteid });
         subcategory.map((subcat) => {
             if (fs.existsSync(subcat?.image)) {
                 fs.unlinkSync(subcat?.image);
             }
         });
-        let extrasubcategory = await extrasubcategoryModel.findById({ categoryId: deleteid });
+        let extrasubcategory = await extrasubcategoryModel.find({ categoryId: deleteid });
         extrasubcategory.map((extrasubcat) => {
             if (fs.existsSync(extrasubcat?.image)) {
                 fs.unlinkSync(extrasubcat?.image);
             }
         });
-        let product = await productModel.findById({ categoryId: deleteid });
+        let product = await productModel.find({ categoryId: deleteid });
         product.map((pro) => {
             if (fs.existsSync(pro?.image)) {
                 fs.unlinkSync(pro?.image);

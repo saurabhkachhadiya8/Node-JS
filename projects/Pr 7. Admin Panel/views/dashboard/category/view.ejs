@@ -219,7 +219,7 @@
                             if (page <= 1) {
                                 paginationBtn += `<button class="btn mx-2 bg-gray-200 px-4 py-2 rounded" style="cursor:not-allowed;opacity:0.5;">Previous</button>`
                             } else {
-                                paginationBtn += `<button onClick="pagination(${page - 1})" class="btn mx-2 bg-gray-200 px-4 py-2 rounded">Previous</button>`
+                                paginationBtn += `<button onclick="pagination(${page - 1})" class="btn mx-2 bg-gray-200 px-4 py-2 rounded">Previous</button>`
                             }
                             paginationBtn += `<select onChange="pagination(this.value)" class="mx-2 bg-gray-200 px-4 py-2 rounded outline-none">`
                             for (let i = 1; i <= totalPages; i++) {
@@ -229,7 +229,7 @@
                             if (page >= totalPages) {
                                 paginationBtn += `<button class="btn mx-2 bg-gray-200 px-4 py-2 rounded" style="cursor:not-allowed;opacity:0.5;">Next</button>`
                             } else {
-                                paginationBtn += `<button onClick="pagination(${page + 1})" class="btn mx-2 bg-gray-200 px-4 py-2 rounded">Next</button>`
+                                paginationBtn += `<button onclick="pagination(${page + 1})" class="btn mx-2 bg-gray-200 px-4 py-2 rounded">Next</button>`
                             }
                         }
                         document.getElementById('paginationBtn').innerHTML = paginationBtn;
