@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
-const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, createSubcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, changesSubcatByCheckboxes, extarsubcategoryPage, createExtrasubcategoryPage, extrasubcategoryCrud, ajaxCategoryWiseRecord, deleteExtrasubcategory, extrasubcategoryStatus, changesExtrasubcatByCheckboxes, productPage, createProductPage, productCrud, ajaxSubcategoryWiseRecord, deleteProduct, productStatus, changesProductByCheckboxes, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage } = require('../controllers/DashboardController');
+const { dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, createSubcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, changesSubcatByCheckboxes, extarsubcategoryPage, createExtrasubcategoryPage, extrasubcategoryCrud, ajaxCategoryWiseRecord, deleteExtrasubcategory, extrasubcategoryStatus, changesExtrasubcatByCheckboxes, productPage, createProductPage, productCrud, ajaxSubcategoryWiseRecord, deleteProduct, productStatus, changesProductByCheckboxes, ajaxPagination, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage } = require('../controllers/DashboardController');
 
 const fileUpload = require("../config/multer");
 
@@ -41,6 +41,9 @@ routes.post('/changes_product_by_checkboxes', changesProductByCheckboxes);
 // extrasubcategory end 
 // subcategory end 
 // category end
+// pagination start 
+routes.get('/ajax_pagination',ajaxPagination);
+// pagination end 
 routes.get('/orders', ordersPage);
 routes.get('/cryptocurrency1', cryptocurrencyPage1);
 routes.get('/cryptocurrency2', cryptocurrencyPage2);

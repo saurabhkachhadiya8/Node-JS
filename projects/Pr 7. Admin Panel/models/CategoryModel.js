@@ -20,5 +20,5 @@ const categorySchema = mongoose.Schema({
         type: String,
         default: "deactive"
     }
-});
+},{ timestamps: true });
 module.exports = mongoose.model('category', categorySchema);

@@ -6,6 +6,7 @@ const productModel = require('../models/ProductModel');
 
 const fs = require('fs');
 const path = require('path');
+const CategoryModel = require('../models/CategoryModel');
 
 const dashboardPage = async (req, res) => {
     try {
@@ -30,7 +31,33 @@ const categoryPage = async (req, res) => {
         let subcategories = await subcategoryModel.find({}).populate('categoryId');
         return res.render('dashboard/category/view', {
             categories,
-            subcategories
+            subcategories,
+        });
+    } catch (err) {
+        console.log(err);
+        return false;
+    }
+}
+const ajaxPagination = async (req, res) => {
+    try {
+        let page = req.query?.page;
+        let totalPages = 1;
+        let limit = 5;
+        let skipedData = limit * (page - 1);
+        let limitedCategories = await categoryModel.find({}).limit(limit).skip(skipedData);
+        let categories = await categoryModel.find({});
+        if (categories.length % limit == 0) {
+            totalPages = categories.length / limit;
+        } else {
+            totalPages = categories.length / limit + 1;
+        }
+        return res.status(200).send({
+            success: true,
+            massage: "record successfully fetch",
+            categories,
+            limitedCategories,
+            skipedData,
+            totalPages:parseInt(totalPages)
         });
     } catch (err) {
         console.log(err);
@@ -931,5 +958,5 @@ const workspacesPage = async (req, res) => {
 }
 
 module.exports = {
-    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, createSubcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, changesSubcatByCheckboxes, extarsubcategoryPage, createExtrasubcategoryPage, extrasubcategoryCrud, ajaxCategoryWiseRecord, deleteExtrasubcategory, extrasubcategoryStatus, changesExtrasubcatByCheckboxes, productPage, createProductPage, productCrud, ajaxSubcategoryWiseRecord, deleteProduct, productStatus, changesProductByCheckboxes, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
+    dashboardPage, crmAnalyticsPage, categoryPage, createCategoryPage, categoryCrud, deleteCategory, categoryStatus, changesCatByCheckboxes, subcategoryPage, createSubcategoryPage, subcategoryCrud, deleteSubcategory, subCategoryStatus, changesSubcatByCheckboxes, extarsubcategoryPage, createExtrasubcategoryPage, extrasubcategoryCrud, ajaxCategoryWiseRecord, deleteExtrasubcategory, extrasubcategoryStatus, changesExtrasubcatByCheckboxes, productPage, createProductPage, productCrud, ajaxSubcategoryWiseRecord, deleteProduct, productStatus, changesProductByCheckboxes, ajaxPagination, ordersPage, cryptocurrencyPage1, cryptocurrencyPage2, bankingPage1, bankingPage2, personalPage, cmsAnalyticsPage, influencerPage, travelPage, teacherPage, educationPage, authorsPage, doctorsPage, employeesPage, workspacesPage
 }

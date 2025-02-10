@@ -67,7 +67,7 @@
                     <form action="/dashboard/changes_product_by_checkboxes" method="post">
                         <div class="is-scrollbar-hidden min-w-full overflow-x-auto">
                             <div class="is-hoverable w-full">
-                                <div class="theadCategory">
+                                <div class="thead">
                                     <div
                                         class="tr text-center flex bg-slate-200 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 rounded-lg">
                                         <div class="th checkbox whitespace-nowrap px-4 py-3 lg:px-5">
@@ -147,7 +147,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tbodyCategory">
+                                <div class="tbody">
                                     <% products.map((product, index)=> { %>
                                         <div class="tr flex items-center border border-transparent border-b-slate-200 dark:border-b-navy-500 relative w-full hover:bg-slate-100 dark:hover:bg-navy-800"
                                             key="<%= product?._id %>" style="margin: 0;">
@@ -158,7 +158,7 @@
                                                 <label
                                                     class="inline-flex items-center space-x-2 z-10 relative">
                                                     <input
-                                                        class="categoryCheckbox form-checkbox is-basic size-5 rounded border-slate-400/70 checked:bg-primary checked:border-primary hover:border-primary focus:border-primary dark:border-navy-400 dark:checked:bg-accent dark:checked:border-accent dark:hover:border-accent dark:focus:border-accent"
+                                                        class="form-checkbox is-basic size-5 rounded border-slate-400/70 checked:bg-primary checked:border-primary hover:border-primary focus:border-primary dark:border-navy-400 dark:checked:bg-accent dark:checked:border-accent dark:hover:border-accent dark:focus:border-accent"
                                                         type="checkbox" name="product_checkbox"
                                                         value="<%= product?._id %>" />
                                                 </label>
