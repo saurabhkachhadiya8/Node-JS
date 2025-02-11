@@ -2,6 +2,11 @@ const express = require('express');
 const port = 8080;
 const app = express();
 
+const db = require('./config/database');
+db();
+
+app.use(express.urlencoded());
+
 app.use('/',require('./routes/indexRoute'));
 
 app.listen(port, (err) => {
