@@ -10,7 +10,7 @@ routes.get('/addproduct',addProPage);
 routes.post('/add_product',proImage.single('image'),addProduct);
 routes.get('/deleteproduct',deleteProduct);
 routes.get('/editproduct',editProduct);
-routes.post('/update_product',updateProduct);
+routes.post('/update_product',proImage.single('image'),updateProduct);
 
 routes.get('/addtocart',addToCartPage);
 routes.post('/add_to_cart',addToCart);

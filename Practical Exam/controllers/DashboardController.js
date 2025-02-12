@@ -81,13 +81,6 @@ const editProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
     try {
         const { updateid, name, price, quentity, description } = req.body;
-        console.log(req.file);
-        console.log(req.body);
-        console.log(name);
-        console.log(price);
-        console.log(quentity);
-        console.log(description);
-
         if (!name || !price || !quentity || !description) {
             console.log("All Fields Are Required");
             return false;
