@@ -40,8 +40,10 @@ const adminViewBlog = async (req, res) => {
     return res.status(200).send({
       success: true,
       message: "All Blogs",
-      length: allBlogs.length,
-      allBlogs
+      allBlogs: {
+        length: allBlogs.length,
+        blogs: allBlogs
+      }
     });
   } catch (err) {
     return res.status(500).send({
@@ -62,8 +64,10 @@ const userViewBlog = async (req, res) => {
     return res.status(200).send({
       success: true,
       message: "Blogs Of User",
-      length: blogsOfUser.length,
-      blogsOfUser
+      blogsOfUser: {
+        length: blogsOfUser.length,
+        blogs: blogsOfUser
+      }
     });
   } catch (err) {
     return res.status(500).send({
@@ -94,9 +98,8 @@ const adminDeleteBlog = async (req, res) => {
 const userDeleteBlog = async (req, res) => {
   try {
     let id = req.query.id;
-    let single = await blogModel.findById(id);
-    let checkAuthor = await blogModel.find({ authorId: single?.authorId });
-    if (!checkAuthor.length) {
+    let single = await blogModel.findOne({ _id: id, authorId: req.user?._id });
+    if (!single) {
       return res.status(400).send({
         success: false,
         message: "Blog Not Found"
@@ -151,9 +154,8 @@ const adminUpdateBlog = async (req, res) => {
 const userUpdateBlog = async (req, res) => {
   try {
     let { id, title, description } = req.body;
-    let single = await blogModel.findById(id);
-    let checkAuthor = await blogModel.find({ authorId: single?.authorId });
-    if (!checkAuthor.length) {
+    let single = await blogModel.findOne({ _id: id, authorId: req.user?._id });
+    if (!single) {
       return res.status(400).send({
         success: false,
         message: "Blog Not Found"
@@ -177,8 +179,7 @@ const userUpdateBlog = async (req, res) => {
     }
     return res.status(200).send({
       success: true,
-      message: "Blog Updated",
-      checkAuthor
+      message: "Blog Updated"
     });
   } catch (err) {
     return res.status(500).send({
